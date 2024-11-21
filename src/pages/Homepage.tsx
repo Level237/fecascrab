@@ -1,9 +1,10 @@
+import { Button } from '../components/ui/button'
 import React from 'react'
 
 export default function Homepage() {
   return (
     <section style={{ background:"url('BG_Site.jpg')",backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
-    className='w-full rounded-md relative h-[100vh] justify-start pt-20 flex flex-col items-center'>
+    className='w-full bg-[#02abee] rounded-md relative h-[100vh] justify-start pt-20 flex flex-col items-center'>
       <div>
         <h2 className='font-bold'>LA FEDERATION CAMEROUNAISE DE SCRABBLE ORGANISE LES</h2>
       </div>
@@ -75,8 +76,8 @@ export default function Homepage() {
         </div>
         </div>
       </div>
-      <div>
-
+      <div className='mt-8'>
+          <Button className='bg-red-700 px-16 text-sm py-6 text-white'>S'INSCRIRE</Button>
       </div>
     </section>
   )
