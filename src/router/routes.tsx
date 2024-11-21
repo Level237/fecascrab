@@ -1,4 +1,4 @@
-import Homepage from "@/pages/Homepage";
+import Homepage from "../pages/Homepage";
 import { createBrowserRouter } from "react-router-dom";
 
 export const routes=createBrowserRouter([{
