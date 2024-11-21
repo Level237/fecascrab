@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button'
 import React, { useEffect, useState } from 'react'
 
@@ -33,7 +34,7 @@ useEffect(() => {
 
   return (
     <section style={{ background:"url('BG_Site.jpg')",backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
-    className='w-full bg-[#02abee] rounded-md relative h-[100vh] justify-start pt-20 flex flex-col items-center'>
+    className='w-full bg-[#02abee] rounded-md relative h-[100%] justify-start pt-20 flex flex-col items-center'>
       <div>
         <h2 className='font-bold'>LA FEDERATION CAMEROUNAISE DE SCRABBLE ORGANISE LES</h2>
       </div>
@@ -95,8 +96,12 @@ useEffect(() => {
         </div>
         </div>
       </div>
-      <div className='mt-8'>
-          <Button className='bg-red-700 px-16 text-sm py-6 text-white'>S'INSCRIRE</Button>
+      <div className='mt-8 mb-24'>
+        <Link to="/inscription"><Button className='bg-red-700 px-16 text-sm py-6 text-white'>S'INSCRIRE</Button></Link>
+          
+      </div>
+      <div className='w-full   flex justify-center items-center h-16 relative bg-[#107a5f]'>
+        <img className='w-20 absolute top-[-30px]' src="/logo.png" alt="" />
       </div>
     </section>
   )
