@@ -40,15 +40,12 @@ useEffect(() => {
       <div>
         <img src="logo_fecascrab.png" alt="" className='w-[27rem] h-[28rem] mt-[-4rem]' />
       </div>
-      <div className='grid mt-[-5rem] grid-cols-4 gap-4'>
+      <div className='grid mt-[-5rem] grid-cols-4'>
         <div className='flex gap-3 justify-center flex-col items-center'>
         <div className='flex gap-1 items-center flex-row'>
-                <div className='bg-white rounded-xl px-3 py-3'>
-                      <h2 className='text-5xl font-bold'>{timeRemaining.jours}</h2>
-                </div>
-                <div className='bg-white rounded-xl px-3 py-3'>
-                      <h2 className='text-5xl font-bold'>0</h2>
-                </div>
+                
+                      {timeRemaining.jours && timeRemaining.jours.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>{el}</h2></div>)}
+
                 <div className='ml-2'>
                   <h2 className='text-white font-bold text-2xl'>:</h2>
                 </div>
@@ -60,12 +57,11 @@ useEffect(() => {
        
         <div className='flex gap-3 justify-center flex-col items-center'>
         <div className='flex gap-1 items-center flex-row'>
-                <div className='bg-white rounded-xl px-3 py-3'>
-                      <h2 className='text-5xl font-bold'>{timeRemaining.heures}</h2>
-                </div>
-                <div className='bg-white rounded-xl px-3 py-3'>
-                      <h2 className='text-5xl font-bold'>0</h2>
-                </div>
+        {timeRemaining.heures?.toString().length==1  && timeRemaining.heures==0  && timeRemaining.heures?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>0</h2></div>}
+        {timeRemaining.heures!==0  && timeRemaining.heures?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>0</h2></div>}
+                      {timeRemaining.heures?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>{el}</h2></div>)}
+             
+              
                 <div className='ml-2'>
                   <h2 className='text-white font-bold text-2xl'>:</h2>
                 </div>
@@ -76,12 +72,10 @@ useEffect(() => {
         </div>
         <div className='flex gap-3 justify-center flex-col items-center'>
         <div className='flex gap-1 items-center flex-row'>
-                <div className='bg-white rounded-xl px-3 py-3'>
-                      <h2 className='text-5xl font-bold'>{timeRemaining.minutes}</h2>
-                </div>
-                <div className='bg-white rounded-xl px-3 py-3'>
-                      <h2 className='text-5xl font-bold'>0</h2>
-                </div>
+        {timeRemaining.minutes?.toString().length==1  && timeRemaining.minutes==0  && timeRemaining.minutes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>0</h2></div>}
+        {timeRemaining.minutes!==0  && timeRemaining.minutes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>0</h2></div>}
+              {timeRemaining.minutes?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>{el}</h2></div>)}
+              
                 <div className='ml-2'>
                   <h2 className='text-white font-bold text-2xl'>:</h2>
                 </div>
@@ -92,13 +86,9 @@ useEffect(() => {
         </div>
         <div className='flex gap-3 justify-center flex-col items-center'>
         <div className='flex gap-1 items-center flex-row'>
-                <div className='bg-white rounded-xl px-3 py-3'>
-                      <h2 className='text-5xl font-bold'>{timeRemaining?.secondes}</h2>
-                </div>
-                <div className='bg-white rounded-xl px-3 py-3'>
-                      <h2 id='seconde' className='text-5xl font-bold'>0</h2>
-                </div>
-              
+          {timeRemaining.secondes?.toString().length==1  && timeRemaining.secondes==0  && timeRemaining.secondes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>0</h2></div>}
+          {timeRemaining.secondes!==0  && timeRemaining.secondes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>0</h2></div>}
+        {timeRemaining.secondes?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>{el}</h2></div>)}
         </div>
         <div>
           <h2  className='text-md font-bold text-white'>SECONDES</h2>
