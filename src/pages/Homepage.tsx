@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button'
 import React, { useEffect, useState } from 'react'
+import { Skeleton } from '../components/ui/skeleton';
 
 export default function Homepage() {
 
   const [startDate,setStartDate]=useState(Date.now())
+  const [loading,setLoading]=useState(false)
   const [endDate,setEndDate]=useState('2025-03-12T10:00')
   const [timeRemaining, setTimeRemaining] = useState({});
   const calculerTempsRestant = (d1:any, d2:any) => {
@@ -27,6 +29,7 @@ export default function Homepage() {
 useEffect(() => {
   const interval = setInterval(() => {
       setTimeRemaining(calculerTempsRestant(startDate,endDate));
+      setLoading(true)
   }, 1000);
 
   return () => clearInterval(interval);
@@ -41,7 +44,55 @@ useEffect(() => {
       <div>
         <img src="logo_fecascrab.png" alt="" className='w-[27rem] h-[28rem] mt-[-4rem]' />
       </div>
-      <div className='grid mt-[-5rem] grid-cols-4'>
+      {!loading && <div className='grid mt-[-5rem] gap-4 grid-cols-4'>
+      <div className='flex gap-3 justify-center flex-col items-center'>
+      <div className='flex gap-1 items-center flex-row'>
+        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
+        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
+        <div className='ml-2'>
+                  <h2 className='text-white font-bold text-2xl'>:</h2>
+                </div>
+      </div>
+      <div>
+          <h2 className='text-md font-bold text-white'>JOURS</h2>
+        </div>
+      </div>
+      <div className='flex gap-3 justify-center flex-col items-center'>
+      <div className='flex gap-1 items-center flex-row'>
+        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
+        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
+        <div className='ml-2'>
+                  <h2 className='text-white font-bold text-2xl'>:</h2>
+                </div>
+      </div>
+      <div>
+          <h2 className='text-md font-bold text-white'>Heures</h2>
+        </div>
+      </div>
+      <div className='flex gap-3 justify-center flex-col items-center'>
+      <div className='flex gap-1 items-center flex-row'>
+        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
+        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
+        <div className='ml-2'>
+                  <h2 className='text-white font-bold text-2xl'>:</h2>
+                </div>
+      </div>
+      <div>
+          <h2 className='text-md font-bold text-white'>Minutes</h2>
+        </div>
+      </div>
+      <div className='flex gap-3 justify-center flex-col items-center'>
+      <div className='flex gap-1 items-center flex-row'>
+        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
+        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
+        
+      </div>
+      <div>
+          <h2 className='text-md font-bold text-white'>Secondes</h2>
+        </div>
+      </div>
+        </div>}
+        {loading && <div className='grid mt-[-5rem] grid-cols-4'>
         <div className='flex gap-3 justify-center flex-col items-center'>
         <div className='flex gap-1 items-center flex-row'>
                 
@@ -95,7 +146,8 @@ useEffect(() => {
           <h2  className='text-md font-bold text-white'>SECONDES</h2>
         </div>
         </div>
-      </div>
+      </div>}
+      
       <div className='mt-8 mb-24'>
         <Link to="/inscription"><Button className='bg-red-700 px-16 text-sm py-6 text-white'>S'INSCRIRE</Button></Link>
           
