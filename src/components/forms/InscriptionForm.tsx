@@ -182,6 +182,18 @@ et m’engage à respecter le règlement des Super Masters de Scrabble 2025.
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
             <h2 className='font-bold text-3xl'>INFORMATIONS DE CONTACT DE L'ORGANISATION</h2>
+            <div className='w-full mx-12 mt-4'>
+                <h2 className='mx-5 text-xl font-light'>Pour toute
+question ou précision, veuillez contacter l’équipe de la FECASCRAB</h2>
+            </div>
+            <div className='w-full flex flex-col gap-3 mx-24 mt-6'>
+              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl font-bold '>Téléphone : <span className='font-light'>(+33) 758 641 042 / (+237) 699 804 338</span> </h2></div>
+              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl font-bold '>Email : <span className='font-light'>assomo.scrabble@gmail.com</span> </h2></div>
+              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl font-bold '>Adresse : <span className='font-light'>Bureau de la FECASCRAB, Douala, Cameroun</span> </h2></div>
+            </div>
+        </section>
+        <section className='flex mt-10 justify-center items-center'>
+                <Button className='bg-red-600 text-white px-24 py-6 rounded-2xl'>VALIDER</Button>
         </section>
     </section>
   )
