@@ -12,6 +12,8 @@ import {
     SelectTrigger,
     SelectValue,
   } from "../ui/select"
+  import { Label } from "../ui/label"
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 import {
@@ -84,6 +86,41 @@ export default function InscriptionForm() {
           </div>
           <div>
             <h2 className='mx-5 text-xl italic'>Catégorie d'inscription(cochez une option):</h2>
+          </div>
+          <div>
+          <RadioGroup defaultValue="comfortable" className='w-full mx-12 mt-4'>
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem className='' value="Joueur étranger" id="r1" />
+        <Label htmlFor="r1"><h2 className='text-xl font-bold '>Joueur étranger <span className='font-light'>-150 e(Repas et hébergement inclus)</span> </h2></Label>
+      </div>
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem className='' value="Joueur local" id="r2" />
+        <Label htmlFor="r2"><h2 className='text-xl font-bold'>Joueur local (Cameroun) <span className='font-light'>-75 e(Repas et hébergement inclus)</span> </h2></Label>
+      </div>
+    
+    </RadioGroup>
+          </div>
+        </section>
+        <Separator className='text-black w-full bg-black mt-12'/>
+        <section className='flex flex-col pt-8'>
+          <div>
+          <h2 className='font-bold text-3xl'>COMPÉTITION</h2>
+          </div>
+          <div>
+            <h2 className='mx-5 text-xl italic'>Type de compétition choisie(cochez une ou plusieurs option):</h2>
+          </div>
+          <div>
+          <RadioGroup defaultValue="comfortable" className='w-full mx-12 mt-4'>
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem className='' value="Joueur étranger" id="r1" />
+        <Label htmlFor="r1"><h2 className='text-xl font-bold '>Joueur étranger <span className='font-light'>-150 e(Repas et hébergement inclus)</span> </h2></Label>
+      </div>
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem className='' value="Joueur local" id="r2" />
+        <Label htmlFor="r2"><h2 className='text-xl font-bold'>Joueur local (Cameroun) <span className='font-light'>-75 e(Repas et hébergement inclus)</span> </h2></Label>
+      </div>
+    
+    </RadioGroup>
           </div>
         </section>
     </section>
