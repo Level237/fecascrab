@@ -3,7 +3,8 @@ import React from 'react'
 
 export default function Inscription() {
   return (
-    <section className='flex flex-col gap-20 '>
+    <section>
+          <section className='flex flex-col gap-20 '>
       <div className='bg-blue-600 w-full h-44 flex justify-center items-center relative'>
                 <div className='absolute bottom-[-80px] z-50'>
                     <img className='w-48 h-48' src="/logo-officiel.png" alt="" />
@@ -23,6 +24,15 @@ export default function Inscription() {
     <section className='mx-36'>
         <InscriptionForm/>
     </section>
+    
     </section>
+    <section className='w-full h-48' style={{ background:"url('BG_Site.jpg')",backgroundPosition:"bottom",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} >
+
+</section>
+<div className='w-full   flex justify-center items-center h-16 relative bg-[#107a5f]'>
+        <img className='w-20 absolute top-[-30px]' src="/logo.png" alt="" />
+      </div>
+    </section>
+    
   )
 }

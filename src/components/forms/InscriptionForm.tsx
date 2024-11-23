@@ -33,7 +33,7 @@ export default function InscriptionForm() {
     }
     console.log(birth)
   return (
-    <section className='mb-44'>
+    <section className='mb-20'>
         <div className='mb-5'>
         <h2 className='font-bold text-3xl'>INFORMATIONS PERSONNELLES</h2>
         </div>
@@ -195,6 +195,8 @@ question ou précision, veuillez contacter l’équipe de la FECASCRAB</h2>
         <section className='flex mt-10 justify-center items-center'>
                 <Button className='bg-red-600 text-white px-24 py-6 rounded-2xl'>VALIDER</Button>
         </section>
+
+       
     </section>
   )
 }

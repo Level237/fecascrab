@@ -39,16 +39,16 @@ useEffect(() => {
     <section style={{ background:"url('BG_Site.jpg')",backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
     className='w-full bg-[#02abee] rounded-md relative h-[100%] justify-start pt-20 flex flex-col items-center'>
       <div>
-        <h2 className='font-bold'>LA FEDERATION CAMEROUNAISE DE SCRABBLE ORGANISE LES</h2>
+        <h2 className='font-bold max-sm:text-center'>LA FEDERATION CAMEROUNAISE DE SCRABBLE ORGANISE LES</h2>
       </div>
       <div>
         <img src="logo_fecascrab.png" alt="" className='w-[27rem] h-[28rem] mt-[-4rem]' />
       </div>
-      {!loading && <div className='grid mt-[-5rem] gap-4 grid-cols-4'>
+      {!loading && <div className='grid max-sm:mx-6  mt-[-5rem] gap-4 grid-cols-4'>
       <div className='flex gap-3 justify-center flex-col items-center'>
       <div className='flex gap-1 items-center flex-row'>
-        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
-        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
+        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
+        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
         <div className='ml-2'>
                   <h2 className='text-white font-bold text-2xl'>:</h2>
                 </div>
@@ -59,8 +59,8 @@ useEffect(() => {
       </div>
       <div className='flex gap-3 justify-center flex-col items-center'>
       <div className='flex gap-1 items-center flex-row'>
-        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
-        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
+        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
+        <Skeleton className="bg-gray-200  max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
         <div className='ml-2'>
                   <h2 className='text-white font-bold text-2xl'>:</h2>
                 </div>
@@ -71,8 +71,8 @@ useEffect(() => {
       </div>
       <div className='flex gap-3 justify-center flex-col items-center'>
       <div className='flex gap-1 items-center flex-row'>
-        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
-        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
+        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
+        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
         <div className='ml-2'>
                   <h2 className='text-white font-bold text-2xl'>:</h2>
                 </div>
@@ -83,8 +83,8 @@ useEffect(() => {
       </div>
       <div className='flex gap-3 justify-center flex-col items-center'>
       <div className='flex gap-1 items-center flex-row'>
-        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
-        <Skeleton className="bg-gray-200 rounded-xl w-4 px-5 py-8" />
+        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
+        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
         
       </div>
       <div>
@@ -92,58 +92,58 @@ useEffect(() => {
         </div>
       </div>
         </div>}
-        {loading && <div className='grid mt-[-5rem] grid-cols-4'>
+        {loading && <div className='grid max-sm:mx-6  mt-[-5rem] grid-cols-4'>
         <div className='flex gap-3 justify-center flex-col items-center'>
         <div className='flex gap-1 items-center flex-row'>
                 
-                      {timeRemaining.jours && timeRemaining.jours.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>{el}</h2></div>)}
+                      {timeRemaining.jours && timeRemaining.jours.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>{el}</h2></div>)}
 
-                <div className='ml-2'>
-                  <h2 className='text-white font-bold text-2xl'>:</h2>
+                <div className='ml-2 max-sm:ml-0'>
+                  <h2 className='text-white font-bold text-2xl max-sm:text-xl'>:</h2>
                 </div>
         </div>
         <div>
-          <h2 className='text-md font-bold text-white'>JOURS</h2>
+          <h2 className='text-md max-sm:text-sm font-bold text-white'>JOURS</h2>
         </div>
         </div>
        
         <div className='flex gap-3 justify-center flex-col items-center'>
-        <div className='flex gap-1 items-center flex-row'>
-        {timeRemaining.heures?.toString().length==1  && timeRemaining.heures==0  && timeRemaining.heures?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>0</h2></div>}
-        {timeRemaining.heures!==0  && timeRemaining.heures?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>0</h2></div>}
-                      {timeRemaining.heures?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>{el}</h2></div>)}
+        <div className='flex gap-1 max-sm:ml-7 items-center flex-row'>
+        {timeRemaining.heures?.toString().length==1  && timeRemaining.heures==0  && timeRemaining.heures?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
+        {timeRemaining.heures!==0  && timeRemaining.heures?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
+                      {timeRemaining.heures?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>{el}</h2></div>)}
              
               
-                <div className='ml-2'>
+                <div className='ml-2 max-sm:ml-1'>
                   <h2 className='text-white font-bold text-2xl'>:</h2>
                 </div>
         </div>
         <div>
-          <h2 className='text-md font-bold text-white'>HEURES</h2>
+          <h2 className='text-md max-sm:text-sm font-bold text-white'>HEURES</h2>
         </div>
         </div>
-        <div className='flex gap-3 justify-center flex-col items-center'>
+        <div className='flex gap-3 max-sm:ml-7 justify-center flex-col items-center'>
         <div className='flex gap-1 items-center flex-row'>
-        {timeRemaining.minutes?.toString().length==1  && timeRemaining.minutes==0  && timeRemaining.minutes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>0</h2></div>}
-        {timeRemaining.minutes!==0  && timeRemaining.minutes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>0</h2></div>}
-              {timeRemaining.minutes?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>{el}</h2></div>)}
+        {timeRemaining.minutes?.toString().length==1  && timeRemaining.minutes==0  && timeRemaining.minutes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
+        {timeRemaining.minutes!==0  && timeRemaining.minutes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
+              {timeRemaining.minutes?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>{el}</h2></div>)}
               
-                <div className='ml-2'>
+                <div className='ml-2 max-sm:ml-1'>
                   <h2 className='text-white font-bold text-2xl'>:</h2>
                 </div>
         </div>
         <div>
-          <h2 className='text-md font-bold text-white'>MINUTES</h2>
+          <h2 className='text-md max-sm:text-sm font-bold text-white'>MINUTES</h2>
         </div>
         </div>
-        <div className='flex gap-3 justify-center flex-col items-center'>
+        <div className='flex gap-3 justify-center max-sm:ml-5 flex-col items-center'>
         <div className='flex gap-1 items-center flex-row'>
-          {timeRemaining.secondes?.toString().length==1  && timeRemaining.secondes==0  && timeRemaining.secondes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>0</h2></div>}
-          {timeRemaining.secondes!==0  && timeRemaining.secondes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>0</h2></div>}
-        {timeRemaining.secondes?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3'><h2 className='text-5xl font-bold'>{el}</h2></div>)}
+          {timeRemaining.secondes?.toString().length==1  && timeRemaining.secondes==0  && timeRemaining.secondes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
+          {timeRemaining.secondes!==0  && timeRemaining.secondes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
+        {timeRemaining.secondes?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>{el}</h2></div>)}
         </div>
         <div>
-          <h2  className='text-md font-bold text-white'>SECONDES</h2>
+          <h2  className='text-md max-sm:text-sm font-bold text-white'>SECONDES</h2>
         </div>
         </div>
       </div>}
