@@ -21,7 +21,7 @@ import {
   } from "../ui/popover"
 import { format } from "date-fns"
 import { Button } from '../ui/button'
-import { Separator } from '@radix-ui/react-select'
+import { Separator } from '../ui/separator'
 export default function InscriptionForm() {
   const [phone, setPhone] = useState('');
     const [birth,setBirth]=useState("")
@@ -32,7 +32,7 @@ export default function InscriptionForm() {
   return (
     <section className='mb-44'>
         <div className='mb-5'>
-        <h2 className='font-bold text-3xl'>informations personnelles</h2>
+        <h2 className='font-bold text-3xl'>INFORMATIONS PERSONNELLES</h2>
         </div>
         <div className='mb-3'>
             <Input placeholder='Nom et Prénom' className='py-8 rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 h-12'/>
@@ -68,7 +68,7 @@ export default function InscriptionForm() {
        
         inputProps={{ 
           required:true,
-          className:" w-full flex justify-center items-center py-8 rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 h-12"
+          className:" w-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring flex justify-center items-center py-8 rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 h-12"
          }}
         
         onChange={(phone) => setPhone(phone)}
@@ -77,7 +77,15 @@ export default function InscriptionForm() {
         <div className='mb-3'>
             <Input type='email'   placeholder='E-mail' className='py-8 rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 h-12'/>
         </div>
-        <Separator/>
+        <Separator className='text-black w-full bg-black mt-12'/>
+        <section className='flex flex-col pt-8'>
+          <div>
+          <h2 className='font-bold text-3xl'>PARTICIPATION AU TOURNOI</h2>
+          </div>
+          <div>
+            <h2 className='mx-5 text-xl italic'>Catégorie d'inscription(cochez une option):</h2>
+          </div>
+        </section>
     </section>
   )
 }
