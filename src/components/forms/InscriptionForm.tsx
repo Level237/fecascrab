@@ -24,6 +24,7 @@ import {
 import { format } from "date-fns"
 import { Button } from '../ui/button'
 import { Separator } from '../ui/separator'
+import { Checkbox } from '../ui/checkbox'
 export default function InscriptionForm() {
   const [phone, setPhone] = useState('');
     const [birth,setBirth]=useState("")
@@ -91,11 +92,11 @@ export default function InscriptionForm() {
           <RadioGroup defaultValue="comfortable" className='w-full mx-12 mt-4'>
       <div className="flex items-center space-x-2">
         <RadioGroupItem className='' value="Joueur étranger" id="r1" />
-        <Label htmlFor="r1"><h2 className='text-xl font-bold '>Joueur étranger <span className='font-light'>-150 e(Repas et hébergement inclus)</span> </h2></Label>
+        <Label htmlFor="r1"><h2 className='text-xl font-bold '>Joueur étranger <span className='font-light'>-150 €(Repas et hébergement inclus)</span> </h2></Label>
       </div>
       <div className="flex items-center space-x-2">
         <RadioGroupItem className='' value="Joueur local" id="r2" />
-        <Label htmlFor="r2"><h2 className='text-xl font-bold'>Joueur local (Cameroun) <span className='font-light'>-75 e(Repas et hébergement inclus)</span> </h2></Label>
+        <Label htmlFor="r2"><h2 className='text-xl font-bold'>Joueur local (Cameroun) <span className='font-light'>-75 €(Repas et hébergement inclus)</span> </h2></Label>
       </div>
     
     </RadioGroup>
@@ -109,19 +110,78 @@ export default function InscriptionForm() {
           <div>
             <h2 className='mx-5 text-xl italic'>Type de compétition choisie(cochez une ou plusieurs option):</h2>
           </div>
-          <div>
-          <RadioGroup defaultValue="comfortable" className='w-full mx-12 mt-4'>
+          <div className='w-full mx-12 mt-4'>
+          <div className="flex items-center space-x-2">
+      <Checkbox id="terms2" className='bg-gray-200 '/>
+      <label
+        htmlFor="terms2"
+        className="text-xl font-bold leading-none peer-disabled:opacity-70"
+      >
+       Duplicate Mix
+      </label>
+    </div>
+    <div>
+    <RadioGroup  className='w-full mx-12 mt-4'>
       <div className="flex items-center space-x-2">
-        <RadioGroupItem className='' value="Joueur étranger" id="r1" />
-        <Label htmlFor="r1"><h2 className='text-xl font-bold '>Joueur étranger <span className='font-light'>-150 e(Repas et hébergement inclus)</span> </h2></Label>
+        <RadioGroupItem className='' value="3 Manches d'Elite" id="r1" />
+        <Label htmlFor="r1"><h2 className='text-xl font-light '>3 Manches d'Elite (Semi Blitz 2 minutes)</h2></Label>
       </div>
       <div className="flex items-center space-x-2">
-        <RadioGroupItem className='' value="Joueur local" id="r2" />
-        <Label htmlFor="r2"><h2 className='text-xl font-bold'>Joueur local (Cameroun) <span className='font-light'>-75 e(Repas et hébergement inclus)</span> </h2></Label>
+        <RadioGroupItem className='' value="2 Manches Blitz" id="r2" />
+        <Label htmlFor="r1"><h2 className='text-xl font-light '>2 Manches Blitz (1 minute)</h2></Label>
       </div>
-    
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem className='' value="1 Partie Originale Joker" id="r2" />
+        <Label htmlFor="r1"><h2 className='text-xl font-light '>1 Partie Originale Joker</h2></Label>
+      </div>
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem className='' value="1 Partie Originale" id="r2" />
+        <Label htmlFor="r1"><h2 className='text-xl font-light '>1 Partie Originale</h2></Label>
+      </div>
     </RadioGroup>
+    </div>
           </div>
+          <div className='w-full mx-12 mt-4'>
+          <div className="flex items-center space-x-2">
+      <Checkbox id="terms2" className='bg-gray-200 '/>
+      <label
+        htmlFor="terms2"
+        className="text-xl font-bold leading-none peer-disabled:opacity-70"
+      >
+      Classique
+      </label>
+    </div>
+    <div>
+    <RadioGroup  className='w-full mx-12 mt-4'>
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem className='' value="17 Rounds + Demi-finale (2 Manches gagnantes) + Finale (3 manches gagnantes)" id="r1" />
+        <Label htmlFor="r1"><h2 className='text-xl font-light '>17 Rounds + Demi-finale (2 Manches gagnantes) + Finale (3 manches gagnantes)</h2></Label>
+      </div>
+    </RadioGroup>
+    </div>
+          </div>
+        </section>
+        <Separator className='text-black w-full bg-black mt-12'/>
+        <section className='flex flex-col pt-8'>
+            <h2 className='font-bold text-3xl'>CONDITIONS</h2>
+            <div className='w-full mx-12 mt-4'>
+          <div className="flex items-start space-x-2">
+      <Checkbox id="terms2" className='bg-gray-200 '/>
+      <label
+        htmlFor="terms2"
+        className="text-xl leading-8 font-light peer-disabled:opacity-70"
+      >
+      Je déclare avoir pris connaissance des conditions de participation et des frais d’inscription?<br></br>
+
+et m’engage à respecter le règlement des Super Masters de Scrabble 2025.
+      </label>
+    </div>
+  
+          </div>
+        </section>
+        <Separator className='text-black w-full bg-black mt-12'/>
+        <section className='flex flex-col pt-8'>
+            <h2 className='font-bold text-3xl'>INFORMATIONS DE CONTACT DE L'ORGANISATION</h2>
         </section>
     </section>
   )
