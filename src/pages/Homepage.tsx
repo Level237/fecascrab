@@ -92,13 +92,13 @@ useEffect(() => {
         </div>
       </div>
         </div>}
-        {loading && <div className='grid max-sm:mx-6  mt-[-5rem] grid-cols-4'>
+        {loading && <div className='flex items-center gap-4 max-sm:gap-0 max-sm:mx-6 max-sm:grid max-sm:grid-cols-4  mt-[-5rem] '>
         <div className='flex gap-3 justify-center flex-col items-center'>
         <div className='flex gap-1 items-center flex-row'>
                 
                       {timeRemaining.jours && timeRemaining.jours.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>{el}</h2></div>)}
 
-                <div className='ml-2 max-sm:ml-0'>
+                <div className='ml-4 max-sm:ml-0'>
                   <h2 className='text-white font-bold text-2xl max-sm:text-xl'>:</h2>
                 </div>
         </div>
@@ -114,7 +114,7 @@ useEffect(() => {
                       {timeRemaining.heures?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>{el}</h2></div>)}
              
               
-                <div className='ml-2 max-sm:ml-1'>
+                <div className='ml-4 max-sm:ml-1'>
                   <h2 className='text-white font-bold text-2xl'>:</h2>
                 </div>
         </div>
@@ -128,7 +128,7 @@ useEffect(() => {
         {timeRemaining.minutes!==0  && timeRemaining.minutes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
               {timeRemaining.minutes?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>{el}</h2></div>)}
               
-                <div className='ml-2 max-sm:ml-1'>
+                <div className='ml-1 max-sm:ml-1'>
                   <h2 className='text-white font-bold text-2xl'>:</h2>
                 </div>
         </div>
