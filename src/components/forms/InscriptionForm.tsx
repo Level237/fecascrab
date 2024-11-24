@@ -16,20 +16,45 @@ import 'react-international-phone/style.css';
 import { Button } from '../ui/button'
 import { Separator } from '../ui/separator'
 import { Checkbox } from '../ui/checkbox'
+import useForm from '../../hooks/use-form'
 export default function InscriptionForm() {
   const [phone, setPhone] = useState('');
     const [birth]=useState("")
-   
+
+    const {
+      value:enterName,
+      hasError:NameError,
+      valueHandler:enteredNameHandler,
+      blurHandler:blurNameHandler,
+      reset:resetName,
+      valueIsValid:nameIsvalid
+    }=useForm((value:any)=>value.trim()!=="")
     console.log(birth)
+
+    const submitFormHandler=(event:any)=>{
+      event.preventDefault()
+      if(!nameIsvalid){
+          return;
+      }
+    }
+    const validClassName=NameError ? "border border-red-400" : ""
   return (
     <section className='mb-20'>
         <div className='mb-5'>
         <h2 className='font-bold text-3xl max-sm:text-xl'>INFORMATIONS PERSONNELLES</h2>
         </div>
-        <div className='mb-3'>
-            <Input placeholder='Nom et Prénom' className='py-8 rounded-xl px-6 placeholder:text-xl max-sm:placeholder:text-lg text-xl bg-gray-100 h-12'/>
+
+        <form action="">
+        <div className='mb-6'>
+            <Input placeholder='Nom et Prénom' 
+              value={enterName}
+              onChange={enteredNameHandler}
+              onBlur={blurNameHandler}
+            className={`py-8 rounded-xl px-6 placeholder:text-xl max-sm:placeholder:text-lg text-xl bg-gray-100 h-12 ${validClassName}`}/>
+            
         </div>
-        <div className='mb-3'>
+        {NameError && <p className="text-xs mt-[-10px] text-red-600">Ne peut pas etre vide</p>}
+        <div className='mb-5 mt-3'>
             <Input type='date'  min="1970-01-01" max="2002-01-01" placeholder='Date de naissance' className='py-8 rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 h-12'/>
         </div>
         <div className='mb-3'>
@@ -67,7 +92,11 @@ export default function InscriptionForm() {
       />
         </div>
         <div className='mb-3'>
-            <Input type='email'   placeholder='E-mail' className='py-8 rounded-xl max-sm:placeholder:text-lg px-6 placeholder:text-xl text-xl bg-gray-100 h-12'/>
+            <Input 
+            type='email'   
+            placeholder='E-mail'
+          
+            className='py-8 rounded-xl max-sm:placeholder:text-lg px-6 placeholder:text-xl text-xl bg-gray-100 h-12'/>
         </div>
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
@@ -184,6 +213,8 @@ question ou précision, veuillez contacter l’équipe de la FECASCRAB</h2>
         <section className='flex mt-10 justify-center items-center'>
                 <Button className='bg-red-600 text-white px-24 py-6 rounded-2xl'>VALIDER</Button>
         </section>
+        </form>
+        
 
        
     </section>

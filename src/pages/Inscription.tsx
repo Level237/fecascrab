@@ -2,13 +2,27 @@ import InscriptionForm from '../components/forms/InscriptionForm'
 import logo from "../assets/logo.png"
 import bgHome from "../assets/BG_Site.jpg"
 import logoOff from "../assets/logo-officiel.png"
+import { Skeleton } from '../components/ui/skeleton'
+import { useState } from 'react'
 export default function Inscription() {
+
+  const [imageLoad,setImageLoad]=useState(false)
+
+  const handleImageLoaded=()=>{
+    setImageLoad(true)
+    console.log('true')
+  }
   return (
     <section>
           <section className='flex flex-col gap-20 '>
       <div className='bg-blue-600 w-full h-44 flex justify-center items-center relative'>
                 <div className='absolute bottom-[-80px] z-50'>
-                    <img className='w-48 h-48' src={logoOff} alt="" />
+                 
+                 
+                    <img className='w-48 h-48 rounded-xl' src={logoOff} alt="logo fecascrab" onLoad={handleImageLoaded} />
+                </div>
+                <div className='absolute bottom-[-80px] z-50'>
+                {!imageLoad &&  <Skeleton className='w-48 h-48 bg-slate-50' />}
                 </div>
       </div>
 

@@ -71,8 +71,8 @@ export default function Email() {
           
         </Section>
         <Section style={buttonContainer}>
-          <Button style={button} href="https://linear.app">
-            Login to Linear
+          <Button style={button} href="https://fecascrab.com/">
+            Accueil
           </Button>
         </Section>
        
@@ -95,8 +95,7 @@ export default function Email() {
               margin: 0,
             }}
           >
-            © 2024 Google LLC 1600 Amphitheatre Parkway, Mountain View, CA
-            94043, USA
+            © 2024 fecascrab Bureau de la FECASCRAB, Douala, Cameroun
           </Text>
           <Text
             style={{
@@ -106,9 +105,7 @@ export default function Email() {
               margin: 0,
             }}
           >
-            You have received this mandatory email service announcement to
-            update you about important changes to your Google Play Developer
-            account.
+            
           </Text>
         </Section>
       </Container>
@@ -154,7 +151,7 @@ const buttonContainer = {
 };
 
 const button = {
-  backgroundColor: "#5e6ad2",
+  backgroundColor: "#E40808FF",
   borderRadius: "3px",
   fontWeight: "600",
   color: "#fff",
