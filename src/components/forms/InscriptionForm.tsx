@@ -1,8 +1,5 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Input } from '../ui/input'
-import { Calendar } from "../ui/calendar"
-import { CalendarIcon } from "lucide-react"
-import { cn } from "../../lib/utils"
 import {
     Select,
     SelectContent,
@@ -16,21 +13,13 @@ import {
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-  } from "../ui/popover"
-import { format } from "date-fns"
 import { Button } from '../ui/button'
 import { Separator } from '../ui/separator'
 import { Checkbox } from '../ui/checkbox'
 export default function InscriptionForm() {
   const [phone, setPhone] = useState('');
-    const [birth,setBirth]=useState("")
-    const onChangeDate=(e:any)=>{
-        setBirth(format(e,'PPP'))
-    }
+    const [birth]=useState("")
+   
     console.log(birth)
   return (
     <section className='mb-20'>

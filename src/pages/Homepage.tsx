@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Skeleton } from '../components/ui/skeleton';
 
 export default function Homepage() {
 
-  const [startDate,setStartDate]=useState(Date.now())
+  const [startDate]=useState(Date.now())
   const [loading,setLoading]=useState(false)
-  const [endDate,setEndDate]=useState('2025-03-12T10:00')
-  const [timeRemaining, setTimeRemaining] = useState({});
-  const calculerTempsRestant = (d1:any, d2:any) => {
+  const [endDate]=useState('2025-03-12T10:00')
+  const [timeRemaining, setTimeRemaining] = useState<{jours:number,heures:number,minutes:number,secondes:number}>( { jours: 0, heures: 0, minutes: 0, secondes: 0 });
+  const calculerTempsRestant = (d2:any) => {
     const now:any = new Date();
     const d2Date:any = new Date(d2);
     const diff = d2Date - now;
@@ -28,7 +28,7 @@ export default function Homepage() {
 
 useEffect(() => {
   const interval = setInterval(() => {
-      setTimeRemaining(calculerTempsRestant(startDate,endDate));
+      setTimeRemaining(calculerTempsRestant(endDate));
       setLoading(true)
   }, 1000);
 

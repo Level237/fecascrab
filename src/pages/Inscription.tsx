@@ -1,5 +1,5 @@
 import InscriptionForm from '../components/forms/InscriptionForm'
-import React from 'react'
+
 
 export default function Inscription() {
   return (
