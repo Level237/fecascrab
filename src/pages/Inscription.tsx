@@ -1,13 +1,14 @@
 import InscriptionForm from '../components/forms/InscriptionForm'
-
-
+import logo from "../assets/logo.png"
+import bgHome from "../assets/BG_Site.jpg"
+import logoOff from "../assets/logo-officiel.png"
 export default function Inscription() {
   return (
     <section>
           <section className='flex flex-col gap-20 '>
       <div className='bg-blue-600 w-full h-44 flex justify-center items-center relative'>
                 <div className='absolute bottom-[-80px] z-50'>
-                    <img className='w-48 h-48' src="/logo-officiel.png" alt="" />
+                    <img className='w-48 h-48' src={logoOff} alt="" />
                 </div>
       </div>
 
@@ -26,11 +27,11 @@ export default function Inscription() {
     </section>
     
     </section>
-    <section className='w-full h-48' style={{ background:"url('BG_Site.jpg')",backgroundPosition:"bottom",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} >
+    <section className='w-full h-48' style={{ background:`url(${bgHome})`,backgroundPosition:"bottom",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} >
 
 </section>
 <div className='w-full   flex justify-center items-center h-16 relative bg-[#107a5f]'>
-        <img className='w-20 absolute top-[-30px]' src="/logo.png" alt="" />
+        <img className='w-20 absolute top-[-30px]' src={logo} alt="" />
       </div>
     </section>
     

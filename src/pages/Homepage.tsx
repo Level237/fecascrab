@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button'
 import { useEffect, useState } from 'react'
 import { Skeleton } from '../components/ui/skeleton';
-
+import bgHome from "../assets/BG_Site.jpg"
+import logo from "../assets/logo.png"
+import logoScrab from "../assets/logo_fecascrab.png"
 export default function Homepage() {
 
   const [startDate]=useState(Date.now())
@@ -36,13 +38,13 @@ useEffect(() => {
 }, [startDate, endDate]);
 
   return (
-    <section style={{ background:"url('BG_Site.jpg')",backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
+    <section style={{ background:`url(${bgHome})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
     className='w-full bg-[#02abee] rounded-md relative h-[100%] justify-start pt-20 flex flex-col items-center'>
       <div>
         <h2 className='font-bold max-sm:text-center'>LA FEDERATION CAMEROUNAISE DE SCRABBLE ORGANISE LES</h2>
       </div>
       <div>
-        <img src="logo_fecascrab.png" alt="" className='w-[27rem] h-[28rem] mt-[-4rem]' />
+        <img src={logoScrab} alt="" className='w-[27rem] h-[28rem] mt-[-4rem]' />
       </div>
       {!loading && <div className='grid max-sm:mx-6  mt-[-5rem] gap-4 grid-cols-4'>
       <div className='flex gap-3 justify-center flex-col items-center'>
@@ -153,7 +155,7 @@ useEffect(() => {
           
       </div>
       <div className='w-full   flex justify-center items-center h-16 relative bg-[#107a5f]'>
-        <img className='w-20 absolute top-[-30px]' src="/logo.png" alt="" />
+        <img className='w-20 absolute top-[-30px]' src={logo} alt="" />
       </div>
     </section>
   )
