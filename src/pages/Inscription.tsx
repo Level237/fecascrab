@@ -4,6 +4,7 @@ import bgHome from "../assets/BG_Site.jpg"
 import logoOff from "../assets/logo-officiel.png"
 import { Skeleton } from '../components/ui/skeleton'
 import { useState } from 'react'
+import { Helmet } from 'react-helmet'
 export default function Inscription() {
 
   const [imageLoad,setImageLoad]=useState(false)
@@ -13,6 +14,16 @@ export default function Inscription() {
     console.log('true')
   }
   return (
+    <>
+    <Helmet>
+      <title>FecaScrab - Inscription</title>
+      <link rel="icon" type="image/svg+xml" href={logo} />
+      <meta name='description' content='Féderation Camerounaise de Scrabble'/>
+      <meta name='keywords' content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
+      <meta property="og:title" content="FecaScrab - Féderation Camerounaise de Scrabble" />
+      <meta property="og:url" content="fecascrab.com/inscription" />
+      <meta property="og:image" content={logoOff} />
+    </Helmet>
     <section>
           <section className='flex flex-col gap-20 '>
       <div className='bg-blue-600 w-full h-44 flex justify-center items-center relative'>
@@ -48,6 +59,8 @@ export default function Inscription() {
         <img className='w-20 absolute top-[-30px]' src={logo} alt="" />
       </div>
     </section>
+    </>
+
     
   )
 }
