@@ -1,6 +1,7 @@
 import Inscription from "../pages/Inscription";
 import Homepage from "../pages/Homepage";
 import { createBrowserRouter } from "react-router-dom";
+import ConfirmPage from "../pages/ConfirmPage";
 
 export const routes=createBrowserRouter([{
     path:'/',
@@ -8,6 +9,9 @@ export const routes=createBrowserRouter([{
 },{
     path:'/inscription',
     element:<Inscription/>
+},{
+    path:'/confirm',
+    element:<ConfirmPage/>
 }
 
 ])
