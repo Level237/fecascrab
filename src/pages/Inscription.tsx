@@ -4,7 +4,7 @@ import bgHome from "../assets/BG_Site.jpg"
 import logoOff from "../assets/logo-officiel.png"
 import { Skeleton } from '../components/ui/skeleton'
 import { useState } from 'react'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 export default function Inscription() {
 
   const [imageLoad,setImageLoad]=useState(false)

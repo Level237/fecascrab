@@ -1,29 +1,6 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { Input } from '../ui/input'
-import { cn } from "../../lib/utils"
-
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "../../components/ui/command"
-import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectLabel,
-    SelectTrigger,
-    SelectValue,
-  } from "../ui/select"
-  import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-  } from "../../components/ui/popover"
+// @ts-ignore
   import { useCountries } from 'use-react-countries'
   import { Label } from "../ui/label"
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
@@ -33,21 +10,18 @@ import { Button } from '../ui/button'
 import { Separator } from '../ui/separator'
 import { Checkbox } from '../ui/checkbox'
 import useForm from '../../hooks/use-form'
-import WelcomeInscription from '../../emails/Welcome';
-import { sendEmail } from '../../lib/sendEmail';
 import emailjs from 'emailjs-com';
-import { Check, ChevronsUpDown } from 'lucide-react'
+
 import { useNavigate } from 'react-router-dom'
 export default function InscriptionForm() {
   const { countries } = useCountries()
-  const [confirm,setConfirm]=useState(false)
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false)
   const [value, setValue] = useState("")
-  const [nationality,setNationality]=useState("")
+
   const [category,setCategory]=useState("")
   const [checkedItems, setCheckedItems] = useState([]);
-  const [radioSelections, setRadioSelections] = useState({});
+  const [radioSelections,setRadioSelections] = useState("");
   const [radioSelections1, setRadioSelections1] = useState({});
   const navigate=useNavigate()
   const options = [
@@ -64,8 +38,6 @@ export default function InscriptionForm() {
       hasError:NameError,
       valueHandler:enteredNameHandler,
       blurHandler:blurNameHandler,
-      reset:resetName,
-      valueIsValid:nameIsvalid
     }=useForm((value:any)=>value.trim()!=="")
     const handleCheckboxChange = (label:any) => {
       setCheckedItems((prev:any) => {
@@ -73,35 +45,26 @@ export default function InscriptionForm() {
           return prev.filter((item:any) => item !== label); // Décocher
         } else {
           return [...prev, label]; // Cocher
-          console.log('dd')
+          console.log(radioSelections,category,value,confirm)
         }
       });
       
     };
     const {
       value:enterBirth,
-      hasError:birthError,
       valueHandler:enteredBirthHandler,
       blurHandler:blurBirthHandler,
-      reset:resetBirth,
-      valueIsValid:BirthIsvalid
     }=useForm((value:any)=>value.trim()!=="")
-    const form = useRef();
   
     const {
       value:enterEmail,
       hasError:emailError,
       valueHandler:enteredEmailHandler,
       blurHandler:blurEmailHandler,
-      reset:resetEmail,
-      valueIsValid:EmailIsvalid
     }=useForm((value:any)=>value.trim()!=="")
 
-    const enteredNationalityHandler=(value:string)=>{
-          setNationality(value)
-          console.log(value)
-    }
-    const handleRadioChange = (value:any) => {
+    
+    const handleRadioChange = (value:string) => {
       setRadioSelections(value);
     };
 
@@ -127,7 +90,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
       emailjs.sendForm(SERVICE_ID,TEMPLATE_ID,e.target,PUBLIC_KEY).then((result:any) => {
         console.log(result.text);
         setLoading(false)
-        setConfirm(true)
+
         navigate("/confirm")
         //alert('Message Sent Successfully')
       }, (error:any) => {
@@ -136,6 +99,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
       });
       //sendEmail()
     }
+    console.log(checkedItems)
     const validClassName=NameError ? "border border-red-400" : ""
     const validClassEmail=emailError ? "border border-red-400" : ""
   return (
@@ -249,7 +213,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
             name="checkedItems"
             value={option.label}
           key={option.id}
-          checked={checkedItems.includes(option.label)}
+         
           onCheckedChange={() => handleCheckboxChange(option.label)}
           className="text-xl max-sm:text-lg font-bold leading-none peer-disabled:opacity-70"
         />

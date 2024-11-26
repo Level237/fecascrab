@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import logo from "../assets/logo.png"
 import bgHome from "../assets/BG_Site.jpg"
 import logoOff from "../assets/logo-officiel.png"
 import { Skeleton } from '../components/ui/skeleton'
-import { LucideArrowUpLeftFromSquare, Terminal } from "lucide-react"
+import { LucideArrowUpLeftFromSquare} from "lucide-react"
  
 import {
   Alert,
