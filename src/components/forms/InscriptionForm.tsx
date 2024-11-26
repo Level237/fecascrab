@@ -21,8 +21,6 @@ export default function InscriptionForm() {
   const countriesSort=countries.sort((a:any, b:any) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
   const [category,setCategory]=useState("")
   const [checkedItems, setCheckedItems] = useState([]);
-  const [radioSelections,setRadioSelections] = useState("");
-  const [radioSelections1, setRadioSelections1] = useState({});
   const navigate=useNavigate()
   const options = [
     { id: 1, label: 'Duplicate Mix',
@@ -45,7 +43,7 @@ export default function InscriptionForm() {
           return prev.filter((item:any) => item !== label); // Décocher
         } else {
           return [...prev, label]; // Cocher
-          console.log(radioSelections,category,value,confirm)
+          console.log(category,value,confirm)
         }
       });
     };
@@ -62,16 +60,6 @@ export default function InscriptionForm() {
       blurHandler:blurEmailHandler,
     }=useForm((value:any)=>value.trim()!=="")
 
-    
-    const handleRadioChange = (value:string) => {
-      setRadioSelections(value);
-    };
-
-    const handleRadioChange1 = (value:any) => {
-      setRadioSelections1(value);
-    };
-
-    console.log(radioSelections1)
     console.log(checkedItems)
     const enteredCategoryHandler=(value:string)=>{
         setCategory(value)

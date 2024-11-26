@@ -52,7 +52,7 @@ useEffect(() => {
       <meta property="og:title" content="FecaScrab - Féderation Camerounaise de Scrabble" />
       <meta property="og:url" content="fecascrab.com" />
       <meta property="og:image" content={logo} />
-      <meta property="og:image:secure_url" content={logo} />
+      <meta property="og:image:secure_url" content={bgHome} />
             <meta property="og:image:type" content="image/jpeg" />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
@@ -60,7 +60,8 @@ useEffect(() => {
             <meta name="twitter:creator" content="fecascrab" />
             <meta name="twitter:card" content="Féderation Camerounaise de Scrabble" />
             <meta name="twitter:title" content="Féderation Camerounaise de Scrabble" />
-            <meta name="twitter:image" content={logo} />
+            <meta name="twitter:site" content="https://fecascrab.com" />
+            <meta name="twitter:image" content={bgHome} />
             <meta name="twitter:description" content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
     </Helmet>
     <section style={{ background:`url(${bgHome})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
