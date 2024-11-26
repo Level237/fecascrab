@@ -95,7 +95,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
   return (
     <section className='mb-20'>
         <div className='mb-5'>
-        <h2 className='font-bold title-font text-4xl max-sm:text-xl'>INFORMATIONS PERSONNELLES <span className='text-[#f00] title-font'>[*]</span></h2>
+        <h2 className='font-bold title-font text-4xl max-sm:text-2xl'>INFORMATIONS PERSONNELLES <span className='text-[#f00] title-font'>[*]</span></h2>
         </div>
 
         <form  onSubmit={submitFormHandler} action="">
@@ -106,7 +106,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
               value={enterName}
               onChange={enteredNameHandler}
               onBlur={blurNameHandler}
-            className={`py-8 rounded-xl title-second px-6 placeholder:text-xl placeholder:title-second max-sm:placeholder:text-lg text-xl bg-gray-100 h-12 ${validClassName}`}/>
+            className={`py-8 rounded-xl title-second px-6 placeholder:text-xl  placeholder:title-second max-sm:placeholder:text-md text-xl bg-gray-100 h-12 ${validClassName}`}/>
             
         </div>
         {NameError && <p className="text-xs title-second mt-[-10px] text-red-600">Ne peut pas etre vide</p>}
@@ -126,9 +126,9 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         <div className="flex">
      <label  className="sr-only title-second">Nationalité</label>
      <select name='nationality' onChange={(e)=>setValue(e.target.value)} id="states" className="bg-gray-100 h-12 py-2 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-         <option className='title-second' selected>Nationalité</option>
+         <option className='title-second ' selected>Nationalité</option>
          {countriesSort.map((country:any)=>(
-               <option className='title-second' value={country.name}>{country.name} {country.emoji}</option>
+               <option className='title-second max:sm:text-2xl' value={country.name}>{country.name} {country.emoji}</option>
          ))}
      </select>
  </div>
@@ -167,7 +167,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
           <div>
-          <h2 className='font-bold title-font text-4xl max-sm:text-xl'>PARTICIPATION AU TOURNOI <span className='text-[#f00]'>[*]</span></h2>
+          <h2 className='font-bold title-font text-4xl max-sm:text-2xl'>PARTICIPATION AU TOURNOI <span className='text-[#f00]'>[*]</span></h2>
           </div>
           <div>
             <h2 className='mx-5  max-sm:mt-6 text-xl max-sm:text-md italic title-italic'>Catégorie d'inscription(cochez une option):</h2>
@@ -189,10 +189,10 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
           <div>
-          <h2 className='font-bold title-font max-sm:text-xl text-4xl'>COMPÉTITION <span className='text-[#f00]'>[*]</span></h2>
+          <h2 className='font-bold title-font max-sm:text-2xl text-4xl'>COMPÉTITION <span className='text-[#f00]'>[*]</span></h2>
           </div>
           <div>
-            <h2 className='mx-5 title-italic max-sm:text-md text-xl italic'>Type de compétition choisie(cochez une ou plusieurs option):</h2>
+            <h2 className='mx-5 title-italic max-sm:text-md max-sm:w-full text-xl italic'>Type de compétition choisie(cochez une ou plusieurs option):</h2>
           </div>
           <div className='w-full mx-12 max-sm:mx-2 max-sm:mt-8 mt-4'>
           <div className="flex items-center">
@@ -241,7 +241,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         </section>
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
-            <h2 className='font-bold title-font max-sm:text-xl text-4xl'>CONDITIONS <span className='text-[#f00]'>[*]</span></h2>
+            <h2 className='font-bold title-font max-sm:text-2xl text-4xl'>CONDITIONS <span className='text-[#f00]'>[*]</span></h2>
             <div className='w-full mx-12 max-sm:mx-2 mt-4'>
           <div className="flex items-start space-x-2">
       <Checkbox required  className='bg-gray-200 '/>
@@ -259,13 +259,13 @@ et m’engage à respecter le règlement des Super Masters de Scrabble 2025.
         </section>
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
-            <h2 className='font-bold title-font max-sm:text-xl text-4xl'>INFORMATIONS DE CONTACT DE L'ORGANISATION</h2>
-            <div className='w-full mx-12 max-sm:mx-2 mt-4'>
-                <h2 className='mx-5 title-medium text-xl'>Pour toute
+            <h2 className='font-bold title-font max-sm:text-2xl text-4xl'>INFORMATIONS DE CONTACT DE L'ORGANISATION</h2>
+            <div className='w-full max-sm:text-md mx-12 max-sm:mx-2 mt-4'>
+                <h2 className='mx-5 title-medium max-sm:text-md text-xl'>Pour toute
 question ou précision, veuillez contacter l’équipe de la FECASCRAB</h2>
             </div>
             <div className='w-full flex flex-col gap-3 mx-24 max-sm:mx-3 mt-6'>
-              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl title-bold font-bold '>Téléphone : <span className='font-light title-medium'>(+33) 758 641 042 / (+237) 699 804 338</span> </h2></div>
+              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl max-sm:text-md title-bold font-bold '>Téléphone : <span className='font-light title-medium'>(+33) 758 641 042 / (+237) 699 804 338</span> </h2></div>
               <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl title-bold font-bold '>Email : <span className='font-light title-medium'>assomo.scrabble@gmail.com</span> </h2></div>
               <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl title-bold font-bold '>Adresse : <span className='font-light title-medium'>Bureau de la FECASCRAB, Douala, Cameroun</span> </h2></div>
             </div>

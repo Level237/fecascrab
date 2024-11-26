@@ -4,9 +4,9 @@ export default function Loader() {
   return (
     <div className="flex items-center bg-[#02abee] justify-center h-screen">
   <div className="flex space-x-2">
-    <div className="h-4 w-4 bg-green-800 rounded-full animate-bounce"></div>
-    <div className="h-4 w-4 bg-red-600 rounded-full animate-bounce200"></div>
-    <div className="h-4 w-4 bg-yellow-400 rounded-full animate-bounce400"></div>
+    <div className="h-4 w-4  text-white font-bold bg-green-800 p-6 flex items-center justify-center rounded-full animate-bounce">A</div>
+    <div className="h-4 w-4 text-white font-bold bg-red-600 p-6 flex items-center justify-center rounded-full animate-bounce200">B</div>
+    <div className="h-4 w-4 text-white font-bold p-6 flex items-center justify-center bg-yellow-400 rounded-full animate-bounce400">C</div>
   </div>
 </div>
   

@@ -54,10 +54,10 @@ export default function Inscription() {
 
     <section className='flex flex-col items-center justify-center'>
             <div>
-                <h2 className='font-bold title-font text-center text-5xl max-sm:text-xl'>FICHE D’INSCRIPTION AUX SUPER MASTERS <br /> DE SCRABBLE 2025</h2>
+                <h2 className='font-bold title-font text-center text-5xl max-sm:text-2xl'>FICHE D’INSCRIPTION AUX SUPER MASTERS <br /> DE SCRABBLE 2025</h2>
             </div>
             <div className='mt-7'>
-                <h2 className='font-bold title-font text-center text-3xl max-sm:text-md'>DATES: DU 12 au 16 mars 2025 <span className='text-sky-400 text-4xl'>&#x2022;</span> EDITIONS:DUPLICATE ET CLASSIQUE <br />LIEU:DOUALA-CAMEROUN</h2>
+                <h2 className='font-bold title-font text-center max-sm:text-xl text-3xl max-sm:text-md'>DATES: DU 12 au 16 mars 2025 <span className='text-sky-400 text-4xl max-sm:text-2xl'>&#x2022;</span> EDITIONS:DUPLICATE ET CLASSIQUE <br />LIEU:DOUALA-CAMEROUN</h2>
             </div>
 
     </section>
