@@ -133,7 +133,7 @@ useEffect(() => {
                 </div>
         </div>
         <div>
-          <h2 className='text-md max-sm:text-sm font-bold text-white'>JOURS</h2>
+          <h2 className='text-md title-bold max-sm:text-sm font-bold text-white'>JOURS</h2>
         </div>
         </div>
        
@@ -149,7 +149,7 @@ useEffect(() => {
                 </div>
         </div>
         <div>
-          <h2 className='text-md max-sm:text-sm font-bold text-white'>HEURES</h2>
+          <h2 className='text-md title-bold max-sm:text-sm font-bold text-white'>HEURES</h2>
         </div>
         </div>
         <div className='flex gap-3 max-sm:ml-7 justify-center flex-col items-center'>
@@ -163,7 +163,7 @@ useEffect(() => {
                 </div>
         </div>
         <div>
-          <h2 className='text-md max-sm:text-sm font-bold text-white'>MINUTES</h2>
+          <h2 className='text-md title-bold max-sm:text-sm font-bold text-white'>MINUTES</h2>
         </div>
         </div>
         <div className='flex gap-3 justify-center max-sm:ml-5 flex-col items-center'>
@@ -173,7 +173,7 @@ useEffect(() => {
         {timeRemaining.secondes?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>{el}</h2></div>)}
         </div>
         <div>
-          <h2  className='text-md max-sm:text-sm font-bold text-white'>SECONDES</h2>
+          <h2  className='text-md title-bold max-sm:text-sm font-bold text-white'>SECONDES</h2>
         </div>
         </div>
       </div>}
