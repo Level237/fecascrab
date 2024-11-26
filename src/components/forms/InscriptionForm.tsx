@@ -18,7 +18,7 @@ export default function InscriptionForm() {
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false)
   const [value, setValue] = useState("")
-
+  const countriesSort=countries.sort((a:any, b:any) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
   const [category,setCategory]=useState("")
   const [checkedItems, setCheckedItems] = useState([]);
   const [radioSelections,setRadioSelections] = useState("");
@@ -48,7 +48,6 @@ export default function InscriptionForm() {
           console.log(radioSelections,category,value,confirm)
         }
       });
-      
     };
     const {
       value:enterBirth,
@@ -135,7 +134,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
      <label  className="sr-only">Nationalité</label>
      <select name='nationality' onChange={(e)=>setValue(e.target.value)} id="states" className="bg-gray-100 h-12 py-2 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
          <option selected>Nationalité</option>
-         {countries.map((country:any)=>(
+         {countriesSort.map((country:any)=>(
                <option value={country.name}>{country.name} {country.emoji}</option>
          ))}
      </select>

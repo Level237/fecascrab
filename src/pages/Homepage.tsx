@@ -43,6 +43,7 @@ useEffect(() => {
     <Helmet>
       <title>FecaScrab - Féderation Camerounaise de Scrabble</title>
       <link rel="icon" type="image/svg+xml" href={logo} />
+      <meta name="robots" content="index, follow" />
       <link rel='canonical' href={ window.location.href } />
       <meta name='description' content='Féderation Camerounaise de Scrabble'/>
       <meta name='keywords' content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
@@ -53,11 +54,13 @@ useEffect(() => {
       <meta property="og:image" content={logo} />
       <meta property="og:image:secure_url" content={logo} />
             <meta property="og:image:type" content="image/jpeg" />
-            <meta property="og:image:width" content="200" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
             <meta property="og:image:alt" content={`Logo site`} />
             <meta name="twitter:creator" content="fecascrab" />
-            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:card" content="Féderation Camerounaise de Scrabble" />
             <meta name="twitter:title" content="Féderation Camerounaise de Scrabble" />
+            <meta name="twitter:image" content={logo} />
             <meta name="twitter:description" content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
     </Helmet>
     <section style={{ background:`url(${bgHome})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
