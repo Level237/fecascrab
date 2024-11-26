@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button'
 import { useEffect, useState } from 'react'
+import "../components/forms/inscription.css"
 import { Skeleton } from '../components/ui/skeleton';
 import bgHome from "../assets/BG_Site.jpg"
 import logo from "../assets/logo.png"
@@ -38,6 +39,7 @@ useEffect(() => {
   return () => clearInterval(interval);
 }, [startDate, endDate]);
 
+
   return (
     <>
     <Helmet>
@@ -67,7 +69,7 @@ useEffect(() => {
     <section style={{ background:`url(${bgHome})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
     className='w-full bg-[#02abee] rounded-md relative h-[100%] justify-start pt-20 flex flex-col items-center'>
       <div>
-        <h2 className='font-bold max-sm:text-center'>LA FEDERATION CAMEROUNAISE DE SCRABBLE ORGANISE LES</h2>
+        <h2 className='font-bold title-bold max-sm:text-center'>LA FEDERATION CAMEROUNAISE DE SCRABBLE ORGANISE LES</h2>
       </div>
       <div>
         <img src={logoScrab} alt="" className='w-[27rem] h-[28rem] mt-[-4rem]' />
@@ -82,7 +84,7 @@ useEffect(() => {
                 </div>
       </div>
       <div>
-          <h2 className='text-md font-bold text-white'>JOURS</h2>
+          <h2 className='text-md title-bold font-bold text-white'>JOURS</h2>
         </div>
       </div>
       <div className='flex gap-3 justify-center flex-col items-center'>
@@ -94,7 +96,7 @@ useEffect(() => {
                 </div>
       </div>
       <div>
-          <h2 className='text-md font-bold text-white'>Heures</h2>
+          <h2 className='text-md title-bold font-bold text-white'>Heures</h2>
         </div>
       </div>
       <div className='flex gap-3 justify-center flex-col items-center'>
@@ -106,7 +108,7 @@ useEffect(() => {
                 </div>
       </div>
       <div>
-          <h2 className='text-md font-bold text-white'>Minutes</h2>
+          <h2 className='text-md title-bold  text-white'>Minutes</h2>
         </div>
       </div>
       <div className='flex gap-3 justify-center flex-col items-center'>
@@ -116,7 +118,7 @@ useEffect(() => {
         
       </div>
       <div>
-          <h2 className='text-md font-bold text-white'>Secondes</h2>
+          <h2 className='text-md title-bold text-white'>Secondes</h2>
         </div>
       </div>
         </div>}
@@ -177,7 +179,7 @@ useEffect(() => {
       </div>}
       
       <div className='mt-8 mb-24'>
-        <Link to="/inscription"><Button className='bg-red-700 px-16 text-sm py-6 text-white'>S'INSCRIRE</Button></Link>
+        <Link to="/inscription"><Button className='bg-red-700 title-bold px-16 text-sm py-6 text-white'>S'INSCRIRE</Button></Link>
           
       </div>
       <div className='w-full   flex justify-center items-center h-16 relative bg-[#107a5f]'>

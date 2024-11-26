@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Input } from '../ui/input'
+
 // @ts-ignore
   import { useCountries } from 'use-react-countries'
   import { Label } from "../ui/label"
@@ -13,6 +14,7 @@ import useForm from '../../hooks/use-form'
 import emailjs from 'emailjs-com';
 
 import { useNavigate } from 'react-router-dom'
+import styled from 'styled-components'
 export default function InscriptionForm() {
   const { countries } = useCountries()
   const [phone, setPhone] = useState('');
@@ -89,10 +91,11 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
     console.log(checkedItems)
     const validClassName=NameError ? "border border-red-400" : ""
     const validClassEmail=emailError ? "border border-red-400" : ""
+
   return (
     <section className='mb-20'>
         <div className='mb-5'>
-        <h2 className='font-bold text-3xl max-sm:text-xl'>INFORMATIONS PERSONNELLES <span className='text-[#f00]'>[*]</span></h2>
+        <h2 className='font-bold title-font text-4xl max-sm:text-xl'>INFORMATIONS PERSONNELLES <span className='text-[#f00] title-font'>[*]</span></h2>
         </div>
 
         <form  onSubmit={submitFormHandler} action="">
@@ -103,10 +106,10 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
               value={enterName}
               onChange={enteredNameHandler}
               onBlur={blurNameHandler}
-            className={`py-8 rounded-xl px-6 placeholder:text-xl max-sm:placeholder:text-lg text-xl bg-gray-100 h-12 ${validClassName}`}/>
+            className={`py-8 rounded-xl title-second px-6 placeholder:text-xl placeholder:title-second max-sm:placeholder:text-lg text-xl bg-gray-100 h-12 ${validClassName}`}/>
             
         </div>
-        {NameError && <p className="text-xs mt-[-10px] text-red-600">Ne peut pas etre vide</p>}
+        {NameError && <p className="text-xs title-second mt-[-10px] text-red-600">Ne peut pas etre vide</p>}
         <div className='mb-5 mt-3'>
             <Input 
             required
@@ -117,15 +120,15 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
             value={enterBirth}
             onChange={enteredBirthHandler}
             onBlur={blurBirthHandler}
-            placeholder='Date de naissance' className='py-8 rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 h-12'/>
+            placeholder='Date de naissance' className='py-8 title-second rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 h-12'/>
         </div>
         <div className='mb-3'>
         <div className="flex">
-     <label  className="sr-only">Nationalité</label>
+     <label  className="sr-only title-second">Nationalité</label>
      <select name='nationality' onChange={(e)=>setValue(e.target.value)} id="states" className="bg-gray-100 h-12 py-2 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-         <option selected>Nationalité</option>
+         <option className='title-second' selected>Nationalité</option>
          {countriesSort.map((country:any)=>(
-               <option value={country.name}>{country.name} {country.emoji}</option>
+               <option className='title-second' value={country.name}>{country.name} {country.emoji}</option>
          ))}
      </select>
  </div>
@@ -137,13 +140,13 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         defaultCountry="cm"
         placeholder='Phone number'
         countrySelectorStyleProps={{ 
-          className:"flex justify-center items-center py-8 rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 mr-2 border-transparent h-12"
+          className:"flex title-second justify-center items-center py-8 rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 mr-2 border-transparent h-12"
          }}
         value={phone}
        
         inputProps={{ 
           required:true,
-          className:" w-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring flex justify-center items-center py-8 rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 h-12"
+          className:" w-full text-second focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring flex justify-center items-center py-8 rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 h-12"
          }}
         
         onChange={(phone) => setPhone(phone) }
@@ -157,27 +160,27 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
             value={enterEmail}
             onChange={enteredEmailHandler}
             onBlur={blurEmailHandler}
-            className={`py-8 rounded-xl ${validClassEmail} max-sm:placeholder:text-lg px-6 placeholder:text-xl text-xl bg-gray-100 h-12`}/>
+            className={`py-8 rounded-xl title-second ${validClassEmail} max-sm:placeholder:text-lg px-6 placeholder:text-xl text-xl bg-gray-100 h-12`}/>
             
         </div>
-        {emailError && <p className="text-xs mt-[10px] text-red-600">Ne peut pas etre vide</p>}
+        {emailError && <p className="text-xs title-second mt-[10px] text-red-600">Ne peut pas etre vide</p>}
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
           <div>
-          <h2 className='font-bold text-3xl max-sm:text-xl'>PARTICIPATION AU TOURNOI <span className='text-[#f00]'>[*]</span></h2>
+          <h2 className='font-bold title-font text-4xl max-sm:text-xl'>PARTICIPATION AU TOURNOI <span className='text-[#f00]'>[*]</span></h2>
           </div>
           <div>
-            <h2 className='mx-5 max-sm:mt-6 text-xl max-sm:text-md italic'>Catégorie d'inscription(cochez une option):</h2>
+            <h2 className='mx-5  max-sm:mt-6 text-xl max-sm:text-md italic title-italic'>Catégorie d'inscription(cochez une option):</h2>
           </div>
           <div>
           <RadioGroup name='category' onValueChange={enteredCategoryHandler}   defaultValue="comfortable" className='w-full mx-12 max-sm:mx-2 max-sm:mt-6 mt-4'>
       <div className="flex items-center space-x-2">
         <RadioGroupItem className='' value="Joueur étranger" id="r1" />
-        <Label htmlFor="r1"><h2 className='text-xl max-sm:text-lg font-bold '>Joueur étranger <span className='font-light'>-150€ (Repas et hébergement inclus)</span> </h2></Label>
+        <Label htmlFor="r1"><h2 className='text-xl title-bold max-sm:text-lg font-bold '>Joueur étranger <span className='font-light title-medium'>-150€ (Repas et hébergement inclus)</span> </h2></Label>
       </div>
       <div className="flex items-center space-x-2">
         <RadioGroupItem className='' value="Joueur local" id="r2" />
-        <Label htmlFor="r2"><h2 className='text-xl max-sm:text-lg font-bold'>Joueur local (Cameroun) <span className='font-light'>-75€(Repas et hébergement inclus)</span> </h2></Label>
+        <Label htmlFor="r2"><h2 className='text-xl title-bold max-sm:text-lg font-bold'>Joueur local (Cameroun) <span className='font-light title-medium'>-75€(Repas et hébergement inclus)</span> </h2></Label>
       </div>
     
     </RadioGroup>
@@ -186,10 +189,10 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
           <div>
-          <h2 className='font-bold max-sm:text-xl text-3xl'>COMPÉTITION <span className='text-[#f00]'>[*]</span></h2>
+          <h2 className='font-bold title-font max-sm:text-xl text-4xl'>COMPÉTITION <span className='text-[#f00]'>[*]</span></h2>
           </div>
           <div>
-            <h2 className='mx-5 max-sm:text-md text-xl italic'>Type de compétition choisie(cochez une ou plusieurs option):</h2>
+            <h2 className='mx-5 title-italic max-sm:text-md text-xl italic'>Type de compétition choisie(cochez une ou plusieurs option):</h2>
           </div>
           <div className='w-full mx-12 max-sm:mx-2 max-sm:mt-8 mt-4'>
           <div className="flex items-center">
@@ -210,15 +213,15 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
           
           
         
-       <label  className="text-xl max-sm:text-lg font-bold leading-none peer-disabled:opacity-70" htmlFor={option.label}>{option.label}</label>
+       <label  className="text-xl title-bold max-sm:text-lg font-bold leading-none peer-disabled:opacity-70" htmlFor={option.label}>{option.label}</label>
             </div>
 
             <div>
-            <div className='w-full flex flex-col gap-1 mx-12 max-sm:mx-3 mt-2'>
+            <div className='w-full title-second flex flex-col gap-1 mx-12 max-sm:mx-3 mt-2'>
               {option.subChoice &&  option?.subChoice.map((c:any)=>
               
               
-              <div className='flex items-center justify-start gap-2'>&#9711; <span className='text-lg max-sm:text-lg font-light '>{c.choice}</span></div>
+              <div className='flex items-center justify-start gap-2'>&#9711; <span className='text-lg title-medium max-sm:text-lg font-light '>{c.choice}</span></div>
             
             
             )}
@@ -238,13 +241,13 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         </section>
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
-            <h2 className='font-bold max-sm:text-xl text-3xl'>CONDITIONS <span className='text-[#f00]'>[*]</span></h2>
+            <h2 className='font-bold title-font max-sm:text-xl text-4xl'>CONDITIONS <span className='text-[#f00]'>[*]</span></h2>
             <div className='w-full mx-12 max-sm:mx-2 mt-4'>
           <div className="flex items-start space-x-2">
       <Checkbox required  className='bg-gray-200 '/>
       <label
         htmlFor="terms2"
-        className="text-xl max-sm:text-lg leading-8 font-light peer-disabled:opacity-70"
+        className="text-xl title-medium max-sm:text-lg font-light "
       >
       Je déclare avoir pris connaissance des conditions de participation et des frais d’inscription?<br></br>
 
@@ -256,19 +259,19 @@ et m’engage à respecter le règlement des Super Masters de Scrabble 2025.
         </section>
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
-            <h2 className='font-bold max-sm:text-xl text-3xl'>INFORMATIONS DE CONTACT DE L'ORGANISATION</h2>
+            <h2 className='font-bold title-font max-sm:text-xl text-4xl'>INFORMATIONS DE CONTACT DE L'ORGANISATION</h2>
             <div className='w-full mx-12 max-sm:mx-2 mt-4'>
-                <h2 className='mx-5 text-xl font-light'>Pour toute
+                <h2 className='mx-5 title-medium text-xl'>Pour toute
 question ou précision, veuillez contacter l’équipe de la FECASCRAB</h2>
             </div>
             <div className='w-full flex flex-col gap-3 mx-24 max-sm:mx-3 mt-6'>
-              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl font-bold '>Téléphone : <span className='font-light'>(+33) 758 641 042 / (+237) 699 804 338</span> </h2></div>
-              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl font-bold '>Email : <span className='font-light'>assomo.scrabble@gmail.com</span> </h2></div>
-              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl font-bold '>Adresse : <span className='font-light'>Bureau de la FECASCRAB, Douala, Cameroun</span> </h2></div>
+              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl title-bold font-bold '>Téléphone : <span className='font-light title-medium'>(+33) 758 641 042 / (+237) 699 804 338</span> </h2></div>
+              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl title-bold font-bold '>Email : <span className='font-light title-medium'>assomo.scrabble@gmail.com</span> </h2></div>
+              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl title-bold font-bold '>Adresse : <span className='font-light title-medium'>Bureau de la FECASCRAB, Douala, Cameroun</span> </h2></div>
             </div>
         </section>
         <section className='flex mt-10 justify-center items-center'>
-                <Button disabled={loading} type='submit' className='bg-red-600 text-white px-24 py-6 rounded-2xl'>VALIDER {loading && <div role="status">
+                <Button disabled={loading} type='submit' className='bg-red-600 title-bold text-white px-24 py-6 rounded-2xl'>VALIDER {loading && <div role="status">
             <svg aria-hidden="true" className="inline w-4 h-4 text-gray-200 animate-spin  fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
                 <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>

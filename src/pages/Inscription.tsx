@@ -5,6 +5,7 @@ import logoOff from "../assets/logo-officiel.png"
 import { Skeleton } from '../components/ui/skeleton'
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
+import '../components/forms/inscription.css'
 export default function Inscription() {
 
   const [imageLoad,setImageLoad]=useState(false)
@@ -26,7 +27,7 @@ export default function Inscription() {
     </Helmet>
     <section>
           <section className='flex flex-col gap-20 '>
-      <div className='bg-blue-600 w-full h-44 flex justify-center items-center relative'>
+      <div className='bg-sky-400 w-full h-44 flex justify-center items-center relative'>
                 <div className='absolute bottom-[-80px] z-50'>
                  
                  
@@ -39,10 +40,10 @@ export default function Inscription() {
 
     <section className='flex flex-col items-center justify-center'>
             <div>
-                <h2 className='font-bold text-center text-3xl max-sm:text-xl'>FICHE D’INSCRIPTION AUX SUPER MASTERS <br /> DE SCRABBLE 2025</h2>
+                <h2 className='font-bold title-font text-center text-5xl max-sm:text-xl'>FICHE D’INSCRIPTION AUX SUPER MASTERS <br /> DE SCRABBLE 2025</h2>
             </div>
             <div className='mt-7'>
-                <h2 className='font-bold text-center text-xl max-sm:text-md'>DATES: DU 12 au 16 mars 2025 &#x2022; EDITIONS:DUPLICATE ET CLASSIQUE <br />LIEU:DOUALA-CAMEROUN</h2>
+                <h2 className='font-bold title-font text-center text-3xl max-sm:text-md'>DATES: DU 12 au 16 mars 2025 <span className='text-sky-400 text-4xl'>&#x2022;</span> EDITIONS:DUPLICATE ET CLASSIQUE <br />LIEU:DOUALA-CAMEROUN</h2>
             </div>
 
     </section>
