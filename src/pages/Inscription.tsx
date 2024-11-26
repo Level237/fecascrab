@@ -3,9 +3,10 @@ import logo from "../assets/logo.png"
 import bgHome from "../assets/BG_Site.jpg"
 import logoOff from "../assets/logo-officiel.png"
 import { Skeleton } from '../components/ui/skeleton'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import '../components/forms/inscription.css'
+import Loader from '../components/ui/loader'
 export default function Inscription() {
 
   const [imageLoad,setImageLoad]=useState(false)
@@ -14,6 +15,18 @@ export default function Inscription() {
     setImageLoad(true)
     console.log('true')
   }
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+
+    const fetchData = async () => {
+
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      setLoading(false);
+    };
+
+    fetchData();
+  }, []);
   return (
     <>
     <Helmet>
@@ -25,7 +38,8 @@ export default function Inscription() {
       <meta property="og:url" content="fecascrab.com/inscription" />
       <meta property="og:image" content={logoOff} />
     </Helmet>
-    <section>
+
+    {!loading &&     <section>
           <section className='flex flex-col gap-20 '>
       <div className='bg-sky-400 w-full h-44 flex justify-center items-center relative'>
                 <div className='absolute bottom-[-80px] z-50'>
@@ -59,7 +73,10 @@ export default function Inscription() {
 <div className='w-full   flex justify-center items-center h-16 relative bg-[#107a5f]'>
         <img className='w-20 absolute top-[-30px]' src={logo} alt="" />
       </div>
-    </section>
+    </section>}
+
+    {loading && <Loader/>}
+
     </>
 
     
