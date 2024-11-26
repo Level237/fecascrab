@@ -28,7 +28,7 @@ export default function InscriptionForm() {
     { id: 1, label: 'Duplicate Mix',
     subChoice:[{id:5,choice:"3 Manches d'Elite (Semi Blitz 2 minutes)"},{id:6,choice:"2 Manches Blitz (1 minute)"},{id:7,choice:"1 Partie Originale Joker"},{id:8,choice:"1 Partie Originale"}]
   },
-    { id: 2, label: 'Classique' },
+    { id: 2, label: 'Classique',subChoice:[{id:10,choice:"17 Rounds + Demi-finale (2 Manches gagnantes) + Finale (3 manches gagnantes)"}] },
   
   ];
     const [birth]=useState("")
@@ -104,12 +104,13 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
   return (
     <section className='mb-20'>
         <div className='mb-5'>
-        <h2 className='font-bold text-3xl max-sm:text-xl'>INFORMATIONS PERSONNELLES</h2>
+        <h2 className='font-bold text-3xl max-sm:text-xl'>INFORMATIONS PERSONNELLES <span className='text-[#f00]'>[*]</span></h2>
         </div>
 
         <form  onSubmit={submitFormHandler} action="">
         <div className='mb-6'>
             <Input placeholder='Nom et Prénom'
+            required
             name='name' 
               value={enterName}
               onChange={enteredNameHandler}
@@ -120,6 +121,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         {NameError && <p className="text-xs mt-[-10px] text-red-600">Ne peut pas etre vide</p>}
         <div className='mb-5 mt-3'>
             <Input 
+            required
              name='birth' 
             type='date'
             min="1970-01-01" 
@@ -142,6 +144,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         </div>
         <div className='mb-3'>
         <PhoneInput
+        required
          name='phone' 
         defaultCountry="cm"
         placeholder='Phone number'
@@ -173,7 +176,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
           <div>
-          <h2 className='font-bold text-3xl max-sm:text-xl'>PARTICIPATION AU TOURNOI</h2>
+          <h2 className='font-bold text-3xl max-sm:text-xl'>PARTICIPATION AU TOURNOI <span className='text-[#f00]'>[*]</span></h2>
           </div>
           <div>
             <h2 className='mx-5 max-sm:mt-6 text-xl max-sm:text-md italic'>Catégorie d'inscription(cochez une option):</h2>
@@ -195,7 +198,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
           <div>
-          <h2 className='font-bold max-sm:text-xl text-3xl'>COMPÉTITION</h2>
+          <h2 className='font-bold max-sm:text-xl text-3xl'>COMPÉTITION <span className='text-[#f00]'>[*]</span></h2>
           </div>
           <div>
             <h2 className='mx-5 max-sm:text-md text-xl italic'>Type de compétition choisie(cochez une ou plusieurs option):</h2>
@@ -223,37 +226,21 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
             </div>
 
             <div>
-            <RadioGroup name='competitionType'  onValueChange={(value:any) => {
-              
-                handleRadioChange(value)
-              
-              
-            }}   className='w-full mx-12 max-sm:mx-2 mt-4'>
+            <div className='w-full flex flex-col gap-1 mx-12 max-sm:mx-3 mt-2'>
               {option.subChoice &&  option?.subChoice.map((c:any)=>
               
-              <div className="flex items-center space-x-2">
-              <RadioGroupItem key={c.id} className='' value={c.choice}   id={c.id} />
-              <Label htmlFor={c.id}><h2 className='text-xl max-sm:text-lg font-light '>{c.choice}</h2></Label>
-            </div>
+              
+              <div className='flex items-center justify-start gap-2'>&#9711; <span className='text-lg max-sm:text-lg font-light '>{c.choice}</span></div>
+            
             
             )}
              
-             </RadioGroup>
+             </div>
             </div>
             </div>
            
      
       ))}
-      <div >
-      <RadioGroup className='w-full mx-12 max-sm:mx-2 flex items-center mt-[-12px]' name='competitionType1' onValueChange={(value:any) => {
-                handleRadioChange1(value)
-            }}>
-      <RadioGroupItem key="10" className='' value="17 Rounds + Demi-finale (2 Manches gagnantes) + Finale (3 manches gagnantes)"   id="10" />
-                <Label htmlFor="10"><h2 className='text-xl max-sm:text-lg font-light '>17 Rounds + Demi-finale (2 Manches gagnantes) + Finale (3 manches gagnantes)</h2></Label>
-                
-                
-                </RadioGroup>
-      </div>
       
       </div>
     </div>
@@ -263,10 +250,10 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         </section>
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
-            <h2 className='font-bold max-sm:text-xl text-3xl'>CONDITIONS</h2>
+            <h2 className='font-bold max-sm:text-xl text-3xl'>CONDITIONS <span className='text-[#f00]'>[*]</span></h2>
             <div className='w-full mx-12 max-sm:mx-2 mt-4'>
           <div className="flex items-start space-x-2">
-      <Checkbox  className='bg-gray-200 '/>
+      <Checkbox required  className='bg-gray-200 '/>
       <label
         htmlFor="terms2"
         className="text-xl max-sm:text-lg leading-8 font-light peer-disabled:opacity-70"
