@@ -31,7 +31,6 @@
     "react-helmet-async": "^2.0.5",
     "react-international-phone": "^4.3.0",
     "react-router-dom": "^6.28.0",
-    "styled-components": "^6.1.13",
     "tailwind-merge": "^2.5.4",
     "use-react-countries": "^2.0.1"
   },

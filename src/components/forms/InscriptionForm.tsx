@@ -14,7 +14,6 @@ import useForm from '../../hooks/use-form'
 import emailjs from 'emailjs-com';
 
 import { useNavigate } from 'react-router-dom'
-import styled from 'styled-components'
 export default function InscriptionForm() {
   const { countries } = useCountries()
   const [phone, setPhone] = useState('');
