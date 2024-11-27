@@ -1,5 +1,5 @@
 import InscriptionForm from '../components/forms/InscriptionForm'
-import logo from "../assets/logo.png"
+import logo from "../assets/logo-1.png"
 import bgHome from "../assets/BG_Site.jpg"
 import logoOff from "../assets/logo-officiel.png"
 import { Skeleton } from '../components/ui/skeleton'
@@ -70,8 +70,8 @@ export default function Inscription() {
     <section className='w-full h-48' style={{ background:`url(${bgHome})`,backgroundPosition:"bottom",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} >
 
 </section>
-<div className='w-full   flex justify-center items-center h-16 relative bg-[#107a5f]'>
-        <img className='w-20 absolute top-[-30px]' src={logo} alt="" />
+<div className='w-full   flex justify-center items-center h-32 relative bg-[#107a5f]'>
+        <img className='w-96 max-sm:w-80 ' src={logo} alt="" />
       </div>
     </section>}
 

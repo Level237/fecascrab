@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import "../components/forms/inscription.css"
 import { Skeleton } from '../components/ui/skeleton';
 import bgHome from "../assets/BG_Site.jpg"
-import logo from "../assets/logo.png"
+import logo from "../assets/logo-1.png"
 import logoScrab from "../assets/logo_fecascrab.png"
 import {Helmet} from "react-helmet-async"
 export default function Homepage() {
@@ -182,8 +182,8 @@ useEffect(() => {
         <Link to="/inscription"><Button className='bg-red-700 title-bold px-16 text-sm py-6 text-white'>S'INSCRIRE</Button></Link>
           
       </div>
-      <div className='w-full   flex justify-center items-center h-16 relative bg-[#107a5f]'>
-        <img className='w-20 absolute top-[-30px]' src={logo} alt="" />
+      <div className='w-full   flex justify-center items-center h-32 relative bg-[#107a5f]'>
+        <img className='w-96 max-sm:w-80 ' src={logo} alt="" />
       </div>
     </section>
     </>
