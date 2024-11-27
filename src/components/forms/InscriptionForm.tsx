@@ -184,8 +184,11 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
     
     </RadioGroup>
           </div>
+          <div className='mt-5'>
+          <h2 className='mx-5  max-sm:mt-6 text-lg max-sm:text-md max-sm:mx-2 italic title-italic'>NB:Les paiements sont collectés par la fédération dont vous dépendez.</h2>
+          </div>
         </section>
-        <Separator className='text-black w-full bg-black mt-12'/>
+        <Separator className='text-black w-full bg-black mt-4'/>
         <section className='flex flex-col pt-8'>
           <div>
           <h2 className='font-bold title-font max-sm:text-2xl text-4xl'>COMPÉTITION <span className='text-[#f00]'>[*]</span></h2>
@@ -220,7 +223,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
               {option.subChoice &&  option?.subChoice.map((c:any)=>
               
               
-              <div className='flex items-center justify-start gap-2'>&#9711; <span className='text-lg title-medium max-sm:text-lg font-light '>{c.choice}</span></div>
+              <div className='flex items-center justify-start gap-2'><span className='bg-[#000000f1] h-3 px-2 py-2 rounded-full'> </span><span className='text-lg title-medium max-sm:text-lg font-light '>{c.choice}</span></div>
             
             
             )}
