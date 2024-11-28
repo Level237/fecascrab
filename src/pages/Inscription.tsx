@@ -5,6 +5,7 @@ import logoOff from "../assets/logo-officiel.png"
 import { Skeleton } from '../components/ui/skeleton'
 import { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
+import logoIcon from "../assets/logo.png"
 import '../components/forms/inscription.css'
 import Loader from '../components/ui/loader'
 export default function Inscription() {
@@ -31,7 +32,7 @@ export default function Inscription() {
     <>
     <Helmet>
       <title>FecaScrab - Inscription</title>
-      <link rel="icon" type="image/svg+xml" href={logo} />
+      <link rel="icon" type="image/svg+xml" href={logoIcon} />
       <meta name='description' content='Féderation Camerounaise de Scrabble'/>
       <meta name='keywords' content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
       <meta property="og:title" content="FecaScrab - Féderation Camerounaise de Scrabble" />

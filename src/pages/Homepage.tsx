@@ -5,6 +5,7 @@ import "../components/forms/inscription.css"
 import { Skeleton } from '../components/ui/skeleton';
 import bgHome from "../assets/BG_Site.jpg"
 import logo from "../assets/logo-1.png"
+import logoIcon from "../assets/logo.png"
 import logoScrab from "../assets/logo_fecascrab.png"
 import {Helmet} from "react-helmet-async"
 export default function Homepage() {
@@ -44,7 +45,7 @@ useEffect(() => {
     <>
     <Helmet>
       <title>FecaScrab - Féderation Camerounaise de Scrabble</title>
-      <link rel="icon" type="image/svg+xml" href={logo} />
+      <link rel="icon" type="image/svg+xml" href={logoIcon} />
       <meta name="robots" content="index, follow" />
       <link rel='canonical' href={ window.location.href } />
       <meta name='description' content='Féderation Camerounaise de Scrabble'/>
