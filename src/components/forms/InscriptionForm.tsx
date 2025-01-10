@@ -88,15 +88,15 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
       }
       console.log(category.length)
       setLoading(true)
-      //emailjs.sendForm(SERVICE_ID,TEMPLATE_ID,e.target,PUBLIC_KEY).then((result:any) => {
-        //console.log(result.text);
-        //  setLoading(false)
-        //navigate("/confirm")
+      emailjs.sendForm(SERVICE_ID,TEMPLATE_ID,e.target,PUBLIC_KEY).then((result:any) => {
+        console.log(result.text);
+        setLoading(false)
+        navigate("/confirm")
         //alert('Message Sent Successfully')
-      //}, (error:any) => {
-      //  console.log(error.text);
-      //  alert('Something went wrong!')
-      //});
+      }, (error:any) => {
+        console.log(error.text);
+       alert('Something went wrong!')
+    });
       //sendEmail()
     }
     console.log(checkedItems)
