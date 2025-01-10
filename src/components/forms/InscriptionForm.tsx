@@ -70,21 +70,33 @@ export default function InscriptionForm() {
     const SERVICE_ID = "service_9t071dd";
 const TEMPLATE_ID = "template_2p8xoo8";
 const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
+
     const submitFormHandler=(e:any)=>{
       e.preventDefault()
       
-      
+      if(phone.length<=4){
+        alert("Veuillez entrer un numéro de téléphone valide")
+        return;
+      }
+      if(category.length===0){
+        alert("Veuillez selectionnez une categorie")
+        return;
+      }
+      if(checkedItems.length===0){
+        alert("Veuillez selectionnez le type de compétition")
+        return;
+      }
+      console.log(category.length)
       setLoading(true)
-      emailjs.sendForm(SERVICE_ID,TEMPLATE_ID,e.target,PUBLIC_KEY).then((result:any) => {
-        console.log(result.text);
-        setLoading(false)
-
-        navigate("/confirm")
+      //emailjs.sendForm(SERVICE_ID,TEMPLATE_ID,e.target,PUBLIC_KEY).then((result:any) => {
+        //console.log(result.text);
+        //  setLoading(false)
+        //navigate("/confirm")
         //alert('Message Sent Successfully')
-      }, (error:any) => {
-        console.log(error.text);
-        alert('Something went wrong!')
-      });
+      //}, (error:any) => {
+      //  console.log(error.text);
+      //  alert('Something went wrong!')
+      //});
       //sendEmail()
     }
     console.log(checkedItems)
@@ -148,13 +160,17 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
           className:" w-full text-second focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring flex justify-center items-center py-8 rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 h-12"
          }}
         
-        onChange={(phone) => setPhone(phone) }
+        onChange={(phone) => {
+          
+          setPhone(phone)
+        } }
       />
         </div>
         <div className='mb-3'>
             <Input 
+            required
              name='email' 
-            type='email'   
+            type='email'
             placeholder='E-mail'
             value={enterEmail}
             onChange={enteredEmailHandler}
