@@ -14,11 +14,14 @@ import useForm from '../../hooks/use-form'
 import emailjs from 'emailjs-com';
 
 import { useNavigate } from 'react-router-dom'
+import { Card } from '../ui/card'
+import { FileText, Upload } from 'lucide-react'
 export default function InscriptionForm() {
   const { countries } = useCountries()
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false)
   const [value, setValue] = useState("")
+  const [picture, setPicture] = useState("")
   const countriesSort=countries.sort((a:any, b:any) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
   const [category,setCategory]=useState("")
   const [checkedItems, setCheckedItems] = useState([]);
@@ -31,7 +34,10 @@ export default function InscriptionForm() {
   
   ];
     const [birth]=useState("")
-
+    const handleChange = (e:any) => {
+      setPicture(e.target.files[0])
+      
+    }
     const {
       value:enterName,
       hasError:NameError,
@@ -179,6 +185,38 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
             
         </div>
         {emailError && <p className="text-xs title-second mt-[10px] text-red-600">Ne peut pas etre vide</p>}
+        <Card className="p-4 bg-white shadow-lg hover:shadow-xl transition-shadow duration-200">
+          <div className="space-y-3">
+            <Label htmlFor="idCardFront" className="text-sm font-medium text-gray-700">
+              Document scanné de votre passport <span className="text-red-500">*</span>
+            </Label>
+            <div className="flex flex-col items-center gap-4">
+              <div className="h-24 w-full rounded-xl bg-gray-50 border-2 border-dashed border-gray-200 
+                flex flex-col items-center justify-center overflow-hidden hover:border-[#02abee]
+                transition-colors duration-200">
+                {picture ? (
+                  <div className="flex items-center gap-3 text-sm text-gray-600">
+                  <FileText className="w-5 h-5 text-[#02abee]" />
+                  {picture?.name}
+                </div>
+                ) : (
+                  <div className="text-center p-2">
+                    <Upload className="mx-auto h-6 w-6 text-gray-400" />
+                    <p className="mt-2 text-sm text-gray-500">Scan de votre passport</p>
+                  </div>
+                )}
+              </div>
+              <Input
+                type="file"
+                id="idCardFront"
+                accept=".pdf"
+                name="passport"
+                onChange={handleChange}
+                className="w-full text-sm"
+              />
+            </div>
+          </div>
+        </Card>
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
           <div>
