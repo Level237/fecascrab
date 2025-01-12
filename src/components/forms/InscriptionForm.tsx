@@ -3,6 +3,7 @@ import { Input } from '../ui/input'
 
 // @ts-ignore
   import { useCountries } from 'use-react-countries'
+  import axios from 'axios'
   import { Label } from "../ui/label"
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
 import { PhoneInput } from 'react-international-phone';
@@ -21,7 +22,8 @@ export default function InscriptionForm() {
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false)
   const [value, setValue] = useState("")
-  const [picture, setPicture] = useState("")
+  const [picture, setPicture] = useState<File | null>(null);
+  const [pictureBase64, setPictureBase64] = useState("");
   const countriesSort=countries.sort((a:any, b:any) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
   const [category,setCategory]=useState("")
   const [checkedItems, setCheckedItems] = useState([]);
@@ -34,9 +36,17 @@ export default function InscriptionForm() {
   
   ];
     const [birth]=useState("")
-    const handleChange = (e:any) => {
-      setPicture(e.target.files[0])
-      
+
+
+    const handleChange = async (e: any) => {
+      setPicture(e.target.files[0]);
+      if (e.target.files[0]) {
+        const base64 = await convertToBase64(e.target.files[0]);
+        
+        setPictureBase64(base64)
+        console.log(base64)
+        }
+
     }
     const {
       value:enterName,
@@ -77,9 +87,53 @@ export default function InscriptionForm() {
 const TEMPLATE_ID = "template_2p8xoo8";
 const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
 
+const convertToBase64 = (file: File): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+    fileReader.onload = () => {
+      resolve(fileReader.result as string);
+    };
+    fileReader.onerror = (error) => {
+      reject(error);
+    };
+  });
+};
     const submitFormHandler=(e:any)=>{
       e.preventDefault()
-      
+      setLoading(true)
+      try{
+       
+        
+        axios.post('https://api.fecascrab.com/test/email',{
+          "name":enterName,
+          "email":enterEmail,
+          "birth":enterBirth,
+          "phone":phone,
+          "category":category,
+          "checkedItems":checkedItems,
+          "passport":picture,
+          "from":enterEmail,
+          "nationality":value
+        },{
+          headers: {
+            "Content-Type": "multipart/form-data",
+            "Accept": "application/json"
+          }
+        }).then((res)=>{
+          
+          console.log(res)
+          setLoading(false)
+          navigate('/confirm')
+        }).catch((err)=>{
+          console.error(err)
+          setLoading(false)
+        })
+      }
+      catch(error){
+        console.error("Error sending email:", error);
+      }
+  
       if(phone.length<=4){
         alert("Veuillez entrer un numéro de téléphone valide")
         return;
@@ -92,20 +146,12 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         alert("Veuillez selectionnez le type de compétition")
         return;
       }
-      console.log(category.length)
-      setLoading(true)
-      emailjs.sendForm(SERVICE_ID,TEMPLATE_ID,e.target,PUBLIC_KEY).then((result:any) => {
-        console.log(result.text);
-        setLoading(false)
-        navigate("/confirm")
-        //alert('Message Sent Successfully')
-      }, (error:any) => {
-        console.log(error.text);
-       alert('Something went wrong!')
-    });
-      //sendEmail()
+      
+     
+     
+      
     }
-    console.log(checkedItems)
+    
     const validClassName=NameError ? "border border-red-400" : ""
     const validClassEmail=emailError ? "border border-red-400" : ""
 
@@ -115,7 +161,8 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
         <h2 className='font-bold title-font text-4xl max-sm:text-2xl'>INFORMATIONS PERSONNELLES <span className='text-[#f00] title-font'>[*]</span></h2>
         </div>
 
-        <form  onSubmit={submitFormHandler} action="">
+        <form encType="multipart/form-data"  onSubmit={submitFormHandler} action="POST">
+
         <div className='mb-6'>
             <Input placeholder='Nom et Prénom'
             required
@@ -197,7 +244,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
                 {picture ? (
                   <div className="flex items-center gap-3 text-sm text-gray-600">
                   <FileText className="w-5 h-5 text-[#02abee]" />
-                  {picture?.name}
+                  {picture.name}
                 </div>
                 ) : (
                   <div className="text-center p-2">
@@ -295,6 +342,7 @@ const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
           </div>
         
         </section>
+        <input type="hidden" name="passportFull" value={pictureBase64} />
         <Separator className='text-black w-full bg-black mt-12'/>
         <section className='flex flex-col pt-8'>
             <h2 className='font-bold title-font max-sm:text-2xl text-4xl'>CONDITIONS <span className='text-[#f00]'>[*]</span></h2>
