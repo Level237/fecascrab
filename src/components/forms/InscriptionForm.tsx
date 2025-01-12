@@ -12,7 +12,6 @@ import { Button } from '../ui/button'
 import { Separator } from '../ui/separator'
 import { Checkbox } from '../ui/checkbox'
 import useForm from '../../hooks/use-form'
-import emailjs from 'emailjs-com';
 
 import { useNavigate } from 'react-router-dom'
 import { Card } from '../ui/card'
@@ -82,10 +81,6 @@ export default function InscriptionForm() {
         setCategory(value)
         console.log(value)
     }
-    console.log(birth)
-    const SERVICE_ID = "service_9t071dd";
-const TEMPLATE_ID = "template_2p8xoo8";
-const PUBLIC_KEY = "QwNvfT3Vx-pl8jKkv";
 
 const convertToBase64 = (file: File): Promise<string> => {
   return new Promise((resolve, reject) => {
