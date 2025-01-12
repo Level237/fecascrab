@@ -34,7 +34,7 @@ export default function InscriptionForm() {
     { id: 2, label: 'Classique',subChoice:[{id:10,choice:"17 Rounds + Demi-finale (2 Manches gagnantes) + Finale (3 manches gagnantes)"}] },
   
   ];
-    const [birth]=useState("")
+    
 
 
     const handleChange = async (e: any) => {
