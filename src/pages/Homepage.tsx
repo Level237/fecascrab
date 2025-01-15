@@ -89,11 +89,11 @@ useEffect(() => {
          
             DE SCRABBLE
           </h1>
-          <div className="relative h-[300px] flex-2">
+          <div className="relative lg:hidden h-[300px] flex-2">
           <img
             src={section1}
             alt="Partie de Scrabble en cours"
-            className="rounded-lg lg:hidden object-cover w-full h-full"
+            className="rounded-lg  object-cover w-full h-full"
           />
         
         </div>

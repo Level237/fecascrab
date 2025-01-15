@@ -47,7 +47,7 @@ export default function NavMobile() {
             
               </Link>
             <div
-              className='flex justify-center items-center mx-5 xl:w-50  bg-gray-100 px-2 py-3 rounded outline outline-transparent focus-within:outline-[#007bff]'>
+              className='flex justify-center items-center mx-5  bg-gray-100 px-2 py-3 rounded outline outline-transparent focus-within:outline-[#007bff]'>
               <input type='text' placeholder='Recherchez'
                 className='w-full text-sm bg-transparent rounded outline-none pr-2' />
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="16px"
