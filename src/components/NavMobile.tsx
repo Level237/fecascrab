@@ -23,11 +23,11 @@ export default function NavMobile() {
               <>
                 <motion.div 
               initial={{ 
-                y:600
+                x:600
                }}
 
                animate={{ 
-                y:2
+                x:100
                 }}
                 exit={{ 
                   x:600
@@ -40,14 +40,13 @@ export default function NavMobile() {
             <div className=" text-white text-4xl">
             <X className='mt-4 mx-4 mb-4' onClick={()=>close()}/>
             <Link to={'/'}>
-              <div className="flex mt-2 mb-8 items-center justify-center">
+              <div className="flex mt-2 mx-8 mb-8 items-center justify-start">
               <img className='w-28 mr-8' src={logo} alt="" />
-              
               </div>
             
               </Link>
             <div
-              className='flex justify-center items-center mx-5  bg-gray-100 px-2 py-3 rounded outline outline-transparent focus-within:outline-[#007bff]'>
+              className='flex w-[65%] justify-center items-center mx-5  bg-gray-100 px-2 py-3 rounded outline outline-transparent focus-within:outline-[#007bff]'>
               <input type='text' placeholder='Recherchez'
                 className='w-full text-sm bg-transparent rounded outline-none pr-2' />
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="16px"
