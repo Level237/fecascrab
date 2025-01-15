@@ -3,6 +3,7 @@ import Homepage from "../pages/Homepage";
 import { createBrowserRouter } from "react-router-dom";
 import ConfirmPage from "../pages/ConfirmPage";
 import OriginePage from "../pages/OriginePage";
+import OrganisationPage from "../pages/OrganisationPage";
 
 export const routes=createBrowserRouter([{
     path:'/',
@@ -17,6 +18,10 @@ export const routes=createBrowserRouter([{
 {
     path:'/origine',
     element:<OriginePage/>
+},
+{
+    path:"/organisation",
+    element:<OrganisationPage/>
 }
 
 ])
