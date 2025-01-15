@@ -17,11 +17,11 @@ export default function Hero() {
 
     {/* Content */}
     <div className="relative z-10 container mx-auto px-4 h-[calc(100vh-80px)] flex items-center justify-center text-center">
-      <h1 className="text-white text-xl md:text-5xl lg:text-5xl font-bold max-w-5xl leading-tight">
+      <h1 className="text-white text-3xl md:text-5xl lg:text-5xl font-bold max-w-5xl leading-tight">
         Bienvenue sur le site officiel
-        <br />
+        <br className='max-sm:hidden' />
         de la Fédération Internationale
-        <br />
+        <br className='max-sm:hidden'/>
         de Scrabble
       </h1>
     </div>

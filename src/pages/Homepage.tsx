@@ -14,6 +14,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Figures from '../components/Figures';
 import selection from "../assets/section2.jpg"
+import NavMobile from '../components/NavMobile';
 export default function Homepage() {
 
   const [startDate]=useState(Date.now())
@@ -75,27 +76,36 @@ useEffect(() => {
     </Helmet>
     <section>
       <Header/>
+      <NavMobile/>
       <Hero/>
-      <div className="max-w-7xl mx-28 px-4 py-12">
+      <div className="max-w-7xl mx-28 px-4 max-sm:mx-4 py-12">
       {/* Welcome Section */}
-      <div className="flex items-center justify-between gap-8 mb-12">
+      <div className="flex items-center max-sm:flex-col justify-between gap-8 mb-12">
         <div className="space-y-6 flex-1">
           <h1 className="text-red-600 font-bold text-3xl md:text-3xl leading-tight">
             BIENVENUE SUR LE SITE OFFICIEL
-            <br />
+            <br className='max-sm:hidden' />
             DE LA FÉDÉRATION INTERNATIONALE
          
             DE SCRABBLE
           </h1>
-          <p className="text-gray-700 text-2xl leading-relaxed">
-            Depuis 1990, nous avons pour mission d&apos;organiser et de promouvoir le Scrabble dans tout le pays. Si vous êtes passionné par les mots, nous offrons des clubs, des formations et les échanges entre passionnés.
-          </p>
-        </div>
-        <div className="relative h-[300px] flex-2">
+          <div className="relative h-[300px] flex-2">
           <img
             src={section1}
             alt="Partie de Scrabble en cours"
-            className="rounded-lg object-cover w-full h-full"
+            className="rounded-lg lg:hidden object-cover w-full h-full"
+          />
+        
+        </div>
+          <p className="text-gray-700 text-2xl max-sm:text-xl leading-relaxed">
+            Depuis 1990, nous avons pour mission d&apos;organiser et de promouvoir le Scrabble dans tout le pays. Si vous êtes passionné par les mots, nous offrons des clubs, des formations et les échanges entre passionnés.
+          </p>
+        </div>
+        <div className="relative max-sm:hidden h-[300px] flex-2">
+          <img
+            src={section1}
+            alt="Partie de Scrabble en cours"
+            className="rounded-lg object-cover  w-full h-full"
           />
         
         </div>
@@ -103,7 +113,7 @@ useEffect(() => {
 
       {/* News Section */}
       <div className="space-y-6">
-        <h2 className="text-3xl font-bold text-red-600">À LA UNE</h2>
+        <h2 className="text-3xl  font-bold text-red-600">À LA UNE</h2>
         
           
            
@@ -116,11 +126,11 @@ useEffect(() => {
             </div>
 
             <div>
-              <h2 className='text-3xl text-[#00723e] font-bold'>SUPER MASTER 2025: UNE EXPERIENCE 
+              <h2 className='text-3xl text-[#00723e] max-sm:text-2xl font-bold'>SUPER MASTER 2025: UNE EXPERIENCE 
               UNIQUE AU CAMEROUN</h2>
-              <p className='text-2xl mt-5'>Rejoignez-nous pour vivre un moment d'exception, où compétition
+              <p className='text-2xl max-sm:text-xl mt-5'>Rejoignez-nous pour vivre un moment d'exception, où compétition
               rime avec excellence et découverte !</p>
-              <div className='mt-3 flex items-center justify-center'>
+              <div className='mt-3 max-sm:mt-6 max-sm:justify-start flex items-center justify-center'>
             <Button className='bg-red-600 text-white px-8 py-6 text-lg title-bold'>Découvrir</Button>
           </div>
             </div>
@@ -136,8 +146,8 @@ useEffect(() => {
             <Button className='bg-red-600 mt-8 text-white px-8 py-6 text-lg title-bold'>Voir tout les palmares</Button>
           </section>
 
-          <section className='mt-24 mx-28 mb-8'>
-          <div className="w-full h-[30rem] bg-black flex items-center justify-center">
+          <section className='mt-24 mx-28 max-sm:mx-4 mb-8'>
+          <div className="w-full h-[30rem] max-sm:h-[20rem] bg-black flex items-center justify-center">
         <p className="text-white text-xl">Plage video</p>
       </div>
 
@@ -155,14 +165,14 @@ useEffect(() => {
      
           </section>
           <div className=" flex flex-col items-center justify-center mt-[-7rem]  p-6">
-            <div className=" bg-red-600 px-28 py-9 z-50 ">
+            <div className=" bg-red-600 px-28 max-sm:px-6 py-9 z-50 ">
              <h2 className='text-2xl mb-6 md:text-3xl font-bold text-white  inline-block'>Sélection Nationale de Scrabble du Cameroun</h2>
              <p className='text-xl text-center'>Vous souhaitez en savoir plus sur comment intégrer l’équipe <br />
 
               nationale ou soutenir nos joueurs ?</p>
               
             </div>
-            <div className='mt-[-1.5rem] z-[60] '><Button className='bg-[#00723e]  text-white px-8 py-6 text-lg'>Contactez Nous</Button></div>
+            <div className='mt-[-1.5rem] z-[60] '><Button className='bg-[#00723e]  text-white max-sm:py-8 px-8 py-6 text-lg'>Contactez Nous</Button></div>
             
           </div>
     </section>
