@@ -3,11 +3,16 @@ import { Button } from '../components/ui/button'
 import { useEffect, useState } from 'react'
 import "../components/forms/inscription.css"
 import { Skeleton } from '../components/ui/skeleton';
+import section1 from "../assets/section1.jpg"
+import section2 from "../assets/event.jpg"
 import bgHome from "../assets/BG_Site.jpg"
 import logo from "../assets/logo-1.png"
 import logoIcon from "../assets/logo.png"
 import logoScrab from "../assets/logo_fecascrab.png"
 import {Helmet} from "react-helmet-async"
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import Figures from '../components/Figures';
 export default function Homepage() {
 
   const [startDate]=useState(Date.now())
@@ -67,125 +72,68 @@ useEffect(() => {
             <meta name="twitter:image" content={bgHome} />
             <meta name="twitter:description" content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
     </Helmet>
-    <section style={{ background:`url(${bgHome})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
-    className='w-full bg-[#02abee] rounded-md relative h-[100%] justify-start pt-20 flex flex-col items-center'>
-      <div>
-        <h2 className='font-bold title-bold max-sm:text-center'>LA FEDERATION CAMEROUNAISE DE SCRABBLE ORGANISE LES</h2>
-      </div>
-      <div>
-        <img src={logoScrab} alt="" className='w-[27rem] h-[28rem] mt-[-4rem]' />
-      </div>
-      {!loading && <div className='grid max-sm:mx-6  mt-[-5rem] gap-4 grid-cols-4'>
-      <div className='flex gap-3 justify-center flex-col items-center'>
-      <div className='flex gap-1 items-center flex-row'>
-        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
-        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
-        <div className='ml-2'>
-                  <h2 className='text-white font-bold text-2xl'>:</h2>
-                </div>
-      </div>
-      <div>
-          <h2 className='text-md title-bold font-bold text-white'>JOURS</h2>
+    <section>
+      <Header/>
+      <Hero/>
+      <div className="max-w-7xl mx-28 px-4 py-12">
+      {/* Welcome Section */}
+      <div className="flex items-center justify-between gap-8 mb-12">
+        <div className="space-y-6 flex-1">
+          <h1 className="text-red-600 font-bold text-3xl md:text-3xl leading-tight">
+            BIENVENUE SUR LE SITE OFFICIEL
+            <br />
+            DE LA FÉDÉRATION INTERNATIONALE
+         
+            DE SCRABBLE
+          </h1>
+          <p className="text-gray-700 text-2xl leading-relaxed">
+            Depuis 1990, nous avons pour mission d&apos;organiser et de promouvoir le Scrabble dans tout le pays. Si vous êtes passionné par les mots, nous offrons des clubs, des formations et les échanges entre passionnés.
+          </p>
         </div>
-      </div>
-      <div className='flex gap-3 justify-center flex-col items-center'>
-      <div className='flex gap-1 items-center flex-row'>
-        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
-        <Skeleton className="bg-gray-200  max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
-        <div className='ml-2'>
-                  <h2 className='text-white font-bold text-2xl'>:</h2>
-                </div>
-      </div>
-      <div>
-          <h2 className='text-md title-bold font-bold text-white'>Heures</h2>
-        </div>
-      </div>
-      <div className='flex gap-3 justify-center flex-col items-center'>
-      <div className='flex gap-1 items-center flex-row'>
-        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
-        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
-        <div className='ml-2'>
-                  <h2 className='text-white font-bold text-2xl'>:</h2>
-                </div>
-      </div>
-      <div>
-          <h2 className='text-md title-bold  text-white'>Minutes</h2>
-        </div>
-      </div>
-      <div className='flex gap-3 justify-center flex-col items-center'>
-      <div className='flex gap-1 items-center flex-row'>
-        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
-        <Skeleton className="bg-gray-200 max-sm:px-4 max-sm:py-6 rounded-xl w-4 px-5 py-8" />
+        <div className="relative h-[300px] flex-2">
+          <img
+            src={section1}
+            alt="Partie de Scrabble en cours"
+            className="rounded-lg object-cover w-full h-full"
+          />
         
-      </div>
-      <div>
-          <h2 className='text-md title-bold text-white'>Secondes</h2>
         </div>
       </div>
-        </div>}
-        {loading && <div className='flex items-center gap-4 max-sm:gap-0 max-sm:mx-6 max-sm:grid max-sm:grid-cols-4  mt-[-5rem] '>
-        <div className='flex gap-3 justify-center flex-col items-center'>
-        <div className='flex gap-1 items-center flex-row'>
-                
-                      {timeRemaining.jours && timeRemaining.jours.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>{el}</h2></div>)}
 
-                <div className='ml-4 max-sm:ml-0'>
-                  <h2 className='text-white font-bold text-2xl max-sm:text-xl'>:</h2>
-                </div>
-        </div>
-        <div>
-          <h2 className='text-md title-bold max-sm:text-sm font-bold text-white'>JOURS</h2>
-        </div>
-        </div>
-       
-        <div className='flex gap-3 justify-center flex-col items-center'>
-        <div className='flex gap-1 max-sm:ml-7 items-center flex-row'>
-        {timeRemaining.heures?.toString().length==1  && timeRemaining.heures==0  && timeRemaining.heures?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
-        {timeRemaining.heures!==0  && timeRemaining.heures?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
-                      {timeRemaining.heures?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>{el}</h2></div>)}
-             
-              
-                <div className='ml-4 max-sm:ml-1'>
-                  <h2 className='text-white font-bold text-2xl'>:</h2>
-                </div>
-        </div>
-        <div>
-          <h2 className='text-md title-bold max-sm:text-sm font-bold text-white'>HEURES</h2>
-        </div>
-        </div>
-        <div className='flex gap-3 max-sm:ml-7 justify-center flex-col items-center'>
-        <div className='flex gap-1 items-center flex-row'>
-        {timeRemaining.minutes?.toString().length==1  && timeRemaining.minutes==0  && timeRemaining.minutes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
-        {timeRemaining.minutes!==0  && timeRemaining.minutes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
-              {timeRemaining.minutes?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>{el}</h2></div>)}
-              
-                <div className='ml-1 max-sm:ml-1'>
-                  <h2 className='text-white font-bold text-2xl'>:</h2>
-                </div>
-        </div>
-        <div>
-          <h2 className='text-md title-bold max-sm:text-sm font-bold text-white'>MINUTES</h2>
-        </div>
-        </div>
-        <div className='flex gap-3 justify-center max-sm:ml-5 flex-col items-center'>
-        <div className='flex gap-1 items-center flex-row'>
-          {timeRemaining.secondes?.toString().length==1  && timeRemaining.secondes==0  && timeRemaining.secondes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
-          {timeRemaining.secondes!==0  && timeRemaining.secondes?.toString().length!==2 && <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>0</h2></div>}
-        {timeRemaining.secondes?.toString().split("").map((el:any)=> <div className='bg-white rounded-xl px-3 py-3 max-sm:px-2.5 max-sm:py-2'><h2 className='text-5xl max-sm:text-xl font-bold'>{el}</h2></div>)}
-        </div>
-        <div>
-          <h2  className='text-md title-bold max-sm:text-sm font-bold text-white'>SECONDES</h2>
-        </div>
-        </div>
-      </div>}
-      
-      <div className='mt-8 mb-24'>
-        <Link to="/inscription"><Button className='bg-red-700 title-bold px-16 text-sm py-6 text-white'>S'INSCRIRE</Button></Link>
+      {/* News Section */}
+      <div className="space-y-6">
+        <h2 className="text-3xl font-bold text-red-600">À LA UNE</h2>
+        
           
-      </div>
-      <div className='w-full   flex justify-center items-center h-32 relative bg-[#107a5f]'>
-        <img className='w-96 max-sm:w-80 ' src={logo} alt="" />
-      </div>
+           
+            <div className="relative h-[200px] md:h-[300px]">
+              <img
+                src={section2}
+                alt="Super Master 2024"
+                className="rounded-2xl object-cover w-full h-full"
+              />
+            </div>
+
+            <div>
+              <h2 className='text-3xl text-[#00723e] font-bold'>SUPER MASTER 2025: UNE EXPERIENCE 
+              UNIQUE AU CAMEROUN</h2>
+              <p className='text-2xl mt-5'>Rejoignez-nous pour vivre un moment d'exception, où compétition
+              rime avec excellence et découverte !</p>
+              <div className='mt-3 flex items-center justify-center'>
+            <Button className='bg-red-600 text-white px-8 py-6 text-lg title-bold'>Découvrir</Button>
+          </div>
+            </div>
+          </div>
+         
+    </div>
+    <section className='w-full bg-[#00723e59] px-6 py-14 flex flex-col items-center'>
+          <div>
+              <h2 className='text-black text-3xl max-sm:text-2xl text-center font-bold'>La fédération Camerounaise de <br />
+              Scrabble c’est au total...</h2>
+            </div>
+            <Figures/>
+            <Button className='bg-red-600 mt-8 text-white px-8 py-6 text-lg title-bold'>Voir tout les palmares</Button>
+          </section>
     </section>
     </>
   )
