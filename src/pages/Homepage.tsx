@@ -13,6 +13,7 @@ import {Helmet} from "react-helmet-async"
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Figures from '../components/Figures';
+import selection from "../assets/section2.jpg"
 export default function Homepage() {
 
   const [startDate]=useState(Date.now())
@@ -134,7 +135,40 @@ useEffect(() => {
             <Figures/>
             <Button className='bg-red-600 mt-8 text-white px-8 py-6 text-lg title-bold'>Voir tout les palmares</Button>
           </section>
+
+          <section className='mt-24 mx-28 mb-8'>
+          <div className="w-full h-[30rem] bg-black flex items-center justify-center">
+        <p className="text-white text-xl">Plage video</p>
+      </div>
+
+      <div className="relative mt-12 rounded-lg overflow-hidden">
+        {/* Background Image */}
+        <img
+          src={selection}
+          alt="Équipe nationale de Scrabble du Cameroun"
+          className="w-full object-cover h-[30rem]"
+        />
+        
+        {/* Overlay Content */}
+       
+      </div>
+     
+          </section>
+          <div className=" flex flex-col items-center justify-center mt-[-7rem]  p-6">
+            <div className=" bg-red-600 px-28 py-9 z-50 ">
+             <h2 className='text-2xl mb-6 md:text-3xl font-bold text-white  inline-block'>Sélection Nationale de Scrabble du Cameroun</h2>
+             <p className='text-xl text-center'>Vous souhaitez en savoir plus sur comment intégrer l’équipe <br />
+
+              nationale ou soutenir nos joueurs ?</p>
+              
+            </div>
+            <div className='mt-[-1.5rem] z-[60] '><Button className='bg-[#00723e]  text-white px-8 py-6 text-lg'>Contactez Nous</Button></div>
+            
+          </div>
     </section>
+    <div className='w-full   flex justify-center items-center h-32 relative bg-[#107a5f]'>
+        <img className='w-96 max-sm:w-80 ' src={logo} alt="" />
+      </div>
     </>
   )
 }
