@@ -103,7 +103,7 @@ export default function HeaderSection() {
                 PALMARÈS
               </Link>
               <Link 
-                to="/events" 
+                to="/" 
                  className={`${isScrolled ? 'text-white hover:text-white' : 'text-[#00723e]'} hover:text-[#00723e]/80 font-medium`}
               >
                 EVENTS
@@ -122,11 +122,14 @@ export default function HeaderSection() {
                 clip-rule="evenodd"></path>
             </svg>
           </div>
-            <Button
-              className="bg-red-600 max-sm:hidden hover:bg-red-700 text-white border-none"
+          <Link to={"/inscription"}>
+          <Button
+              className="bg-red-600 max-sm:hidden px-10 py-5 hover:bg-red-700 text-white border-none"
             >
-              NOUS CONTACTER
+              S'inscrire
             </Button>
+          </Link>
+            
           </div>
         </div>
       </header>
