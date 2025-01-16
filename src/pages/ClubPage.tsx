@@ -1,0 +1,274 @@
+import { HeroSection } from '../components/HeroSection'
+import HeaderSection from '../components/headerSection'
+import slide from "../assets/club.jpeg"
+import NavMobile from '../components/NavMobile'
+import slide4Origine from "../assets/slide4Origine.jpg"
+import slide5Origine from "../assets/slide5Origine.jpg"
+import slide3Origine from "../assets/slide3origine.jpg"
+import slide2Origine from "../assets/slide2Origine.jpg"
+import slide6Origine from "../assets/slide6Origine.jpg"
+import slide7Origine from "../assets/slide7Origine.jpg"
+import slide8Origine from "../assets/slide8Origine.jpg"
+import slide9Origine from "../assets/slide9Origine.jpg"
+import slide10Origine from "../assets/slide10.jpg"
+import slide11Origine from "../assets/slide11.jpg"
+import slide12Origine from "../assets/slide12.jpg"
+export default function ClubPage() {
+  return (
+    <section>
+        <HeaderSection />
+        <NavMobile/>
+        <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
+    className=' z-10 relative mt-12 max-sm:mt-7 h-96 mx-24 max-sm:mx-0   bg-[#02abee]'>
+        <div className='absolute bottom-[-30px] px-4 pt-24 pb-5 left-12 max-sm:left-12 bg-red-600'>
+            <h2 className='text-2xl text-white font-bold '>Les Clubs</h2>
+        </div>
+    </div>
+
+    <section className='mx-32 mt-24 max-sm:mx-4'>
+                <p className='text-xl max-sm:text-lg'>Actuellement, la FECASCRAB regroupe une vingtaine de clubs répartis sur
+l’ensemble du territoire camerounais, chacun jouant un rôle clé dans la promotion
+et le développement régional de cette discipline intellectuelle.
+        </p>
+        <h2 className="text-2xl mt-7 max-sm:text-xl  font-bold text-red-600">LISTE DES CLUBS AFFILIES</h2>
+
+
+        <div className='mx-4 max-sm:mx-6 mt-8'>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>1. DSC Douala :  </h2>
+
+            <div className='text-xl'>
+            <p>Ibis douala Bonanjo</p>
+                <p>Mardi et jeudi : 18h30 - 21h30</p>
+                <p>Contact : Paco Bahanag |  (+237) 697 860 698</p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>2. DSA :  </h2>
+
+            <div className='text-xl'>
+            <p>Douala</p>
+                <p>Tous les jours de 16h - 21h 
+                </p>
+                <p>Contact : Michel Honoré Obi |
+(+237) 695 426 333 
+</p>
+<p><span className='font-bold'>Abonnement annuel : 10.000 xaf</span></p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>3. Fin Goudron Scrabble Club (FGSC)
+                    :  </h2>
+
+            <div className='text-xl'>
+            <p>Douala - Bonaberi
+            </p>
+                <p>Tous les jours de 16h - 21h 
+                </p>
+                <p>Contact: Aubin Kingue (+237) 699 307 796
+</p>
+<p><span className='font-bold'>Abonnement 5.000 xaf annuel / 2.000 xaf/ mois
+</span></p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>4. AZEP
+                    :  </h2>
+
+            <div className='text-xl'>
+            <p>Douala - Bonaberi
+            </p>
+                <p>Contact : Reine Moby
+|
+(+237) 696 510 042
+
+                </p>
+                <p>Elouga : 65191850
+</p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>5. Cradat Scrabble Club (CRASC)
+
+                    :  </h2>
+
+            <div className='text-xl'>
+            <p>Yaoundé
+
+            </p>
+                <p>Lundi - vendredi 16h-21h // samedi - dimanche 8h - 20h 
+                </p>
+                <p>Contact :
+Bachirou Mohamadou
+(+237) 670 90 54 57 - 699 575 871
+
+
+</p>
+<p><span className='font-bold'>Abonnement 5.000 xaf annuel / 2.000 xaf/ mois
+</span></p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>6. Scrabble Tennis Club (STC)
+
+
+                    :  </h2>
+
+            <div className='text-xl'>
+            <p>Yaoundé
+
+            </p>
+               
+                <p>Contact : Iliassou Mana |
+                (+237) 693 59 51 04
+
+
+</p>
+<p><span className='font-bold'>Abonnement 5.000 xaf annuel / 2.000 xaf/ mois
+</span></p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>7. Sophia Soa Scrabble Club (SSSC)     :  </h2>
+
+            <div className='text-xl'>
+            <p>Yaoundé
+
+            </p>
+                <p>mercredi 12h - 16h // samedi 12h - 16h
+                </p>
+                <p>Contact : Jean michel EBE BETAYENE |
+(+237) 676 60 53 43
+</p>
+<p><span className='font-bold'>Abonnement: 15.000 xaf/ an // 1.000 xaf/ mois 
+</span></p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>8. Harmony Scrabble Club (HSC)
+                    :  </h2>
+
+            <div className='text-xl'>
+            <p>Yaoundé
+
+            </p>
+                <p>Mercredi et vendredi 16h - 20h 
+                </p>
+                <p>Contact : Augustin Tchouling (+237) 690 463 755 / Gislain Yamga 699 217 606
+</p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>9. Biyem-Assi Scrabble Club ( BSC)
+
+                    :  </h2>
+
+            <div className='text-xl'>
+            <p>Yaoundé
+
+            </p>
+               
+                <p>Contact : Rudolph Bakinien
+|
+(+237) 674 41 50 72
+</p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>10. AMVOE Scrabble Club
+
+                    :  </h2>
+
+            <div className='text-xl'>
+            <p>Nkoldongo Yaoundé
+            </p>
+                
+                <p>Contact : Vandelin Ndzana |
+                (+237) 690813358
+</p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>11. DSC Star Land Yaoundé
+                    :  </h2>
+
+            <div className='text-xl'>
+                <p>Contact : Ivan Seundjeu (+237) 698352543
+</p>
+<p><span className='font-bold'>Abonnement: 
+</span></p>
+<p>
+    <li className='font-bold mx-4 mt-3'>50000 xfa annuel + droit d’adhésion annuel + licence nationale + licence
+    internationale + packs de logiciels d'entrainements</li>
+    <li className='font-bold mx-4 mt-3'>20000 Xfa / mois: location salle avec boisson à chaque rencontre</li>
+</p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>12. Club des amis du Scrabble de Bangangté
+
+
+                    :  </h2>
+
+            <div className='text-xl'>
+                <p>Docteur Yannick Stève Ngounou : (+237) 697 70 43 33
+</p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>13. Club des amis du Scrabble Maroua
+                    :  </h2>
+
+            <div className='text-xl'>
+                <p>Greng Omar (+237) 694 82 43 03
+</p>
+            </div>
+                    </div>
+                    <div className='mb-6'>
+                    <h2 className='font-bold text-2xl'>14. scrabble champions : club anglophone
+                    :  </h2>
+
+            <div className='text-xl'>
+            <p>Mimboman Yaounde 
+            </p>
+                <p>Friday 18h - 20h sunday 15h - 18h 
+                </p>
+                <p>Contact : Christian shofola |
+(+237) 679 917 318 
+
+</p>
+<p><span className='font-bold'>Fees: 10000 xaf per year
+</span></p>
+            </div>
+                    </div>
+          
+        </div>
+
+       
+
+
+            <div>
+            <p className='text-xl max-sm:text-lg'>Grâce à cette présence nationale, la FECASCRAB continue de fédérer des
+passionnés et de renforcer les bases du Scrabble dans toutes les régions du
+Cameroun. Si vous souhaitez rejoindre un club, contactez celui de votre localité et
+plongez dans l’univers captivant du Scrabble !
+        </p>
+        <p className='text-xl max-sm:text-lg'>Cette structure pourra évoluer avec de nouvelles nominations et l’expansion des
+activités de la Fédération.
+        </p>
+            </div>
+          
+           
+            <div className="relative mb-12 max-sm:hidden mt-12 h-[300px] flex-2">
+          <img
+            src={slide12Origine}
+            alt="Partie de Scrabble en cours"
+            className="rounded-lg object-cover  w-full h-full"
+          />
+        
+        </div>
+           
+    </section>
+    </section>
+  )
+}
