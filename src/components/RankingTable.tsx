@@ -114,9 +114,9 @@ import {
         <Table>
           <TableHeader className="bg-emerald-700 ">
             <TableRow>
-              <TableHead className="text-white text-xl w-16 py-4 px-12">N°</TableHead>
-              <TableHead className="text-white text-xl w-64 py-4">Joueur</TableHead>
-              <TableHead className="text-white text-xl w-80 py-4">Palmares Compétitions Nationales</TableHead>
+              <TableHead className="text-white text-xl max-sm:text-sm w-16 max-sm:w-2 py-4 px-12">N°</TableHead>
+              <TableHead className="text-white text-xl max-sm:text-sm  w-64 max-sm:w-3   py-4">Joueur</TableHead>
+              <TableHead className="text-white text-xl max-sm:text-sm max-sm:w-full  max-sm:py-2  w-80 py-4">Palmares Compétitions Nationales</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

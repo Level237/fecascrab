@@ -32,7 +32,7 @@ export default function PalmaresPage() {
     </div>
 
     <div className="max-w-7xl mx-24 max-sm:mx-2 px-4 py-16">
-      <h1 className="text-red-600 text-3xl md:text-4xl font-bold mb-12 leading-tight">
+      <h1 className="text-red-600 text-3xl max-sm:text-2xl md:text-4xl font-bold mb-12 leading-tight">
         PALMARES DU CAMEROUN AUX CHAMPIONNATS
         <br />
         DU MONDE DE SCRABBLE FRANCOPHONE (CDM)
@@ -41,7 +41,7 @@ export default function PalmaresPage() {
       <div className="grid md:grid-cols-2 gap-12">
         {/* CDM 2021 */}
         <div className="space-y-6">
-          <h2 className="text-red-600 text-2xl font-bold">
+          <h2 className="text-red-600 text-2xl max-sm:text-xl font-bold">
             CDM 2021 (Aix-les-Bains en FRANCE)
           </h2>
           
@@ -80,7 +80,7 @@ export default function PalmaresPage() {
 
         {/* CDM 2024 */}
         <div className="space-y-6">
-          <h2 className="text-red-600 text-2xl font-bold">
+          <h2 className="text-red-600 text-2xl max-sm:text-xl  font-bold">
             CDM 2024 (Montauban en FRANCE)
           </h2>
           
@@ -109,7 +109,7 @@ export default function PalmaresPage() {
       </div>
     </div>
     <div className="max-w-7xl mx-24 max-sm:mx-2 px-4 py-2">
-    <h1 className="text-red-600 text-3xl md:text-4xl font-bold mb-12 leading-tight">
+    <h1 className="text-red-600 text-3xl max-sm:text-2xl  md:text-4xl font-bold mb-12 leading-tight">
         PALMARES DU CAMEROUN AUX CHAMPIONNATS
         <br />
         D’AFRIQUE DE SCRABB E (CHAMPAS) DE 2016 A 2024
@@ -117,7 +117,7 @@ export default function PalmaresPage() {
       <div className="grid md:grid-cols-2 gap-12">
         {/* CDM 2021 */}
         <div className="space-y-6">
-          <h2 className="text-red-600 text-2xl font-bold">
+          <h2 className="text-red-600 max-sm:text-xl  text-2xl font-bold">
             CHAMPAS 2016 (Lomé au TOGO)
           </h2>
           
@@ -149,7 +149,7 @@ export default function PalmaresPage() {
 
         {/* CDM 2024 */}
         <div className="space-y-6">
-          <h2 className="text-red-600 text-2xl font-bold">
+          <h2 className="text-red-600 max-sm:text-xl  text-2xl font-bold">
           CHAMPAS 2019 (Brazzaville au Congo)
           </h2>
           
@@ -176,7 +176,7 @@ export default function PalmaresPage() {
           </div>
         </div>
         <div className="space-y-6">
-          <h2 className="text-red-600 text-2xl font-bold">
+          <h2 className="text-red-600 max-sm:text-xl  text-2xl font-bold">
           CHAMPAS 2017 (Abidjan en Côte d’Ivoire)
           </h2>
           
@@ -212,7 +212,7 @@ export default function PalmaresPage() {
             </div>
           </div>
           <div className="space-y-6">
-          <h2 className="text-red-600 text-2xl font-bold">
+          <h2 className="text-red-600 max-sm:text-xl  text-2xl font-bold">
           CHAMPAS 2018 (Bamako au Mali)
           </h2>
           
@@ -243,7 +243,7 @@ export default function PalmaresPage() {
         </div>
         </div>
         <div className="space-y-6">
-          <h2 className="text-red-600 text-2xl font-bold">
+          <h2 className="text-red-600 max-sm:text-xl  text-2xl font-bold">
           CHAMPAS 2021 (Dakar au Sénégal)
           </h2>
           
@@ -314,7 +314,7 @@ export default function PalmaresPage() {
         
       </div>
     </div>
-    <div className="max-w-7xl mx-24 max-sm:mx-2 px-4 py-2">
+    <div className="max-w-7xl mx-24 max-sm:mx-0 max-sm:px-0 px-4 py-2">
     <div className="relative mb-12 max-sm:hidden mt-12 h-[500px] flex-2">
           <img
             src={palmares1}
@@ -324,8 +324,8 @@ export default function PalmaresPage() {
         
         </div>
 
-        <div>
-        <h1 className="text-red-600 text-3xl md:text-4xl font-bold mb-12 leading-tight">
+        <div className=''>
+        <h1 className="text-red-600 max-sm:mx-8 text-3xl max-sm:text-2xl mt-5  md:text-4xl font-bold mb-12 max-sm:mb-6 leading-tight">
         Palmarès de TEAM Cameroun
       </h1>
       <RankingsTable/>
