@@ -110,15 +110,16 @@ export function HeroCarousel() {
 
       {/* Navigation Arrows */}
       <button
+      
         onClick={() => handleArrowClick('prev')}
-        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors"
+        className="absolute max-sm:hidden left-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-8 h-8" />
+        <ChevronLeft   className="w-8 h-8" />
       </button>
       <button
         onClick={() => handleArrowClick('next')}
-        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors"
+        className="absolute max-sm:hidden right-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors"
         aria-label="Next slide"
       >
         <ChevronRight className="w-8 h-8" />
