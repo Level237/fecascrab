@@ -19,6 +19,8 @@ import medalAr from "../assets/silver medal.png"
 import medalBr from "../assets/bronze medal.png"
 import palmares1 from "../assets/palmares1.jpg"
 import { RankingsTable } from '../components/RankingTable'
+import { ChampionshipTable } from '../components/ChampionsTable'
+import { ChampionClassic } from '../components/ChampionClassic'
 export default function PalmaresPage() {
   return (
     <section>
@@ -327,6 +329,17 @@ export default function PalmaresPage() {
         Palmarès de TEAM Cameroun
       </h1>
       <RankingsTable/>
+      
+        </div>
+        <div className='mt-12'>
+        <h1 className="text-red-600 text-center text-2xl md:text-4xl font-bold mb-12 leading-tight">
+        PALMARES DES MASTERS INTERNATIONAUX <br />
+        DU CAMEROUN
+      </h1>
+      <h1 className='text-[#00723e] text-center text-2xl md:text-4xl font-bold mb-1 leading-tight'>Elite Duplicate</h1>
+      <ChampionshipTable/>
+      <h1 className='text-[#00723e] text-center text-2xl md:text-4xl font-bold mb-1 leading-tight'>Elite Classique</h1>
+        <ChampionClassic/>
         </div>
     </div>
     </section>
