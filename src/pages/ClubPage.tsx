@@ -35,18 +35,18 @@ et le développement régional de cette discipline intellectuelle.
 
         <div className='mx-4 max-sm:mx-6 mt-8'>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>1. DSC Douala :  </h2>
+                    <h2 className='font-bold max-sm:text-xl text-2xl'>1. DSC Douala :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
             <p>Ibis douala Bonanjo</p>
                 <p>Mardi et jeudi : 18h30 - 21h30</p>
                 <p>Contact : Paco Bahanag |  (+237) 697 860 698</p>
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>2. DSA :  </h2>
+                    <h2 className='font-bold max-sm:text-xl text-2xl'>2. DSA :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
             <p>Douala</p>
                 <p>Tous les jours de 16h - 21h 
                 </p>
@@ -57,10 +57,10 @@ et le développement régional de cette discipline intellectuelle.
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>3. Fin Goudron Scrabble Club (FGSC)
+                    <h2 className='font-bold max-sm:text-xl text-2xl'>3. Fin Goudron Scrabble Club (FGSC)
                     :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
             <p>Douala - Bonaberi
             </p>
                 <p>Tous les jours de 16h - 21h 
@@ -72,10 +72,10 @@ et le développement régional de cette discipline intellectuelle.
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>4. AZEP
+                    <h2 className='font-bold max-sm:text-xl text-2xl'>4. AZEP
                     :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
             <p>Douala - Bonaberi
             </p>
                 <p>Contact : Reine Moby
@@ -88,11 +88,11 @@ et le développement régional de cette discipline intellectuelle.
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>5. Cradat Scrabble Club (CRASC)
+                    <h2 className='font-bold text-2xl max-sm:text-xl'>5. Cradat Scrabble Club (CRASC)
 
                     :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
             <p>Yaoundé
 
             </p>
@@ -109,12 +109,12 @@ Bachirou Mohamadou
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>6. Scrabble Tennis Club (STC)
+                    <h2 className='font-bold text-2xl max-sm:text-xl'>6. Scrabble Tennis Club (STC)
 
 
                     :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
             <p>Yaoundé
 
             </p>
@@ -129,9 +129,9 @@ Bachirou Mohamadou
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>7. Sophia Soa Scrabble Club (SSSC)     :  </h2>
+                    <h2 className='font-bold max-sm:text-xl text-2xl'>7. Sophia Soa Scrabble Club (SSSC)     :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
             <p>Yaoundé
 
             </p>
@@ -145,10 +145,10 @@ Bachirou Mohamadou
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>8. Harmony Scrabble Club (HSC)
+                    <h2 className='font-bold max-sm:text-xl text-2xl'>8. Harmony Scrabble Club (HSC)
                     :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
             <p>Yaoundé
 
             </p>
@@ -159,11 +159,11 @@ Bachirou Mohamadou
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>9. Biyem-Assi Scrabble Club ( BSC)
+                    <h2 className='font-bold max-sm:text-xl text-2xl'>9. Biyem-Assi Scrabble Club ( BSC)
 
                     :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
             <p>Yaoundé
 
             </p>
@@ -175,11 +175,11 @@ Bachirou Mohamadou
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>10. AMVOE Scrabble Club
+                    <h2 className='font-bold max-sm:text-xl text-2xl'>10. AMVOE Scrabble Club
 
                     :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
             <p>Nkoldongo Yaoundé
             </p>
                 
@@ -189,10 +189,10 @@ Bachirou Mohamadou
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>11. DSC Star Land Yaoundé
+                    <h2 className='font-bold max-sm:text-xl text-2xl'>11. DSC Star Land Yaoundé
                     :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
                 <p>Contact : Ivan Seundjeu (+237) 698352543
 </p>
 <p><span className='font-bold'>Abonnement: 
@@ -205,30 +205,30 @@ Bachirou Mohamadou
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>12. Club des amis du Scrabble de Bangangté
+                    <h2 className='font-bold max-sm:text-xl text-2xl'>12. Club des amis du Scrabble de Bangangté
 
 
                     :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
                 <p>Docteur Yannick Stève Ngounou : (+237) 697 70 43 33
 </p>
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>13. Club des amis du Scrabble Maroua
+                    <h2 className='font-bold max-sm:text-xl text-2xl'>13. Club des amis du Scrabble Maroua
                     :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
                 <p>Greng Omar (+237) 694 82 43 03
 </p>
             </div>
                     </div>
                     <div className='mb-6'>
-                    <h2 className='font-bold text-2xl'>14. scrabble champions : club anglophone
+                    <h2 className='font-bold text-2xl max-sm:text-xl'>14. scrabble champions : club anglophone
                     :  </h2>
 
-            <div className='text-xl'>
+            <div className='text-xl max-sm:text-lg'>
             <p>Mimboman Yaounde 
             </p>
                 <p>Friday 18h - 20h sunday 15h - 18h 
