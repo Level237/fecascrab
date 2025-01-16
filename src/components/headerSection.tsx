@@ -122,9 +122,9 @@ export default function HeaderSection() {
                 clip-rule="evenodd"></path>
             </svg>
           </div>
-          <Link to={"/inscription"}>
+          <Link className='max-sm:hidden' to={"/inscription"}>
           <Button
-              className="bg-red-600 max-sm:hidden px-10 py-5 hover:bg-red-700 text-white border-none"
+              className="bg-red-600  px-10 py-5 hover:bg-red-700 text-white border-none"
             >
               S'inscrire
             </Button>

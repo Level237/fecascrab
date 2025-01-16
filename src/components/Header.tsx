@@ -105,9 +105,9 @@ export default function Header() {
                 clip-rule="evenodd"></path>
             </svg>
           </div>
-          <Link to={"/inscription"}> <Button
+          <Link className='max-sm:hidden' to={"/inscription"}> <Button
             variant="outline" 
-            className="bg-white max-sm:hidden rounded-2xl py-6 font-bold text-emerald-800 hover:bg-white/90"
+            className="bg-white  rounded-2xl py-6 font-bold text-emerald-800 hover:bg-white/90"
           >
             S'INSCRIRE
           </Button></Link>

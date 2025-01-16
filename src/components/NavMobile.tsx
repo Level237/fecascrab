@@ -40,7 +40,7 @@ export default function NavMobile() {
                  transition={{ 
                   duration:0.7
                   }}
-              id='navbar' className=" lg:hidden fixed z-[99999999] top-0 right-0 bottom-[100%]   w-[100%] h-[100%]  bg-[#00723e]">
+              id='navbar' className=" lg:hidden fixed z-[9999999999999999999999999] top-0 right-0 bottom-[100%]   w-[100%] h-[100%]  bg-[#00723e]">
         <React.Fragment >
             <div className=" text-white text-4xl">
             <X className='mt-4 mx-4 mb-4' onClick={()=>close()}/>
@@ -112,7 +112,7 @@ export default function NavMobile() {
         </React.Fragment>
         
         </motion.div>
-              <div onClick={()=>closeHeader()} className='absolute z-[999] backdrop-blur-sm   inset-0 w-full h-full'>
+              <div onClick={()=>closeHeader()} className='fixed z-[9999] backdrop-blur-sm   inset-0 w-full h-full'>
 
               </div>
               </>

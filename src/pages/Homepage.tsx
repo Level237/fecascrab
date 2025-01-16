@@ -16,6 +16,7 @@ import NavMobile from '../components/NavMobile';
 import Loader from '../components/ui/loader';
 import Footer from '../components/Footer';
 import { InstagramEmbed } from 'react-social-media-embed';
+import { HeroCarousel } from '../components/heroCarousel';
 export default function Homepage() {
 
 
@@ -67,7 +68,7 @@ export default function Homepage() {
     <section> <section>
     <Header/>
     <NavMobile/>
-    <Hero/>
+    <HeroCarousel/>
     <div className="max-w-7xl mx-28 px-4 max-sm:mx-4 py-12">
     {/* Welcome Section */}
     <div className="flex items-center max-sm:flex-col justify-between gap-8 mb-12">
