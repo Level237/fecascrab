@@ -18,6 +18,7 @@ import medalOr from "../assets/gold medal.png"
 import medalAr from "../assets/silver medal.png"
 import medalBr from "../assets/bronze medal.png"
 import palmares1 from "../assets/palmares1.jpg"
+import { RankingsTable } from '../components/RankingTable'
 export default function PalmaresPage() {
   return (
     <section>
@@ -325,6 +326,7 @@ export default function PalmaresPage() {
         <h1 className="text-red-600 text-3xl md:text-4xl font-bold mb-12 leading-tight">
         Palmarès de TEAM Cameroun
       </h1>
+      <RankingsTable/>
         </div>
     </div>
     </section>
