@@ -7,6 +7,7 @@ import logoIcon from "../assets/logo.png"
 import '../components/forms/inscription.css'
 import Loader from '../components/ui/loader'
 import Footer from '../components/Footer'
+import { ScrollRestoration } from 'react-router-dom'
 export default function Inscription() {
 
   const [imageLoad,setImageLoad]=useState(false)
@@ -40,6 +41,7 @@ export default function Inscription() {
     </Helmet>
 
     {!loading &&     <section>
+      <ScrollRestoration/>
           <section className='flex flex-col gap-20 '>
       <div className='bg-sky-400 w-full h-44 flex justify-center items-center relative'>
                 <div className='absolute bottom-[-80px] z-50'>

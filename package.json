@@ -33,13 +33,14 @@
     "react-helmet-async": "^2.0.5",
     "react-international-phone": "^4.3.0",
     "react-router-dom": "^6.28.0",
+    "react-social-media-embed": "^2.5.17",
     "tailwind-merge": "^2.5.4",
     "use-react-countries": "^2.0.1",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
-    "@types/react": "^18.3.12",
+    "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.1",
     "@types/react-helmet": "^6.1.11",
     "@vitejs/plugin-react": "^4.3.3",

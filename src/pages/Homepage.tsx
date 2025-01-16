@@ -2,13 +2,11 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button'
 import { useEffect, useState } from 'react'
 import "../components/forms/inscription.css"
-import { Skeleton } from '../components/ui/skeleton';
 import section1 from "../assets/section1.jpg"
 import section2 from "../assets/event.jpg"
 import bgHome from "../assets/BG_Site.jpg"
 import logo from "../assets/logo-1.png"
 import logoIcon from "../assets/logo.png"
-import logoScrab from "../assets/logo_fecascrab.png"
 import {Helmet} from "react-helmet-async"
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -17,9 +15,10 @@ import selection from "../assets/section2.jpg"
 import NavMobile from '../components/NavMobile';
 import Loader from '../components/ui/loader';
 import Footer from '../components/Footer';
+import { InstagramEmbed } from 'react-social-media-embed';
 export default function Homepage() {
 
-  const [startDate]=useState(Date.now())
+
   
   const [loading, setLoading] = useState(true);
 
@@ -33,24 +32,7 @@ export default function Homepage() {
   
       fetchData();
     }, []);
-  const [endDate]=useState('2025-03-12T10:00')
-  const [timeRemaining, setTimeRemaining] = useState<{jours:number,heures:number,minutes:number,secondes:number}>( { jours: 0, heures: 0, minutes: 0, secondes: 0 });
-  const calculerTempsRestant = (d2:any) => {
-    const now:any = new Date();
-    const d2Date:any = new Date(d2);
-    const diff = d2Date - now;
 
-    if (diff < 0) {
-        return { jours: 0, heures: 0, minutes: 0, secondes: 0 };
-    }
-
-    const jours = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const heures = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const secondes = Math.floor((diff % (1000 * 60)) / 1000);
-
-    return { jours, heures, minutes, secondes };
-};
 
 
 
@@ -90,7 +72,7 @@ export default function Homepage() {
     {/* Welcome Section */}
     <div className="flex items-center max-sm:flex-col justify-between gap-8 mb-12">
       <div className="space-y-6 flex-1">
-        <h1 className="text-red-600 font-bold text-3xl md:text-3xl leading-tight">
+        <h1 className="text-red-600 font-bold text-3xl max-sm:text-2xl md:text-3xl leading-tight">
           BIENVENUE SUR LE SITE OFFICIEL
           <br className='max-sm:hidden' />
           DE LA FÉDÉRATION INTERNATIONALE
@@ -121,7 +103,7 @@ export default function Homepage() {
 
     {/* News Section */}
     <div className="space-y-6">
-      <h2 className="text-3xl  font-bold text-red-600">À LA UNE</h2>
+      <h2 className="text-3xl  font-bold max-sm:text-2xl text-red-600">À LA UNE</h2>
       
         
          
@@ -139,7 +121,8 @@ export default function Homepage() {
             <p className='text-2xl max-sm:text-xl mt-5'>Rejoignez-nous pour vivre un moment d'exception, où compétition
             rime avec excellence et découverte !</p>
             <div className='mt-3 max-sm:mt-6 max-sm:justify-start flex items-center justify-center'>
-          <Button className='bg-red-600 text-white px-8 py-6 text-lg title-bold'>Découvrir</Button>
+          <Link to={"/inscription"}><Button className='bg-red-600 text-white px-8 py-6 text-lg title-bold'>Découvrir</Button></Link>
+          
         </div>
           </div>
         </div>
@@ -151,12 +134,13 @@ export default function Homepage() {
             Scrabble c’est au total...</h2>
           </div>
           <Figures/>
-          <Button className='bg-red-600 mt-8 text-white px-8 py-6 text-lg title-bold'>Voir tout les palmares</Button>
+          <Link to={'/palmares'}><Button className='bg-red-600 mt-8 text-white px-8 py-6 text-lg title-bold'>Voir tout les palmares</Button></Link>
+          
         </section>
-
+        
         <section className='mt-24 mx-28 max-sm:mx-4 mb-8'>
         <div className="w-full h-[30rem] max-sm:h-[20rem] bg-black flex items-center justify-center">
-      <p className="text-white text-xl">Plage video</p>
+        <InstagramEmbed url='https://www.instagram.com/reel/DExR_IQO6FQ/?igsh=OXR5aWp2aWp2aWFpenp2' width="100%" height="100%" />
     </div>
 
     <div className="relative mt-12 rounded-lg overflow-hidden">
@@ -180,8 +164,10 @@ export default function Homepage() {
             nationale ou soutenir nos joueurs ?</p>
             
           </div>
-          <div className='mt-[-1.5rem] z-[60] '><Button className='bg-[#00723e]  text-white max-sm:py-8 px-8 py-6 text-lg'>Contactez Nous</Button></div>
-          
+          <div className='mt-[-1.5rem] z-[60] '>
+            <Link to="/inscription"><Button className='bg-[#00723e]  text-white max-sm:py-8 px-8 py-6 text-lg'>Contactez Nous</Button></Link>
+            
+            </div>
         </div>
   </section>
  

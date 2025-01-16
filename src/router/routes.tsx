@@ -25,7 +25,7 @@ export const routes=createBrowserRouter([{
     path:"/organisation",
     element:<OrganisationPage/>
 },{
-    path:"/clubs",
+    path:"/clubs-afiliés",
     element:<ClubPage/>
 },{
     path:"/palmares",

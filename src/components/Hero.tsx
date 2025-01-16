@@ -1,4 +1,4 @@
-import React from 'react'
+
 import slide from "../assets/hero.jpg"
 export default function Hero() {
   return (

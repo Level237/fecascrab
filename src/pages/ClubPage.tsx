@@ -1,4 +1,4 @@
-import { HeroSection } from '../components/HeroSection'
+
 import HeaderSection from '../components/headerSection'
 import slide from "../assets/club.jpeg"
 import NavMobile from '../components/NavMobile'

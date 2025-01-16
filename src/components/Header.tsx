@@ -1,11 +1,14 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 import logo from "../assets/logo.png"
 import { Button } from './ui/button'
 import { initialStore } from '../store/store'
+import { motion, AnimatePresence } from "framer-motion"
+import { ChevronDown } from 'lucide-react'
+import React from 'react'
 export default function Header() {
   const openHeader=initialStore((state)=>state.openShowHeader)
-
+  const [isHovered, setIsHovered] = React.useState(false);
   const openHeaderMobile=()=>{
     //props.open()
    openHeader()
@@ -29,9 +32,52 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
               to="/federation" 
-              className="text-white hover:text-white/80 font-medium"
+              onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+              className="text-white relative flex items-center gap-3 hover:text-white/80 font-medium"
             >
-              LA FÉDÉRATION ▾
+              LA FÉDÉRATION <ChevronDown className="h-4 w-4" />
+              <AnimatePresence>
+          {isHovered && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.2 }}
+              className="absolute top-[2rem] left-0 w-48 bg-white  shadow-lg py-2 z-50"
+            >
+              
+                <Link
+                  key={"origine"}
+                  to={"/origine"}
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                >
+                  ORIGINE
+                </Link>
+                <Link
+                  key={"organisation"}
+                  to={"/organisation"}
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                >
+                  ORGANISATION
+                </Link>
+                <Link
+                  key={"club"}
+                  to={"/clubs-afiliés"}
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                >
+                  CLUBS AFFILIÉS
+                </Link>
+                <Link
+                  key={"Galerie"}
+                  to={"/"}
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                >
+                  GALERIE
+                </Link>
+            </motion.div>
+          )}
+        </AnimatePresence>
             </Link>
             <Link 
               to="/palmares" 
@@ -40,13 +86,13 @@ export default function Header() {
               PALMARÈS
             </Link>
             <Link 
-              to="/events" 
+              to="/" 
               className="text-white hover:text-white/80 font-medium"
             >
               EVENTS
             </Link>
             <Link 
-              to="/creation-club" 
+              to="/" 
               className="text-white hover:text-white/80 font-medium"
             >
               CRÉATION CLUB
@@ -59,12 +105,13 @@ export default function Header() {
                 clip-rule="evenodd"></path>
             </svg>
           </div>
-          <Button
+          <Link to={"/inscription"}> <Button
             variant="outline" 
             className="bg-white max-sm:hidden rounded-2xl py-6 font-bold text-emerald-800 hover:bg-white/90"
           >
-            NOUS CONTACTER
-          </Button>
+            S'INSCRIRE
+          </Button></Link>
+         
         </div>
       </div>
     </header>

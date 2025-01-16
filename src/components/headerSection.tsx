@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom'
 import { Button } from './ui/button'
 import logo from "../assets/logo.png"
 import { initialStore } from '../store/store'
+import { ChevronDown } from 'lucide-react'
+import { AnimatePresence,motion } from 'framer-motion'
 export default function HeaderSection() {
     const [isScrolled, setIsScrolled] = useState(false)
     const openHeader=initialStore((state)=>state.openShowHeader)
-
+    const [isHovered, setIsHovered] = React.useState(false);
     const openHeaderMobile=()=>{
       //props.open()
      openHeader()
@@ -43,27 +45,72 @@ export default function HeaderSection() {
             </div>
   
             <nav className="hidden md:flex items-center space-x-8">
-              <Link 
-                to="/federation" 
-                className={`${isScrolled ? 'text-white' : 'text-[#00723e]'} hover:text-white/80 font-medium`}
-              >
-                LA FÉDÉRATION ▾
-              </Link>
+
+            <Link 
+              to="/federation" 
+              onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={`${isScrolled ? 'text-white hover:text-white' : 'text-[#00723e]'} flex items-center gap-3 relative hover:text-[#00723e]/80 font-medium`}
+            >
+              LA FÉDÉRATION <ChevronDown className="h-4 w-4" />
+              <AnimatePresence>
+          {isHovered && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.2 }}
+              className={`absolute top-[2rem] ${isScrolled ? 'bg-white text-[#00723e]' : 'bg-[#00723e]'} left-0 w-48   shadow-lg py-2 z-50`}
+            >
+              
+                <Link
+                  key={"origine"}
+                  to={"/origine"}
+                  className={`block px-4 py-2 text-sm ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
+                >
+                  ORIGINE
+                </Link>
+                <Link
+                  key={"organisation"}
+                  to={"/organisation"}
+                  className={`block px-4 py-2 text-sm ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
+                >
+                  ORGANISATION
+                </Link>
+                <Link
+                  key={"club"}
+                  to={"/clubs-afiliés"}
+                  className={`block px-4 py-2 text-sm ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
+                >
+                  CLUBS AFFILIÉS
+                </Link>
+                <Link
+                  key={"Galerie"}
+                  to={"/"}
+                  className={`block px-4 py-2 text-sm ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
+                >
+                  GALERIE
+                </Link>
+            </motion.div>
+          )}
+        </AnimatePresence>
+            </Link>
+             
               <Link 
                 to="/palmares" 
-                className={`${isScrolled ? 'text-white' : 'text-[#00723e]'} hover:text-white/80 font-medium`}
+                className={`${isScrolled ? 'text-white hover:text-white' : 'text-[#00723e]'} hover:text-[#00723e]/80 font-medium`}
               >
                 PALMARÈS
               </Link>
               <Link 
                 to="/events" 
-                 className={`${isScrolled ? 'text-white' : 'text-[#00723e]'} hover:text-white/80 font-medium`}
+                 className={`${isScrolled ? 'text-white hover:text-white' : 'text-[#00723e]'} hover:text-[#00723e]/80 font-medium`}
               >
                 EVENTS
               </Link>
               <Link 
                 to="/creation-club" 
-                 className={`${isScrolled ? 'text-white' : 'text-[#00723e]'} hover:text-white/80 font-medium`}
+                 className={`${isScrolled ? 'text-white hover:text-white' : 'text-[#00723e]'} hover:text-[#00723e]/80 font-medium`}
               >
                 CRÉATION CLUB
               </Link>

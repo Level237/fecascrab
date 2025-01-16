@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom'
 import { AnimatePresence,motion } from "framer-motion";
-import { X } from 'lucide-react'
+import { Plus, X } from 'lucide-react'
 import React from 'react';
 import { initialStore } from '../store/store';
 import logo from "../assets/logo.png"
@@ -9,10 +9,15 @@ export default function NavMobile() {
 
     const showHeader=initialStore((state)=>state.showHeader)
     const closeHeader=initialStore((state)=>state.closeShowHeader)
+    const [open,setOpen]=React.useState(false)
     const close=()=>{
          
        
       closeHeader()
+  }
+
+  const openSubMenu=()=>{
+    setOpen(true)
   }
   return (
     <div>
@@ -60,11 +65,30 @@ export default function NavMobile() {
         
             <div className="mt-[12px] ml-10 text-white font-bold text-xl flex flex-col items-start">
             
-                <div className='mt-8' >
+                <div className='mt-8 w-[65%] flex items-center justify-between' >
                   <Link to='/' onClick={()=>closeHeader()} >
                     La Féderation
                     </Link>
+                    <div>
+                      {open && <X onClick={()=>setOpen(false)}/>}
+                        {!open && <Plus onClick={openSubMenu}/>}
+                      
+                    </div>
                 </div>
+                {open && <div className="mt-5 mx-6 mb-6 flex flex-col gap-3 underline underline-offset-4 text-md">
+                <Link to='/origine' onClick={()=>closeHeader()} >
+                    Origine
+                    </Link>
+                    <Link to='/organisation' onClick={()=>closeHeader()} >
+                    Organisation
+                    </Link>
+                    <Link to='/clubs-afiliés' onClick={()=>closeHeader()} >
+                    Clubs Affiliés
+                    </Link>
+                    <Link to='/' onClick={()=>closeHeader()} >
+                    Galerie
+                    </Link>
+                </div>}
                 <div  className="mt-5">
                 <Link to='/actualites' onClick={()=>closeHeader()}>
                     Palmarès
