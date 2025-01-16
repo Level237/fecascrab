@@ -13,9 +13,27 @@ import slide9Origine from "../assets/slide9Origine.jpg"
 import slide10Origine from "../assets/slide10.jpg"
 import slide11Origine from "../assets/slide11.jpg"
 import slide12Origine from "../assets/slide12.jpg"
+import { useEffect, useState } from 'react'
+import Loader from '../components/ui/loader'
 export default function OriginePage() {
+
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+
+      const fetchData = async () => {
+  
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        setLoading(false);
+      };
+  
+      fetchData();
+    }, []);
   return (
-    <section>
+
+    <>
+    {!loading &&  <section>
         <HeaderSection />
         <NavMobile/>
         <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
@@ -201,6 +219,10 @@ Reebok (Tchuyo)
         </div>
            
     </section>
-    </section>
+    </section>}
+
+    {loading && <Loader/>}
+    </>
+   
   )
 }

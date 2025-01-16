@@ -15,10 +15,23 @@ import Hero from '../components/Hero';
 import Figures from '../components/Figures';
 import selection from "../assets/section2.jpg"
 import NavMobile from '../components/NavMobile';
+import Loader from '../components/ui/loader';
 export default function Homepage() {
 
   const [startDate]=useState(Date.now())
-  const [loading,setLoading]=useState(false)
+  
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+
+      const fetchData = async () => {
+  
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        setLoading(false);
+      };
+  
+      fetchData();
+    }, []);
   const [endDate]=useState('2025-03-12T10:00')
   const [timeRemaining, setTimeRemaining] = useState<{jours:number,heures:number,minutes:number,secondes:number}>( { jours: 0, heures: 0, minutes: 0, secondes: 0 });
   const calculerTempsRestant = (d2:any) => {
@@ -38,14 +51,7 @@ export default function Homepage() {
     return { jours, heures, minutes, secondes };
 };
 
-useEffect(() => {
-  const interval = setInterval(() => {
-      setTimeRemaining(calculerTempsRestant(endDate));
-      setLoading(true)
-  }, 1000);
 
-  return () => clearInterval(interval);
-}, [startDate, endDate]);
 
 
   return (
@@ -74,111 +80,115 @@ useEffect(() => {
             <meta name="twitter:image" content={bgHome} />
             <meta name="twitter:description" content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
     </Helmet>
-    <section>
-      <Header/>
-      <NavMobile/>
-      <Hero/>
-      <div className="max-w-7xl mx-28 px-4 max-sm:mx-4 py-12">
-      {/* Welcome Section */}
-      <div className="flex items-center max-sm:flex-col justify-between gap-8 mb-12">
-        <div className="space-y-6 flex-1">
-          <h1 className="text-red-600 font-bold text-3xl md:text-3xl leading-tight">
-            BIENVENUE SUR LE SITE OFFICIEL
-            <br className='max-sm:hidden' />
-            DE LA FÉDÉRATION INTERNATIONALE
-         
-            DE SCRABBLE
-          </h1>
-          <div className="relative lg:hidden h-[300px] flex-2">
-          <img
-            src={section1}
-            alt="Partie de Scrabble en cours"
-            className="rounded-lg  object-cover w-full h-full"
-          />
-        
-        </div>
-          <p className="text-gray-700 text-2xl max-sm:text-xl leading-relaxed">
-            Depuis 1990, nous avons pour mission d&apos;organiser et de promouvoir le Scrabble dans tout le pays. Si vous êtes passionné par les mots, nous offrons des clubs, des formations et les échanges entre passionnés.
-          </p>
-        </div>
-        <div className="relative max-sm:hidden h-[300px] flex-2">
-          <img
-            src={section1}
-            alt="Partie de Scrabble en cours"
-            className="rounded-lg object-cover  w-full h-full"
-          />
-        
-        </div>
-      </div>
-
-      {/* News Section */}
-      <div className="space-y-6">
-        <h2 className="text-3xl  font-bold text-red-600">À LA UNE</h2>
-        
-          
-           
-            <div className="relative h-[200px] md:h-[300px]">
-              <img
-                src={section2}
-                alt="Super Master 2024"
-                className="rounded-2xl object-cover w-full h-full"
-              />
-            </div>
-
-            <div>
-              <h2 className='text-3xl text-[#00723e] max-sm:text-2xl font-bold'>SUPER MASTER 2025: UNE EXPERIENCE 
-              UNIQUE AU CAMEROUN</h2>
-              <p className='text-2xl max-sm:text-xl mt-5'>Rejoignez-nous pour vivre un moment d'exception, où compétition
-              rime avec excellence et découverte !</p>
-              <div className='mt-3 max-sm:mt-6 max-sm:justify-start flex items-center justify-center'>
-            <Button className='bg-red-600 text-white px-8 py-6 text-lg title-bold'>Découvrir</Button>
-          </div>
-            </div>
-          </div>
-         
-    </div>
-    <section className='w-full bg-[#00723e59] px-6 py-14 flex flex-col items-center'>
-          <div>
-              <h2 className='text-black text-3xl max-sm:text-2xl text-center font-bold'>La fédération Camerounaise de <br />
-              Scrabble c’est au total...</h2>
-            </div>
-            <Figures/>
-            <Button className='bg-red-600 mt-8 text-white px-8 py-6 text-lg title-bold'>Voir tout les palmares</Button>
-          </section>
-
-          <section className='mt-24 mx-28 max-sm:mx-4 mb-8'>
-          <div className="w-full h-[30rem] max-sm:h-[20rem] bg-black flex items-center justify-center">
-        <p className="text-white text-xl">Plage video</p>
-      </div>
-
-      <div className="relative mt-12 rounded-lg overflow-hidden">
-        {/* Background Image */}
-        <img
-          src={selection}
-          alt="Équipe nationale de Scrabble du Cameroun"
-          className="w-full object-cover h-[30rem]"
-        />
-        
-        {/* Overlay Content */}
+    {!loading && 
+    <section> <section>
+    <Header/>
+    <NavMobile/>
+    <Hero/>
+    <div className="max-w-7xl mx-28 px-4 max-sm:mx-4 py-12">
+    {/* Welcome Section */}
+    <div className="flex items-center max-sm:flex-col justify-between gap-8 mb-12">
+      <div className="space-y-6 flex-1">
+        <h1 className="text-red-600 font-bold text-3xl md:text-3xl leading-tight">
+          BIENVENUE SUR LE SITE OFFICIEL
+          <br className='max-sm:hidden' />
+          DE LA FÉDÉRATION INTERNATIONALE
        
+          DE SCRABBLE
+        </h1>
+        <div className="relative lg:hidden h-[300px] flex-2">
+        <img
+          src={section1}
+          alt="Partie de Scrabble en cours"
+          className="rounded-lg  object-cover w-full h-full"
+        />
+      
       </div>
-     
-          </section>
-          <div className=" flex flex-col items-center justify-center mt-[-7rem]  p-6">
-            <div className=" bg-red-600 px-28 max-sm:px-6 py-9 z-50 ">
-             <h2 className='text-2xl mb-6 md:text-3xl font-bold text-white  inline-block'>Sélection Nationale de Scrabble du Cameroun</h2>
-             <p className='text-xl text-center'>Vous souhaitez en savoir plus sur comment intégrer l’équipe <br />
+        <p className="text-gray-700 text-2xl max-sm:text-xl leading-relaxed">
+          Depuis 1990, nous avons pour mission d&apos;organiser et de promouvoir le Scrabble dans tout le pays. Si vous êtes passionné par les mots, nous offrons des clubs, des formations et les échanges entre passionnés.
+        </p>
+      </div>
+      <div className="relative max-sm:hidden h-[300px] flex-2">
+        <img
+          src={section1}
+          alt="Partie de Scrabble en cours"
+          className="rounded-lg object-cover  w-full h-full"
+        />
+      
+      </div>
+    </div>
 
-              nationale ou soutenir nos joueurs ?</p>
-              
-            </div>
-            <div className='mt-[-1.5rem] z-[60] '><Button className='bg-[#00723e]  text-white max-sm:py-8 px-8 py-6 text-lg'>Contactez Nous</Button></div>
+    {/* News Section */}
+    <div className="space-y-6">
+      <h2 className="text-3xl  font-bold text-red-600">À LA UNE</h2>
+      
+        
+         
+          <div className="relative h-[200px] md:h-[300px]">
+            <img
+              src={section2}
+              alt="Super Master 2024"
+              className="rounded-2xl object-cover w-full h-full"
+            />
+          </div>
+
+          <div>
+            <h2 className='text-3xl text-[#00723e] max-sm:text-2xl font-bold'>SUPER MASTER 2025: UNE EXPERIENCE 
+            UNIQUE AU CAMEROUN</h2>
+            <p className='text-2xl max-sm:text-xl mt-5'>Rejoignez-nous pour vivre un moment d'exception, où compétition
+            rime avec excellence et découverte !</p>
+            <div className='mt-3 max-sm:mt-6 max-sm:justify-start flex items-center justify-center'>
+          <Button className='bg-red-600 text-white px-8 py-6 text-lg title-bold'>Découvrir</Button>
+        </div>
+          </div>
+        </div>
+       
+  </div>
+  <section className='w-full bg-[#00723e59] px-6 py-14 flex flex-col items-center'>
+        <div>
+            <h2 className='text-black text-3xl max-sm:text-2xl text-center font-bold'>La fédération Camerounaise de <br />
+            Scrabble c’est au total...</h2>
+          </div>
+          <Figures/>
+          <Button className='bg-red-600 mt-8 text-white px-8 py-6 text-lg title-bold'>Voir tout les palmares</Button>
+        </section>
+
+        <section className='mt-24 mx-28 max-sm:mx-4 mb-8'>
+        <div className="w-full h-[30rem] max-sm:h-[20rem] bg-black flex items-center justify-center">
+      <p className="text-white text-xl">Plage video</p>
+    </div>
+
+    <div className="relative mt-12 rounded-lg overflow-hidden">
+      {/* Background Image */}
+      <img
+        src={selection}
+        alt="Équipe nationale de Scrabble du Cameroun"
+        className="w-full object-cover h-[30rem]"
+      />
+      
+      {/* Overlay Content */}
+     
+    </div>
+   
+        </section>
+        <div className=" flex flex-col items-center justify-center mt-[-7rem]  p-6">
+          <div className=" bg-red-600 px-28 max-sm:px-6 py-9 z-50 ">
+           <h2 className='text-2xl mb-6 md:text-3xl font-bold text-white  inline-block'>Sélection Nationale de Scrabble du Cameroun</h2>
+           <p className='text-xl text-center'>Vous souhaitez en savoir plus sur comment intégrer l’équipe <br />
+
+            nationale ou soutenir nos joueurs ?</p>
             
           </div>
-    </section>
-    <div className='w-full   flex justify-center items-center h-32 relative bg-[#107a5f]'>
-        <img className='w-96 max-sm:w-80 ' src={logo} alt="" />
-      </div>
+          <div className='mt-[-1.5rem] z-[60] '><Button className='bg-[#00723e]  text-white max-sm:py-8 px-8 py-6 text-lg'>Contactez Nous</Button></div>
+          
+        </div>
+  </section>
+  <div className='w-full   flex justify-center items-center h-32 relative bg-[#107a5f]'>
+      <img className='w-96 max-sm:w-80 ' src={logo} alt="" />
+    </div></section>
+    
+    }
+   {loading && <Loader/>}
     </>
   )
 }
