@@ -18,6 +18,7 @@ import medalOr from "../assets/gold medal.png"
 import medalAr from "../assets/silver medal.png"
 import medalBr from "../assets/bronze medal.png"
 import palmares1 from "../assets/palmares1.jpg"
+import palmares2 from "../assets/palmares2.jpg"
 import { RankingsTable } from '../components/RankingTable'
 import { ChampionshipTable } from '../components/ChampionsTable'
 import { ChampionClassic } from '../components/ChampionClassic'
@@ -32,7 +33,7 @@ export default function PalmaresPage() {
     </div>
 
     <div className="max-w-7xl mx-24 max-sm:mx-2 px-4 py-16">
-      <h1 className="text-red-600 text-3xl max-sm:text-2xl md:text-4xl font-bold mb-12 leading-tight">
+      <h1 className="text-red-600 text-3xl max-sm:text-2xl md:text-3xl font-bold mb-12 leading-tight">
         PALMARES DU CAMEROUN AUX CHAMPIONNATS
         <br />
         DU MONDE DE SCRABBLE FRANCOPHONE (CDM)
@@ -109,7 +110,7 @@ export default function PalmaresPage() {
       </div>
     </div>
     <div className="max-w-7xl mx-24 max-sm:mx-2 px-4 py-2">
-    <h1 className="text-red-600 text-3xl max-sm:text-2xl  md:text-4xl font-bold mb-12 leading-tight">
+    <h1 className="text-red-600 text-3xl max-sm:text-2xl  md:text-3xl font-bold mb-12 leading-tight">
         PALMARES DU CAMEROUN AUX CHAMPIONNATS
         <br />
         D’AFRIQUE DE SCRABB E (CHAMPAS) DE 2016 A 2024
@@ -315,31 +316,52 @@ export default function PalmaresPage() {
       </div>
     </div>
     <div className="max-w-7xl mx-24 max-sm:mx-0 max-sm:px-0 px-4 py-2">
-    <div className="relative mb-12 max-sm:hidden mt-12 h-[500px] flex-2">
+    <div className="relative mb-12  mt-12  flex-2">
           <img
             src={palmares1}
             alt="Partie de Scrabble en cours"
-            className="rounded-lg object-cover  w-full h-full"
+            className="rounded-lg object-contain  w-full h-full"
           />
         
         </div>
 
         <div className=''>
-        <h1 className="text-red-600 max-sm:mx-8 text-3xl max-sm:text-2xl mt-5  md:text-4xl font-bold mb-12 max-sm:mb-6 leading-tight">
+        <h1 className="text-red-600 max-sm:mx-8 text-3xl max-sm:text-2xl mt-5  md:text-3xl font-bold mb-12 max-sm:mb-6 leading-tight">
         Palmarès de TEAM Cameroun
       </h1>
       <RankingsTable/>
       
         </div>
         <div className='mt-12'>
-        <h1 className="text-red-600 text-center text-2xl md:text-4xl font-bold mb-12 leading-tight">
+        <h1 className="text-red-600 text-center text-2xl md:text-3xl font-bold mb-12 leading-tight">
         PALMARES DES MASTERS INTERNATIONAUX <br />
         DU CAMEROUN
       </h1>
-      <h1 className='text-[#00723e] text-center text-2xl md:text-4xl font-bold mb-1 leading-tight'>Elite Duplicate</h1>
+      <h1 className='text-[#00723e] text-center text-2xl md:text-3xl font-bold mb-1 leading-tight'>Elite Duplicate</h1>
       <ChampionshipTable/>
-      <h1 className='text-[#00723e] text-center text-2xl md:text-4xl font-bold mb-1 leading-tight'>Elite Classique</h1>
+      <h1 className='text-[#00723e] text-center text-2xl md:text-3xl font-bold mb-1 leading-tight'>Elite Classique</h1>
         <ChampionClassic/>
+        <h1 className='text-[#00723e] text-center text-2xl max-sm:text-xl md:text-3xl font-bold mb-1 leading-tight'>Défis</h1>
+        <h1 className="text-red-600 text-center max-sm:text-xl text-xl md:text-3xl font-bold mb-12 leading-tight">
+        BALOG FRANCOIS ROLAND (2021)<br />
+        TCHOUYO ERIC SALVADOR (2023)
+      </h1>
+      <div className="relative mb-12  flex-2">
+          <img
+            src={palmares2}
+            alt="Partie de Scrabble en cours"
+            className="rounded-lg object-contain  w-full h-full"
+          />
+        
+        </div>
+        </div>
+        <div className="relative mb-12 max-sm:hidden mt-12 h-[300px] flex-2">
+          <img
+            src={slide12Origine}
+            alt="Partie de Scrabble en cours"
+            className="rounded-lg object-cover  w-full h-full"
+          />
+        
         </div>
     </div>
     </section>
