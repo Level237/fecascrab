@@ -8,6 +8,7 @@ import Loader from '../components/ui/loader'
 import logo from "../assets/logo-1.png"
 import logoIcon from "../assets/logo.png"
 import {Helmet} from "react-helmet-async"
+import Footer from '../components/Footer'
 export default function ClubPage() {
 
     const [loading, setLoading] = useState(true);
@@ -301,7 +302,7 @@ activités de la Fédération.
         </div>
            
     </section>
-    
+    <Footer/>
     </section>}
    
      

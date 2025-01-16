@@ -16,6 +16,7 @@ import Figures from '../components/Figures';
 import selection from "../assets/section2.jpg"
 import NavMobile from '../components/NavMobile';
 import Loader from '../components/ui/loader';
+import Footer from '../components/Footer';
 export default function Homepage() {
 
   const [startDate]=useState(Date.now())
@@ -183,9 +184,9 @@ export default function Homepage() {
           
         </div>
   </section>
-  <div className='w-full   flex justify-center items-center h-32 relative bg-[#107a5f]'>
-      <img className='w-96 max-sm:w-80 ' src={logo} alt="" />
-    </div></section>
+ 
+    <Footer/>
+    </section>
     
     }
    {loading && <Loader/>}

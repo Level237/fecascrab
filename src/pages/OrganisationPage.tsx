@@ -5,6 +5,7 @@ import NavMobile from '../components/NavMobile'
 import slide12Origine from "../assets/slide12.jpg"
 import { useEffect, useState } from 'react';
 import Loader from '../components/ui/loader';
+import Footer from '../components/Footer';
 export default function OrganisationPage() {
 
 
@@ -102,6 +103,7 @@ activités de la Fédération.
         </div>
            
     </section>
+    <Footer/>
     </section>}
 
     {loading && <Loader/>}

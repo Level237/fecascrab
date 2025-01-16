@@ -1,4 +1,4 @@
-import { HeroSection } from '../components/HeroSection'
+
 import HeaderSection from '../components/headerSection'
 import slide from "../assets/slideOrigine.jpeg"
 import NavMobile from '../components/NavMobile'
@@ -15,6 +15,7 @@ import slide11Origine from "../assets/slide11.jpg"
 import slide12Origine from "../assets/slide12.jpg"
 import { useEffect, useState } from 'react'
 import Loader from '../components/ui/loader'
+import Footer from '../components/Footer'
 export default function OriginePage() {
 
 
@@ -219,6 +220,7 @@ Reebok (Tchuyo)
         </div>
            
     </section>
+    <Footer/>
     </section>}
 
     {loading && <Loader/>}

@@ -365,7 +365,7 @@ question ou précision, veuillez contacter l’équipe de la FECASCRAB</h2>
             </div>
             <div className='w-full flex flex-col gap-3 mx-24 max-sm:mx-3 mt-6'>
               <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl max-sm:text-md title-bold font-bold '>Téléphone : <span className='font-light title-medium'>(+33) 758 641 042 / (+237) 699 804 338</span> </h2></div>
-              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl title-bold font-bold '>Email : <span className='font-light title-medium'>assomo.scrabble@gmail.com</span> </h2></div>
+              <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl title-bold font-bold '>Email : <span className='font-light title-medium'>contact@fecascrab.com</span> </h2></div>
               <div className='flex items-center justify-start gap-2'>&#9711; <h2 className='text-xl title-bold font-bold '>Adresse : <span className='font-light title-medium'>Bureau de la FECASCRAB, Douala, Cameroun</span> </h2></div>
             </div>
         </section>

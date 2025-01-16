@@ -14,6 +14,7 @@ import { ChampionshipTable } from '../components/ChampionsTable'
 import { ChampionClassic } from '../components/ChampionClassic'
 import { useEffect, useState } from 'react'
 import Loader from '../components/ui/loader'
+import Footer from '../components/Footer'
 export default function PalmaresPage() {
 
   const [loading, setLoading] = useState(true);
@@ -371,6 +372,7 @@ export default function PalmaresPage() {
         
         </div>
     </div>
+    <Footer/>
     </section>}
 
     {loading && <Loader/>}
