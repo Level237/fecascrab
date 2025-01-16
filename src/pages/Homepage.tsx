@@ -139,12 +139,15 @@ export default function Homepage() {
           
         </section>
         
-        <section className='mt-24 mx-28 max-sm:mx-4 mb-8'>
-        <div className="w-full h-[30rem] max-sm:h-[20rem] bg-black flex items-center justify-center">
-        <InstagramEmbed url='https://www.instagram.com/reel/DExR_IQO6FQ/?igsh=OXR5aWp2aWp2aWFpenp2' width="100%" height="100%" />
+        <section className='mt-24 mx-28 max-sm:mx-0 mb-8'>
+        <div className="w-full h-[30rem] mt-32 hidden max-sm:flex max-sm:h-[20rem] bg-black items-center justify-center">
+        <InstagramEmbed url='https://www.instagram.com/reel/DExR_IQO6FQ/?igsh=OXR5aWp2aWp2aWFpenp2' width="100vh" height="600px" />
+    </div>
+    <div className="w-full h-[30rem] mt-32 flex max-sm:hidden max-sm:h-[20rem] bg-black items-center justify-center">
+        <InstagramEmbed url='https://www.instagram.com/reel/DExR_IQO6FQ/?igsh=OXR5aWp2aWp2aWFpenp2' width="100%" height="600px" />
     </div>
 
-    <div className="relative mt-12 rounded-lg overflow-hidden">
+    <div className="relative mt-32 rounded-lg overflow-hidden">
       {/* Background Image */}
       <img
         src={selection}
