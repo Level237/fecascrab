@@ -9,7 +9,6 @@ import logo from "../assets/logo-1.png"
 import logoIcon from "../assets/logo.png"
 import {Helmet} from "react-helmet-async"
 import Header from '../components/Header';
-import Hero from '../components/Hero';
 import Figures from '../components/Figures';
 import selection from "../assets/section2.jpg"
 import NavMobile from '../components/NavMobile';
