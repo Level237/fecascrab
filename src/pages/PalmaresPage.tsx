@@ -1,6 +1,6 @@
 
 import HeaderSection from '../components/headerSection'
-import slide from "../assets/club.jpeg"
+import slide from "../assets/palmares-slide.jpg"
 import NavMobile from '../components/NavMobile'
 import slide12Origine from "../assets/slide12.jpg"
 
@@ -36,8 +36,13 @@ export default function PalmaresPage() {
         <HeaderSection />
         <NavMobile/>
         <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
-    className=' z-10 relative mt-12 max-sm:mt-7 h-96 mx-24 max-sm:mx-0   bg-[#02abee]'>
-      
+    className=' z-10  flex items-center justify-center relative mt-12 max-sm:mt-7 h-96 mx-24 max-sm:mx-0   bg-[#02abee]'>
+      <div className=' z-[50]  '>
+        <h2 className='text-5xl max-sm:text-4xl text-white font-bold '>Palmarès</h2>
+      </div>
+      <div className='absolute inset-0 bg-black opacity-30'>
+
+      </div>
     </div>
 
     <div className="max-w-7xl mx-24 max-sm:mx-2 px-4 py-16">
