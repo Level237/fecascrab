@@ -7,6 +7,7 @@ import OrganisationPage from "../pages/OrganisationPage";
 import ClubPage from "../pages/ClubPage";
 import PalmaresPage from "../pages/PalmaresPage";
 import EventPage from "../pages/EventPage";
+import CreateClubPage from "../pages/CreateClubPage";
 
 export const routes=createBrowserRouter([{
     path:'/',
@@ -34,6 +35,9 @@ export const routes=createBrowserRouter([{
 },{
     path:"events",
     element:<EventPage/>
+},{
+    path:"creation-club",
+    element:<CreateClubPage/>
 }
 
 ])
