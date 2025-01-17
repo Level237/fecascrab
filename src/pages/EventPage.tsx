@@ -130,6 +130,14 @@ passion.
       </div>
         </section>
         </section>
+        <div className="relative mb-12 mx-24 max-sm:hidden mt-12 h-[300px] flex-2">
+          <img
+            src={slide12Origine}
+            alt="Partie de Scrabble en cours"
+            className="rounded-lg object-cover  w-full h-full"
+          />
+        
+        </div>
     <Footer/>
     </section>}
 
