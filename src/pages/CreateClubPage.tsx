@@ -22,6 +22,7 @@ import event1Respo from "../assets/SuperLeagueScrabble_VisuelOfficiel_AllSmart20
 import Footer from '../components/Footer'
 import { Button } from '../components/ui/button'
 import { Separator } from '../components/ui/separator'
+import ClubForm from '../components/forms/ClubForm'
 export default function CreateClubPage() {
 
 
@@ -60,7 +61,7 @@ export default function CreateClubPage() {
         remplir ce formulaire avec les informations nécessaires afin<br className='max-sm:hidden' />
         avec excellence et découverte !</p>
       </div>
-       
+        <ClubForm/>
         </section>
        
         <div className="relative mb-12 mx-24 max-sm:hidden mt-12 h-[300px] flex-2">
