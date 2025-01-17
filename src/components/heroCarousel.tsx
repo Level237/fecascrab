@@ -8,12 +8,14 @@ import hero2 from "../assets/palmares1-slide.jpg"
 import slide1 from "../assets/Slide01.jpg"
 import slide2 from "../assets/Slide02.jpg"
 import { Button } from './ui/button'
-import { Link } from 'react-router-dom'
+import slide1responsive from "../assets/responsive_MasterScrabble.jpg"
+import slide2responsive from "../assets/responsive_ScrabbleJunior.jpg"
 
 interface Slide {
   id: number
   title?: any
-  subtitle?: string
+  subtitle?: string,
+  imageMobile?: string,
   image: string,
 }
 
@@ -22,20 +24,23 @@ const slides: Slide[] = [
     id: 1,
     title: <> </>,
     subtitle: "de la Fédération Internationale\nde Scrabble",
+    imageMobile: slide1responsive,
     image: slide1,
   },
   {
     id: 2,
     title: <> </>,
     subtitle: "",
+    imageMobile: slide2responsive,
     image: slide2
   },
   {
     id: 3,
-    title: <> <h1 className="text-white text-3xl md:text-5xl lg:text-5xl font-bold max-w-5xl leading-tight">Bienvenue sur le site Officiel <br className='max-sm:hidden' /> de la féderation camerounaise <br /> de Scrabble
+    title: <> <h1 className="text-white text-3xl md:text-5xl lg:text-5xl font-bold max-w-5xl leading-tight">Bienvenue sur le site Officiel <br className='max-sm:hidden' /> de la féderation camerounaise <br className='max-sm:hidden' /> de Scrabble
     
     </h1></>,
     subtitle: "de la Fédération Internationale\nde Scrabble",
+    imageMobile: hero,
     image: hero,
   },
   
@@ -82,14 +87,24 @@ export function HeroCarousel() {
         >
           {/* Background Image with Overlay */}
           <div 
-            className="absolute inset-0 bg-transparent"
+            className="absolute max-sm:hidden inset-0 bg-[#00000063]"
             style={{
               backgroundImage: `url(${slides[currentSlide].image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="absolute inset-0 bg-transparent" />
+            <div className="absolute inset-0 bg-[#00000015]" />
+          </div>
+          <div 
+            className="absolute hidden max-sm:block inset-0 bg-transparent"
+            style={{
+              backgroundImage: `url(${slides[currentSlide].imageMobile})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div className="absolute inset-0 bg-[#00000015]" />
           </div>
 
           {/* Content */}
