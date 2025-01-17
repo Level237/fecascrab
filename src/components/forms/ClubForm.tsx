@@ -614,9 +614,12 @@ export default function ClubForm() {
     />
   </div>
         </div>
-        <Button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white">
+        <div className="flex items-center justify-center">
+        <Button type="submit" className="py-8 px-8 text-lg bg-red-600 hover:bg-red-700 text-white">
           Soumettre la demande
         </Button>
+        </div>
+        
       </form>
     </Form>
   )
