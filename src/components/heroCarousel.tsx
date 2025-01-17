@@ -5,39 +5,40 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import hero from "../assets/hero.jpg"
 import hero2 from "../assets/palmares1-slide.jpg"
+import slide1 from "../assets/Slide01.jpg"
+import slide2 from "../assets/Slide02.jpg"
 import { Button } from './ui/button'
 import { Link } from 'react-router-dom'
 
 interface Slide {
   id: number
-  title: any
+  title?: any
   subtitle?: string
   image: string,
-  cta?: string,
-  link?: any
 }
 
 const slides: Slide[] = [
   {
     id: 1,
-    title: <> <h1 className="text-white text-3xl md:text-5xl lg:text-5xl font-bold max-w-5xl leading-tight">Inscrivez vous au Super Master <br className='max-sm:hidden' /> Fecascrab 2025
-    
-    </h1></>,
+    title: <> </>,
     subtitle: "de la Fédération Internationale\nde Scrabble",
-    cta: "inscrivez vous",
-    link:"/inscription",
-    image: hero,
+    image: slide1,
   },
   {
     id: 2,
-    title: <> <h1 className="text-white text-3xl md:text-5xl lg:text-5xl font-bold max-w-5xl leading-tight">Palmarès Camerounais  et <br className='max-sm:hidden' /> Championnats Internationaux
+    title: <> </>,
+    subtitle: "",
+    image: slide2
+  },
+  {
+    id: 3,
+    title: <> <h1 className="text-white text-3xl md:text-5xl lg:text-5xl font-bold max-w-5xl leading-tight">Bienvenue sur le site Officiel <br className='max-sm:hidden' /> de la féderation camerounaise <br /> de Scrabble
     
     </h1></>,
-    cta:"En savoir plus",
-    link:"/palmares",
-    subtitle: "",
-    image: hero2
+    subtitle: "de la Fédération Internationale\nde Scrabble",
+    image: hero,
   },
+  
 ]
 
 export function HeroCarousel() {
@@ -81,14 +82,14 @@ export function HeroCarousel() {
         >
           {/* Background Image with Overlay */}
           <div 
-            className="absolute inset-0 bg-emerald-900"
+            className="absolute inset-0 bg-transparent"
             style={{
               backgroundImage: `url(${slides[currentSlide].image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="absolute inset-0 bg-emerald-900/80" />
+            <div className="absolute inset-0 bg-transparent" />
           </div>
 
           {/* Content */}
@@ -96,12 +97,13 @@ export function HeroCarousel() {
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.6 }}
               className="text-center"
             >
               
                 {slides[currentSlide].title}
-                <Link to={slides[currentSlide].link}><Button className='mt-8 py-7 text-lg px-12 bg-red-600 text-white'>{slides[currentSlide].cta}</Button></Link>
+                
+               
               
             </motion.div>
           </div>

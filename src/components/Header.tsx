@@ -17,7 +17,7 @@ export default function Header() {
     <header className="absolute  top-8 w-full z-50 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex flex-1 items-center">
             <Link to="/" className="flex items-center">
               <img
                 src={logo}
@@ -29,7 +29,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden w-[50%] md:flex items-center space-x-8">
             <Link 
               to="/federation" 
               onMouseEnter={() => setIsHovered(true)}
@@ -107,9 +107,9 @@ export default function Header() {
           </div>
           <Link className='max-sm:hidden' to={"/inscription"}> <Button
             variant="outline" 
-            className="bg-white  rounded-2xl py-6 font-bold text-emerald-800 hover:bg-white/90"
+            className="bg-red-500 border-none text-white  rounded-2xl py-6 font-bold "
           >
-            S'INSCRIRE
+            Nous Contactez
           </Button></Link>
          
         </div>
