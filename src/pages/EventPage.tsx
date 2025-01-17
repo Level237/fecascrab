@@ -21,6 +21,7 @@ import event3 from "../assets/CHAMPAS 2019.jpg"
 import event1Respo from "../assets/SuperLeagueScrabble_VisuelOfficiel_AllSmart2024.jpg"
 import Footer from '../components/Footer'
 import { Button } from '../components/ui/button'
+import CtaInscription from '../components/Cta-inscription'
 export default function EventPage() {
 
 
@@ -130,14 +131,7 @@ passion.
       </div>
         </section>
         </section>
-        <div className="relative mb-12 mx-24 max-sm:hidden mt-12 h-[300px] flex-2">
-          <img
-            src={slide12Origine}
-            alt="Partie de Scrabble en cours"
-            className="rounded-lg object-cover  w-full h-full"
-          />
-        
-        </div>
+        <CtaInscription/>
     <Footer/>
     </section>}
 

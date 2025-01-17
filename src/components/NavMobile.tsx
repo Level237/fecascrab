@@ -99,7 +99,7 @@ export default function NavMobile() {
                 className=' text-white block'>Calendrier</Link>
                 </div>
                 <div onClick={()=>closeHeader()} className="mt-5">
-                  <Link to='/classements'>
+                  <Link to='/events'>
                   Events
                   </Link>
                 
