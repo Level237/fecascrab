@@ -4,10 +4,8 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import hero from "../assets/hero.jpg"
-import hero2 from "../assets/palmares1-slide.jpg"
 import slide1 from "../assets/Slide01.jpg"
 import slide2 from "../assets/Slide02.jpg"
-import { Button } from './ui/button'
 import slide1responsive from "../assets/responsive_MasterScrabble.jpg"
 import slide2responsive from "../assets/responsive_ScrabbleJunior.jpg"
 

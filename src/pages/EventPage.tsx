@@ -2,17 +2,6 @@
 import HeaderSection from '../components/headerSection'
 import slide from "../assets/word-events-is-written-wooden-cubes-diary-near-handle.jpg"
 import NavMobile from '../components/NavMobile'
-import slide4Origine from "../assets/slide4Origine.jpg"
-import slide5Origine from "../assets/slide5Origine.jpg"
-import slide3Origine from "../assets/slide3origine.jpg"
-import slide2Origine from "../assets/slide2Origine.jpg"
-import slide6Origine from "../assets/slide6Origine.jpg"
-import slide7Origine from "../assets/slide7Origine.jpg"
-import slide8Origine from "../assets/slide8Origine.jpg"
-import slide9Origine from "../assets/slide9Origine.jpg"
-import slide10Origine from "../assets/slide10.jpg"
-import slide11Origine from "../assets/slide11.jpg"
-import slide12Origine from "../assets/slide12.jpg"
 import { useEffect, useState } from 'react'
 import Loader from '../components/ui/loader'
 import event1 from "../assets/Slide01.jpg"

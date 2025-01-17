@@ -1,5 +1,5 @@
 import { animate, useInView,motion } from 'framer-motion'
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function AnimatedCount({count,index,type}:{count:number,index:number,type:string}) {
     const ref = useRef(null)
