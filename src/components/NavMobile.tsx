@@ -90,7 +90,7 @@ export default function NavMobile() {
                     </Link>
                 </div>}
                 <div  className="mt-5">
-                <Link to='/actualites' onClick={()=>closeHeader()}>
+                <Link to='/palmares' onClick={()=>closeHeader()}>
                     Palmarès
                     </Link>
                 </div>

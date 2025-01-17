@@ -16,6 +16,7 @@ import Loader from '../components/ui/loader';
 import Footer from '../components/Footer';
 import { InstagramEmbed } from 'react-social-media-embed';
 import { HeroCarousel } from '../components/heroCarousel';
+import superLeagueResponsive from "../assets/SuperLeagueScrabble_VisuelOfficiel_AllSmart2024.jpg"
 export default function Homepage() {
 
 
@@ -107,11 +108,18 @@ export default function Homepage() {
       
         
          
-          <div className="relative h-[200px] md:h-[300px]">
+          <div className="relative max-sm:hidden h-[200px] md:h-[300px]">
             <img
               src={section2}
               alt="Super Master 2024"
               className="rounded-2xl object-cover w-full h-full"
+            />
+          </div>
+          <div className="relative hidden max-sm:block h-[400px] md:h-[300px]">
+            <img
+              src={superLeagueResponsive}
+              alt="Super Master 2024"
+              className="rounded-xl object-cover w-full h-full"
             />
           </div>
 
@@ -142,8 +150,8 @@ export default function Homepage() {
         <div className="w-full h-[30rem] mt-32 hidden max-sm:flex max-sm:h-[20rem] bg-black items-center justify-center">
         <InstagramEmbed url='https://www.instagram.com/reel/DExR_IQO6FQ/?igsh=OXR5aWp2aWp2aWFpenp2' width="100vh" height="600px" />
     </div>
-    <div className="w-full h-[30rem] mt-32 flex max-sm:hidden max-sm:h-[20rem] bg-black items-center justify-center">
-        <InstagramEmbed url='https://www.instagram.com/reel/DExR_IQO6FQ/?igsh=OXR5aWp2aWp2aWFpenp2' width="100%" height="600px" />
+    <div className="w-full relative h-[30rem] mt-32 flex max-sm:hidden max-sm:h-[20rem] bg-black items-center justify-center">
+        <InstagramEmbed url='https://www.instagram.com/reel/DExR_IQO6FQ/?igsh=OXR5aWp2aWp2aWFpenp2'  width="100%" height="100vh" />
     </div>
 
     <div className="relative mt-32 rounded-lg overflow-hidden">
@@ -161,7 +169,7 @@ export default function Homepage() {
         </section>
         <div className=" flex flex-col items-center justify-center mt-[-7rem]  p-6">
           <div className=" bg-red-600 px-28 max-sm:px-6 py-9 z-50 ">
-           <h2 className='text-2xl mb-6 md:text-3xl font-bold text-white  inline-block'>Sélection Nationale de Scrabble du Cameroun</h2>
+           <h2 className='text-2xl mb-0 md:text-3xl font-bold text-white  inline-block'>Sélection Nationale de Scrabble du Cameroun</h2>
            <p className='text-xl text-center'>Vous souhaitez en savoir plus sur comment intégrer l’équipe <br />
 
             nationale ou soutenir nos joueurs ?</p>
