@@ -86,7 +86,7 @@ export default function Header() {
               PALMARÈS
             </Link>
             <Link 
-              to="/" 
+              to="/events" 
               className="text-white hover:text-white/80 font-medium"
             >
               EVENTS

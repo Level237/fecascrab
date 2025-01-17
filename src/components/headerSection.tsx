@@ -103,7 +103,7 @@ export default function HeaderSection() {
                 PALMARÈS
               </Link>
               <Link 
-                to="/" 
+                to="/events" 
                  className={`${isScrolled ? 'text-white hover:text-white' : 'text-[#00723e]'} hover:text-[#00723e]/80 font-medium`}
               >
                 EVENTS
@@ -126,7 +126,7 @@ export default function HeaderSection() {
           <Button
               className="bg-red-600  px-10 py-5 hover:bg-red-700 text-white border-none"
             >
-              S'inscrire
+              Contactez-nous
             </Button>
           </Link>
             
