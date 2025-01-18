@@ -7,8 +7,7 @@ import { useEffect, useState } from 'react'
 import Loader from '../../components/ui/loader'
 import Footer from '../../components/Footer'
 import { Separator } from '../../components/ui/separator'
-import PhotoGallery from '../../components/photos-galeries'
-import CtaInscription from '../../components/Cta-inscription'
+import CtaScolaire from '../../components/Cta-scolaire'
 export default function ScrabbleJunior() {
 
 
@@ -111,20 +110,20 @@ participant à des tournois.
                 <div className='flex flex-col mt-6 mx-4'>
                         <div className='flex flex-col justify-center gap-2'>
                             <span className='font-bold text-2xl max-sm:text-lg'>Yaoundé</span>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>1.Centre éducatif Montessori</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Sendjeu Iva</p></div>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>2.Collège international La Gaieté</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : D jamen Juliot Aro</p></div>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>3.Collège Saint Benoît</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Menanga Joël</p></div>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>4.Lycée d'Anguissa</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Ndongo Patrick</p></div>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>5.Lycée de Biyem-Assi</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Essama Brangers Thierry</p></div>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>6.Lycée Général Leclerc</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Tessongang K. Jean Lin</p></div>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>7.Lycée de Mendong</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Ela Alo'o Guy Maxime</p></div>
+                            <div className=''><p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>1.Centre éducatif Montessori</span> – Encadreur : Sendjeu Iva</p></div>
+                            <div className=''> <p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>2.Collège international La Gaieté</span>– Encadreur : D jamen Juliot Aro</p></div>
+                            <div className=''> <p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>3.Collège Saint Benoît</span> – Encadreur : Menanga Joël</p></div>
+                            <div className=''> <p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>4.Lycée d'Anguissa</span>– Encadreur : Ndongo Patrick</p></div>
+                            <div className=''> <p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>5.Lycée de Biyem-Assi</span>– Encadreur : Essama Brangers Thierry</p></div>
+                            <div className=''> <p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>6.Lycée Général Leclerc</span>– Encadreur : Tessongang K. Jean Lin</p></div>
+                            <div className=''><p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>7.Lycée de Mendong</span> – Encadreur : Ela Alo'o Guy Maxime</p></div>
                         </div>
                         
                 </div>
                 <div className='flex flex-col mt-6 mx-4'>
                         <div className='flex flex-col justify-center gap-2'>
                             <span className='font-bold text-2xl max-sm:text-lg'>Bagangté</span>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>8.Fondation Gacha</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Ngounou Steve Yannick</p></div>
+                            <div className=''> <p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>8.Fondation Gacha</span>– Encadreur : Ngounou Steve Yannick</p></div>
                            
                         </div>
                         
@@ -133,7 +132,7 @@ participant à des tournois.
                 <div className='flex flex-col mt-6 mx-4'>
                         <div className='flex flex-col justify-center gap-2'>
                             <span className='font-bold text-2xl max-sm:text-lg'>Monatélé</span>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>9.Lycée de Monatélé</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Nkouete Chewa Josaphat</p></div>
+                            <div className=''> <p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>9.Lycée de Monatélé</span>– Encadreur : Nkouete Chewa Josaphat</p></div>
                            
                         </div>
                         
@@ -141,9 +140,9 @@ participant à des tournois.
                 <div className='flex flex-col mt-6 mx-4'>
                         <div className='flex flex-col justify-center gap-2'>
                             <span className='font-bold text-2xl max-sm:text-lg'>Simbock et Efok</span>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>10.Collège Jésus-Marie</span> </div>
+                            <div className=''><span className='font-bold text-2xl max-sm:text-lg'>10.Collège Jésus-Marie</span> </div>
 
-                            <div className='flex gap-2'><span className="font-bold text-2xl max-sm:text-lg">11.Ntondobe College
+                            <div className=''><span className="font-bold text-2xl max-sm:text-lg">11.Ntondobe College
                             </span> </div>
 
                            
@@ -153,12 +152,12 @@ participant à des tournois.
                 <div className='flex flex-col mt-6 mx-4'>
                         <div className='flex flex-col justify-center gap-2'>
                             <span className='font-bold text-2xl max-sm:text-lg'>Douala</span>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>12.Lycée de la Cité des Palmiers</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Yommouth Dimitri</p></div>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>13.Collège Duvaal</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Yommouth Dimitri</p></div>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>14.Lycée bilingue de Bonabéri</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Kingue Alain</p></div>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>15.Olive School</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Kingue Alain</p></div>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>16.Lycée de Ndog-Hem PK12</span> <p className='text-2xl max-sm:text-lg'>– Encadreur : Njonji Alexandre Parfait</p></div>
-                            <div className='flex gap-2'><span className='font-bold text-2xl max-sm:text-lg'>17.Club Azep</span> </div>
+                            <div className=''><p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>12.Lycée de la Cité des Palmiers</span> – Encadreur : Yommouth Dimitri</p></div>
+                            <div className=''> <p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>13.Collège Duvaal</span>– Encadreur : Yommouth Dimitri</p></div>
+                            <div className=''> <p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>14.Lycée bilingue de Bonabéri</span>– Encadreur : Kingue Alain</p></div>
+                            <div className=''><p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>15.Olive School</span> – Encadreur : Kingue Alain</p></div>
+                            <div className=''> <p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>16.Lycée de Ndog-Hem PK12</span>– Encadreur : Njonji Alexandre Parfait</p></div>
+                            <div className=''><span className='font-bold text-2xl max-sm:text-lg'>17.Club Azep</span> </div>
                            
                         </div>
                         
@@ -186,7 +185,7 @@ participant à des tournois.
                 <Separator className='bg-[#00723e] mt-7'/>
             </div>
     </section>
-    <CtaInscription/>
+    <CtaScolaire/>
     <Footer/>
     </section>
     }
