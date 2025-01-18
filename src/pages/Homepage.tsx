@@ -74,10 +74,9 @@ export default function Homepage() {
     <div className="flex items-center max-sm:flex-col justify-between gap-8 mb-12">
       <div className="space-y-6 flex-1">
         <h1 className="text-red-600 font-bold text-3xl max-sm:text-2xl md:text-3xl leading-tight">
-          BIENVENUE SUR LE SITE OFFICIEL
-          <br className='max-sm:hidden' />
-          DE LA FÉDÉRATION CAMEROUNAISE
-       
+          BIENVENUE SUR LE SITE OFFICIEL 
+          
+           DE LA FÉDÉRATION CAMEROUNAISE
           DE SCRABBLE
         </h1>
         <div className="relative lg:hidden h-[300px] flex-2">
