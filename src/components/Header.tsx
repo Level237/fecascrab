@@ -92,7 +92,7 @@ export default function Header() {
               EVENTS
             </Link>
             <Link 
-              to="/" 
+              to="/creation-club" 
               className="text-white hover:text-white/80 font-medium"
             >
               CRÉATION CLUB

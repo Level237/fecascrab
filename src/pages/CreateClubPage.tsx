@@ -8,6 +8,7 @@ import Loader from '../components/ui/loader'
 import Footer from '../components/Footer'
 import { Separator } from '../components/ui/separator'
 import ClubForm from '../components/forms/ClubForm'
+import CtaInscription from '../components/Cta-inscription'
 export default function CreateClubPage() {
 
 
@@ -49,14 +50,7 @@ export default function CreateClubPage() {
         <ClubForm/>
         </section>
        
-        <div className="relative mb-12 mx-24 max-sm:hidden mt-12 h-[300px] flex-2">
-          <img
-            src={slide12Origine}
-            alt="Partie de Scrabble en cours"
-            className="rounded-lg object-cover  w-full h-full"
-          />
-        
-        </div>
+        <CtaInscription/>
     <Footer/>
     </section>}
 

@@ -2,8 +2,6 @@
 import HeaderSection from '../components/headerSection'
 import slide from "../assets/palmares-slide.jpg"
 import NavMobile from '../components/NavMobile'
-import slide12Origine from "../assets/slide12.jpg"
-
 import medalOr from "../assets/gold medal.png"
 import medalAr from "../assets/silver medal.png"
 import medalBr from "../assets/bronze medal.png"
@@ -15,6 +13,7 @@ import { ChampionClassic } from '../components/ChampionClassic'
 import { useEffect, useState } from 'react'
 import Loader from '../components/ui/loader'
 import Footer from '../components/Footer'
+import CtaInscription from '../components/Cta-inscription'
 export default function PalmaresPage() {
 
   const [loading, setLoading] = useState(true);
@@ -368,15 +367,9 @@ export default function PalmaresPage() {
         
         </div>
         </div>
-        <div className="relative mb-12 max-sm:hidden mt-12 h-[300px] flex-2">
-          <img
-            src={slide12Origine}
-            alt="Partie de Scrabble en cours"
-            className="rounded-lg object-cover  w-full h-full"
-          />
         
-        </div>
     </div>
+    <CtaInscription/>
     <Footer/>
     </section>}
 

@@ -76,7 +76,7 @@ export default function Homepage() {
         <h1 className="text-red-600 font-bold text-3xl max-sm:text-2xl md:text-3xl leading-tight">
           BIENVENUE SUR LE SITE OFFICIEL
           <br className='max-sm:hidden' />
-          DE LA FÉDÉRATION INTERNATIONALE
+          DE LA FÉDÉRATION CAMEROUNAISE
        
           DE SCRABBLE
         </h1>
