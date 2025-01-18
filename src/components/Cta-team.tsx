@@ -17,7 +17,7 @@ export default function CtaTeam() {
 Contactez la FECASCRAB pour découvrir comment contribuer à cette belle aventure</p>
             <div>
                 
-              <Link to="/creation-club"><Button className="bg-red-600 title-font rounded-full  text-white text-2xl  py-6 px-12">Contactez-nous</Button></Link>
+              <Link to="/rejoindre-equipe-national"><Button className="bg-red-600 title-font rounded-full  text-white text-2xl  py-6 px-12">Contactez-nous</Button></Link>
                
             </div>
         </div>
@@ -28,7 +28,7 @@ Contactez la FECASCRAB pour découvrir comment contribuer à cette belle aventur
           <p className='text-2xl max-sm:text-lg text-white text-center'>Vous souhaitez en savoir plus sur l’équipe nationale ou soutenir nos joueurs ? 
 
 Contactez la FECASCRAB pour découvrir comment contribuer à cette belle aventure</p>
-          <Link to="/creation-club"><Button className="bg-red-600 mb-[6rem] title-font  rounded-full text-white text-2xl  py-8 px-12">Contactez-nous</Button></Link>
+          <Link to="/rejoindre-equipe-national"><Button className="bg-red-600 mb-[6rem] title-font  rounded-full text-white text-2xl  py-8 px-12">Contactez-nous</Button></Link>
             
                 
            

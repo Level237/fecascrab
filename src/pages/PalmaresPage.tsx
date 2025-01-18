@@ -125,7 +125,7 @@ export default function PalmaresPage() {
     <h1 className="text-red-600 text-3xl max-sm:text-2xl  md:text-3xl font-bold mb-12 leading-tight">
         PALMARES DU CAMEROUN AUX CHAMPIONNATS
         <br />
-        D’AFRIQUE DE SCRABB E (CHAMPAS) DE 2016 A 2024
+        D’AFRIQUE DE SCRABBLE (CHAMPAS) DE 2016 A 2024
       </h1>
       <div className="grid md:grid-cols-2 gap-12">
         {/* CDM 2021 */}
