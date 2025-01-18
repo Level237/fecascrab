@@ -11,6 +11,7 @@ import event1Respo from "../assets/SuperLeagueScrabble_VisuelOfficiel_AllSmart20
 import Footer from '../components/Footer'
 import { Button } from '../components/ui/button'
 import CtaInscription from '../components/Cta-inscription'
+import { Link } from 'react-router-dom'
 export default function EventPage() {
 
 
@@ -63,7 +64,8 @@ export default function EventPage() {
         avec excellence et découverte !</p>
       </div>
       <div className='flex justify-center max-sm:justify-start'>
-        <Button className='text-white px-7 rounded-2xl py-6 bg-red-600 text-xl'>En Savoir plus</Button>
+        <Link to="/events/super-master-scrabble"><Button className='text-white px-7 rounded-2xl py-6 bg-red-600 text-xl'>En Savoir plus</Button></Link>
+        
       </div>
         </section>
         <section className='grid grid-cols-2 max-sm:grid-cols-1 mt-12 max-sm:mx-2 mx-24 gap-6'>
@@ -89,7 +91,8 @@ est un puissant outil éducatif.
 </p>
       </div>
       <div className='flex'>
-        <Button className='text-white px-7 rounded-2xl py-6 bg-red-600 text-xl'>En Savoir plus</Button>
+        <Link to="/events/scrabble-scolaire"><Button className='text-white px-7 rounded-2xl py-6 bg-red-600 text-xl'>En Savoir plus</Button></Link>
+        
       </div>
         </section>
         <section className='flex mt-16 flex-col max-sm:mx-2  gap-4'>
@@ -116,7 +119,8 @@ passion.
 </p>
       </div>
       <div className='flex'>
-        <Button className='text-white px-7 rounded-2xl py-6 bg-red-600 text-xl'>En Savoir plus</Button>
+        <Link to="/events/national-team"><Button className='text-white px-7 rounded-2xl py-6 bg-red-600 text-xl'>En Savoir plus</Button></Link>
+        
       </div>
         </section>
         </section>
