@@ -1,13 +1,18 @@
 
 import HeaderSection from '../../components/headerSection'
 import slide from "../../assets/CHAMPAS 2019.jpg"
-import slideResponsive from "../../assets/responsive_ScrabbleJunior.jpg"
+import img1 from "../../assets/slide4Origine.jpg"
+import img2 from "../../assets/slide3origine.jpg"
+import img3 from "../../assets/slide8Origine.jpg"
+import img4 from "../../assets/slide2Origine.jpg"
+import img5 from "../../assets/slide10.jpg"
 import NavMobile from '../../components/NavMobile'
 import { useEffect, useState } from 'react'
 import Loader from '../../components/ui/loader'
 import Footer from '../../components/Footer'
 import { Separator } from '../../components/ui/separator'
 import CtaScolaire from '../../components/Cta-scolaire'
+import CtaTeam from '../../components/Cta-team'
 export default function NationalTeam() {
 
 
@@ -45,7 +50,7 @@ export default function NationalTeam() {
 
     <section>
     <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
-    <h2 className='font-bold text-2xl italic text-red-500 max-sm:text-3xl'>La Fierté du Scrabble Camerounais
+    <h2 className='font-bold text-2xl italic text-red-500 max-sm:text-xl'>La Fierté du Scrabble Camerounais
     </h2>
                 <div>
                     <p className='text-2xl max-sm:text-lg'>Depuis 2016, le Cameroun a fièrement constitué une équipe nationale de Scrabble, symbole
@@ -136,13 +141,56 @@ camerounais par le ministère des Sports et la FECASCRAB.
                             <div className='flex gap-2'> <p className='text-2xl max-sm:text-lg'><span className='font-bold text-2xl max-sm:text-lg'>3.Finale lors des Super Masters :</span>La phase ultime se tiendra en mars, avec des prix et
                             distinctions pour les jeunes talents.</p></div>
                         </div>
+
+                        <div className='flex flex-col max-sm:mx-0  gap-2 mx-12 mt-12'>
+                                <div className='grid max-sm:grid-cols-1 grid-cols-3 gap-2'>
+                                        <div>
+                                        <img
+                                        src={img1}
+                                        alt={`national team cameroon`}
+                                        className="object-cover h-full rounded-lg"
+                                        />
+                                        </div>
+                                        <div>
+                                        <img
+                                        src={img2}
+                                        alt={`national team cameroon`}
+                                        className="object-cover h-full rounded-lg"
+                                        />
+                                        </div>
+                                        <div>
+                                        <img
+                                        src={img3}
+                                        alt={`national team cameroon`}
+                                        className="object-cover h-full rounded-lg"
+                                        />
+                                        </div>
+                                </div>
+                                <div className='grid max-sm:grid-cols-1 grid-cols-2 gap-2'>
+                                        <div>
+                                        <img
+                                        src={img4}
+                                        alt={`national team cameroon`}
+                                        className="object-cover h-full rounded-lg"
+                                        />
+                                        </div>
+                                        <div>
+                                        <img
+                                        src={img5}
+                                        alt={`national team cameroon`}
+                                        className="object-cover h-full rounded-lg"
+                                        />
+                                        </div>
+                                        
+                                </div>
+                        </div>
                         
                 </div>
                
                 
             </div>
     </section>
-    <CtaScolaire/>
+    <CtaTeam/>
     <Footer/>
     </section>
     }
