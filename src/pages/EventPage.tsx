@@ -37,7 +37,7 @@ export default function EventPage() {
         
     </div>
 
-        <section className='flex mt-16 flex-col max-sm:mx-2 mx-24 gap-6'>
+        <section className='flex mt-16 flex-col max-sm:mx-2 mx-24 gap-4'>
         <div className="relative max-sm:hidden h-[30rem] flex-2">
         <img
           src={event1}
@@ -55,11 +55,11 @@ export default function EventPage() {
       
       </div>
       <div>
-        <h2 className='text-4xl  max-sm:text-2xl font-bold text-[#107a5f]'>SUPER MASTER 2025: UNE EXPERIENCE <br className='max-sm:hidden' />UNIQUE AU CAMEROUN</h2>
+        <h2 className='text-3xl  max-sm:text-2xl font-bold text-[#107a5f]'>SUPER MASTER 2025: UNE EXPERIENCE <br className='max-sm:hidden' />UNIQUE AU CAMEROUN</h2>
       </div>
 
       <div>
-        <p className='text-3xl max-sm:text-lg'>Rejoignez-nous pour vivre un moment d'exception, où compétition rime <br className='max-sm:hidden' />
+        <p className='text-2xl max-sm:text-lg'>Rejoignez-nous pour vivre un moment d'exception, où compétition rime <br className='max-sm:hidden' />
         avec excellence et découverte !</p>
       </div>
       <div className='flex justify-center max-sm:justify-start'>
