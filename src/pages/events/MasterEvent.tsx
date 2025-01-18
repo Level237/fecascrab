@@ -1,14 +1,14 @@
 
-import HeaderSection from '../components/headerSection'
-import slide from "../assets/Slide01.jpg"
-import slideResponsive from "../assets/responsive_MasterScrabble.jpg"
-import NavMobile from '../components/NavMobile'
+import HeaderSection from '../../components/headerSection'
+import slide from "../../assets/Slide01.jpg"
+import slideResponsive from "../../assets/responsive_MasterScrabble.jpg"
+import NavMobile from '../../components/NavMobile'
 import { useEffect, useState } from 'react'
-import Loader from '../components/ui/loader'
-import Footer from '../components/Footer'
-import { Separator } from '../components/ui/separator'
-import PhotoGallery from '../components/photos-galeries'
-import CtaInscription from '../components/Cta-inscription'
+import Loader from '../../components/ui/loader'
+import Footer from '../../components/Footer'
+import { Separator } from '../../components/ui/separator'
+import PhotoGallery from '../../components/photos-galeries'
+import CtaInscription from '../../components/Cta-inscription'
 export default function MasterEvent() {
 
 
