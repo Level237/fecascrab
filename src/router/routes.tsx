@@ -12,6 +12,7 @@ import MasterEvent from "../pages/events/MasterEvent";
 import ScrabbleJunior from "../pages/events/ScrabbleJunior";
 import NationalTeam from "../pages/events/NationalTeam";
 import JoinTeamPage from "../pages/JoinTeamPage";
+import GaleryPage from "../pages/GaleryPage";
 
 export const routes=createBrowserRouter([{
     path:'/',
@@ -54,6 +55,9 @@ export const routes=createBrowserRouter([{
 },{
     path:"rejoindre-equipe-national",
     element:<JoinTeamPage/>
+},{
+    path:"gallerie",
+    element:<GaleryPage/>
 }
 
 ])
