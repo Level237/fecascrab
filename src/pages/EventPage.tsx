@@ -68,7 +68,7 @@ export default function EventPage() {
         </section>
         <section className='grid grid-cols-2 max-sm:grid-cols-1 mt-12 max-sm:mx-2 mx-24 gap-6'>
 
-        <section className='flex mt-16 flex-col max-sm:mx-2  gap-6'>
+        <section className='flex mt-16 flex-col max-sm:mx-2  gap-4'>
         <div className="relative  h-[30rem] flex-2">
         <img
           src={event2}
@@ -79,11 +79,11 @@ export default function EventPage() {
       </div>
   
       <div>
-        <h2 className='text-4xl  max-sm:text-2xl font-bold text-[#107a5f]'>Le Scrabble Scolaire : Une formation pour l'Avenir</h2>
+        <h2 className='text-3xl  max-sm:text-2xl font-bold text-[#107a5f]'>Le Scrabble Scolaire : Une formation pour l'Avenir</h2>
       </div>
 
       <div>
-        <p className='text-2xl max-sm:text-lg'>Le Scrabble scolaire au Cameroun
+        <p className='text-xl max-sm:text-lg'>Le Scrabble scolaire au Cameroun
 est bien plus qu’un simple jeu. Il
 est un puissant outil éducatif.
 </p>
@@ -92,7 +92,7 @@ est un puissant outil éducatif.
         <Button className='text-white px-7 rounded-2xl py-6 bg-red-600 text-xl'>En Savoir plus</Button>
       </div>
         </section>
-        <section className='flex mt-16 flex-col max-sm:mx-2  gap-6'>
+        <section className='flex mt-16 flex-col max-sm:mx-2  gap-4'>
         <div className="relative  h-[30rem] flex-2">
         <img
           src={event3}
@@ -103,12 +103,12 @@ est un puissant outil éducatif.
       </div>
   
       <div>
-        <h2 className='text-4xl  max-sm:text-2xl font-bold text-[#107a5f]'>Selection Nationale de
+        <h2 className='text-3xl  max-sm:text-2xl font-bold text-[#107a5f]'>Selection Nationale de
         Scrabble du Cameroun</h2>
       </div>
 
       <div>
-        <p className='text-2xl max-sm:text-lg'>Depuis 2016, le Cameroun a
+        <p className='text-xl max-sm:text-lg'>Depuis 2016, le Cameroun a
 fièrement constitué une équipe
 nationale de Scrabble, symbole
 de discipline, d'excellence et de
