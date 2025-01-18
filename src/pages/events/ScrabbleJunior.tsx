@@ -182,7 +182,7 @@ participant à des tournois.
                         
                 </div>
                
-                <Separator className='bg-[#00723e] mt-7'/>
+                
             </div>
     </section>
     <CtaScolaire/>

@@ -10,6 +10,7 @@ import EventPage from "../pages/EventPage";
 import CreateClubPage from "../pages/CreateClubPage";
 import MasterEvent from "../pages/events/MasterEvent";
 import ScrabbleJunior from "../pages/events/ScrabbleJunior";
+import NationalTeam from "../pages/events/NationalTeam";
 
 export const routes=createBrowserRouter([{
     path:'/',
@@ -46,6 +47,9 @@ export const routes=createBrowserRouter([{
 },{
     path:"events/scrabble-scolaire",
     element:<ScrabbleJunior/>
+},{
+    path:"events/national-team",
+    element:<NationalTeam/>
 }
 
 ])
