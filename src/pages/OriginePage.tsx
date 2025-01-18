@@ -52,13 +52,6 @@ export default function OriginePage() {
         passionnés.
 
         </p>
-        <p className='text-xl max-sm:text-lg'>La Fédération camerounaise de Scrabble (FECASCRAB) est l'organe officiel qui
-        régit la pratique du Scrabble au Cameroun. Créée en 1990, la FECASCRAB s’est
-        donnée pour mission de promouvoir ce jeu intellectuel dans tout le pays, en offrant
-        un cadre structuré pour les compétitions, les formations et les échanges entre
-        passionnés.
-
-        </p>
         <h2 className='text-2xl mt-7 max-sm:text-2xl font-bold'>Date clés</h2>
 
         <div className='mx-4 max-sm:mx-6 mt-8'>
@@ -117,7 +110,7 @@ famille du mouvement sportif camerounais.
                     </div>
             </div>
             <div>
-            <p className='text-xl max-sm:text-lg'>Ces moments forts témoignent de l’évolution et de l’in uence grandissante de la
+            <p className='text-xl max-sm:text-lg'>Ces moments forts témoignent de l’évolution et de l’influence grandissante de la
             FECASCRAB sur le développement du Scrabble en Afrique et dans le monde.
 
 
@@ -133,7 +126,7 @@ femmes et hommes qui ont marqué son parcours.
 
         <div className='mt-6 mx-6'>
         <li className="text-xl max-sm:text-lg mb-4 text-justify">
-                     <span className='font-bold'>Victor Banyu: </span>Premier président de la FECASCRAB en 1991, visionnaire ayant
+                     <span className='font-bold'>Samuel Banyu: </span>Premier président de la FECASCRAB en 1991, visionnaire ayant
 œuvré pour la structuration de la Fédération et son affiliation internationale.
             </li>
             <li className="text-xl max-sm:text-lg mb-4 text-justify">

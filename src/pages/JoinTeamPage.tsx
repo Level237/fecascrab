@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import { Separator } from '../components/ui/separator'
 import ClubForm from '../components/forms/ClubForm'
 import CtaInscription from '../components/Cta-inscription'
+import JoinTeam from '../components/forms/JoinTeam'
 export default function JoinTeamPage() {
 
 
@@ -42,7 +43,7 @@ export default function JoinTeamPage() {
         
     </div>
 
-        <section className='flex mt-16 flex-col justify-center max-sm:mx-4 mx-24 gap-6'>
+        <section className='flex mt-16 flex-col justify-center max-sm:mx-4 mx-44 gap-6'>
        
            
             <div>
@@ -50,10 +51,10 @@ export default function JoinTeamPage() {
 Scrabble, bien vouloir nous laisser un message en remplissant les champs ci-dessous. Nous
 vous repondrons le plus rapidement possible</p>
       </div>
-        <ClubForm/>
+        <JoinTeam/>
         </section>
        
-        <CtaInscription/>
+       
     <Footer/>
     </section>}
 
