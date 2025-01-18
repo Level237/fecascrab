@@ -33,7 +33,7 @@ import {
     {
       number: 3,
       year: 2019,
-      champion: "DELANGE SULLIVAN",
+      champion: "DELANOE SULLIVAN",
       viceChampion: "ELONG NOËL ARSÈNE",
       bronze: "ILAGOU REKAWE SCHELICK",
     },
@@ -53,6 +53,11 @@ import {
     },
   ];
   
+  /**
+   * Renders a table of champion classic data.
+   *
+   * @returns {React.ReactElement} The table element.
+   */
   export function ChampionClassic() {
     return (
       <div className="container mx-auto py-10">

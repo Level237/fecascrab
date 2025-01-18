@@ -78,7 +78,7 @@ import {
       number: 7,
       name: "LONLA SOCPA Jules Bernard",
       achievements: [
-        { title: "Vise Champion du Cameroun Elite Classique 2024" },
+        { title: "Vice Champion du Cameroun Elite Classique 2024" },
         { title: "Champion du Cameroun Elite Classique 2016" },
         { title: "Champion du Cameroun Elite Classique 2008" },
       ],

@@ -70,7 +70,7 @@ dans les compétitions
         </p>
         <div className='mt-5'>
             <li className="text-xl max-sm:text-lg mb-4 text-justify">
-                        <span className='font-bold'>Directeur Technique National (DTN) : Gislain Yamga</span>Responsable des orientations techniques et des programmes de formation, il
+                        <span className='font-bold'>Directeur Technique National (DTN) : Gislain Yamga :</span>Responsable des orientations techniques et des programmes de formation, il
                         coordonne l’ensemble des activités sportives et compétitives.
                 </li>
                 <li className="text-xl max-sm:text-lg mb-4 text-justify">

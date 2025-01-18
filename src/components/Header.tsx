@@ -109,7 +109,7 @@ export default function Header() {
             variant="outline" 
             className="bg-red-500 border-none text-white  rounded-2xl py-6 font-bold "
           >
-            Nous Contactez
+            Contactez-nous
           </Button></Link>
          
         </div>

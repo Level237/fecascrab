@@ -43,14 +43,14 @@ import {
       number: 3,
       year: 2019,
       champion: { name: "BALOU BI SERI FRANCK", percentage: 99.97 },
-      viceChampion: { name: "DELANGE SULLIVAN", percentage: 98.06 },
+      viceChampion: { name: "DELANOE SULLIVAN", percentage: 98.06 },
       bronze: { name: "SEUNANG PATRICK", percentage: 97.66 },
     },
     {
       number: 4,
       year: 2017,
       champion: { name: "ZINGBE GUEU MATHIEU", percentage: 98.99 },
-      viceChampion: { name: "DELANGE SULLIVAN", percentage: 98.06 },
+      viceChampion: { name: "DELANOE SULLIVAN", percentage: 98.06 },
       bronze: { name: "SEUNANG PATRICK", percentage: 98.15 },
     },
     {

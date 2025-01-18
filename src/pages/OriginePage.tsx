@@ -130,9 +130,7 @@ femmes et hommes qui ont marqué son parcours.
 œuvré pour la structuration de la Fédération et son affiliation internationale.
             </li>
             <li className="text-xl max-sm:text-lg mb-4 text-justify">
-                     <span className='font-bold'>Nkouete Chewa King josaphat: </span>Champion emblématique, multiple vainqueur
-des Championnats Nationaux et véritable ambassadeur du Scrabble
-camerounais. triple champion D’Afrique duplicate.
+                     <span className='font-bold'>Nkouete Chewa King josaphat: </span>Triple champion D’Afrique duplicate.
             </li>
             <li className="text-xl max-sm:text-lg mb-4 text-justify">
                      <span className='font-bold'>Amédée Assomo: </span>Président sortant, aujourd’hui président de la Fédération
@@ -168,8 +166,8 @@ championnats d’afrique disputés à Bamako (Mali).
             </div>
             <li className="text-xl max-sm:text-lg mb-4 text-justify">
                      <span className='font-bold'>Novembre 2021: </span>Finale historique du championnat du monde classique opposant
-les camerounais Amédée Assomo et Eric Tchuyo Salvador qui verra le sacre de
-Reebok (Tchuyo)
+les camerounais Amédée Assomo et Eric Salvador TCHOUYO.Celle-ci  verra le sacre TCHOUYO "Reebok"
+
 
             </li>
 
