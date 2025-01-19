@@ -69,7 +69,56 @@ import abi50 from "../assets/galeries/abi/abi50.jpg"
 import abi51 from "../assets/galeries/abi/abi51.jpg"
 import abi52 from "../assets/galeries/abi/abi52.jpg"
 
-
+import dak1 from "../assets/galeries/dak/dak1.jpg"
+import dak2 from "../assets/galeries/dak/dak2.jpg"
+import dak3 from "../assets/galeries/dak/dak3.jpg"
+import dak4 from "../assets/galeries/dak/dak4.jpg"
+import dak5 from "../assets/galeries/dak/dak5.jpg"
+import dak6 from "../assets/galeries/dak/dak6.jpg"
+import dak7 from "../assets/galeries/dak/dak7.jpg"
+import dak8 from "../assets/galeries/dak/dak8.jpg"
+import dak9 from "../assets/galeries/dak/dak9.jpg"
+import dak10 from "../assets/galeries/dak/dak10.jpg"
+import dak11 from "../assets/galeries/dak/dak11.jpg"
+import dak12 from "../assets/galeries/dak/dak12.jpg"
+import dak13 from "../assets/galeries/dak/dak13.jpg"
+import dak14 from "../assets/galeries/dak/dak14.jpg"
+import dak15 from "../assets/galeries/dak/dak15.jpg"
+import dak16 from "../assets/galeries/dak/dak16.jpg"
+import dak17 from "../assets/galeries/dak/dak17.jpg"
+import dak18 from "../assets/galeries/dak/dak18.jpg"
+import dak19 from "../assets/galeries/dak/dak19.jpg"
+import dak20 from "../assets/galeries/dak/dak20.jpg"
+import dak21 from "../assets/galeries/dak/dak21.jpg"
+import dak22 from "../assets/galeries/dak/dak22.jpg"
+import dak23 from "../assets/galeries/dak/dak23.jpg"
+import dak24 from "../assets/galeries/dak/dak24.jpg"
+import dak25 from "../assets/galeries/dak/dak25.jpg"
+import dak26 from "../assets/galeries/dak/dak26.jpg"
+import dak27 from "../assets/galeries/dak/dak27.jpg"
+import dak28 from "../assets/galeries/dak/dak28.jpg"
+import dak29 from "../assets/galeries/dak/dak29.jpg"
+import dak30 from "../assets/galeries/dak/dak30.jpg"
+import dak31 from "../assets/galeries/dak/dak31.jpg"
+import dak32 from "../assets/galeries/dak/dak32.jpg"
+import dak33 from "../assets/galeries/dak/dak33.jpg"
+import dak34 from "../assets/galeries/dak/dak34.jpg"
+import dak35 from "../assets/galeries/dak/dak35.jpg"
+import dak36 from "../assets/galeries/dak/dak36.jpg"
+import dak37 from "../assets/galeries/dak/dak37.jpg"
+import dak38 from "../assets/galeries/dak/dak38.jpg"
+import dak39 from "../assets/galeries/dak/dak39.jpg"
+import dak40 from "../assets/galeries/dak/dak40.jpg"
+import dak41 from "../assets/galeries/dak/dak41.jpg"
+import dak42 from "../assets/galeries/dak/dak42.jpg"
+import dak43 from "../assets/galeries/dak/dak43.jpg"
+import dak44 from "../assets/galeries/dak/dak44.jpg"
+import dak45 from "../assets/galeries/dak/dak45.jpg"
+import dak46 from "../assets/galeries/dak/dak46.jpg"
+import dak47 from "../assets/galeries/dak/dak47.jpg"
+import dak48 from "../assets/galeries/dak/dak48.jpg"
+import dak49 from "../assets/galeries/dak/dak49.jpg"
+import dak50 from "../assets/galeries/dak/dak50.jpg"
 
 
 export const albums: Album[] = [
@@ -421,13 +470,257 @@ export const albums: Album[] = [
     year: '2021',
     coverImage: dakarCover,
     photoCount: 208,
-    photos: Array(208).fill(null).map((_, i) => ({
-      id: i,
-      src: dakarCover,
-      alt: `Dakar 2021 photo ${i + 1}`,
-      caption: `Séminaire à Dakar - Session ${i + 1}`,
-      date: `2021-${String(Math.floor(i / 30) + 1).padStart(2, '0')}-${String(i % 30 + 1).padStart(2, '0')}`
-    }))
+    photos: [
+      {
+        id: 0,
+        src: dak1,
+        alt: `Dakar 2021 photo 1`,
+      },
+      {
+        id: 1,
+        src: dak2,
+        alt: `Dakar 2021 photo 2`,
+      },
+      {
+        id: 2,
+        src: dak3,
+        alt: `Dakar 2021 photo 3`,
+      },
+      {
+        id: 3,
+        src: dak4,
+        alt: `Dakar 2021 photo 4`,
+      },
+      {
+        id: 4,
+        src: dak5,
+        alt: `Dakar 2021 photo 5`,
+      },
+      {
+        id: 5,
+        src: dak6,
+        alt: `Dakar 2021 photo 6`,
+      },
+      {
+        id: 6,
+        src: dak7,
+        alt: `Dakar 2021 photo 7`,
+      },
+      {
+        id: 7,
+        src: dak8,
+        alt: `Dakar 2021 photo 8`,
+      },
+      {
+        id: 8,
+        src: dak9,
+        alt: `Dakar 2021 photo 9`,
+      },
+      {
+        id: 9,
+        src: dak10,
+        alt: `Dakar 2021 photo 10`,
+      },
+      {
+        id: 10,
+        src: dak11,
+        alt: `Dakar 2021 photo 11`,
+      },
+      {
+        id: 11,
+        src: dak12,
+        alt: `Dakar 2021 photo 12`,
+      },
+      {
+        id: 12,
+        src: dak13,
+        alt: `Dakar 2021 photo 13`,
+      },
+      {
+        id: 13,
+        src: dak14,
+        alt: `Dakar 2021 photo 14`,
+      },
+      {
+        id: 14,
+        src: dak15,
+        alt: `Dakar 2021 photo 15`,
+      },
+      {
+        id: 15,
+        src: dak16,
+        alt: `Dakar 2021 photo 16`,
+      },
+      {
+        id: 16,
+        src: dak17,
+        alt: `Dakar 2021 photo 17`,
+      },
+      {
+        id: 17,
+        src: dak18,
+        alt: `Dakar 2021 photo 18`,
+      },
+      {
+        id: 18,
+        src: dak19,
+        alt: `Dakar 2021 photo 19`,
+      },
+      {
+        id: 19,
+        src: dak20,
+        alt: `Dakar 2021 photo 20`,
+      },
+      {
+        id: 20,
+        src: dak21,
+        alt: `Dakar 2021 photo 21`,
+      },
+      {
+        id: 21,
+        src: dak22,
+        alt: `Dakar 2021 photo 22`,
+      },
+      {
+        id: 22,
+        src: dak23,
+        alt: `Dakar 2021 photo 23`,
+      },
+      {
+        id: 23,
+        src: dak24,
+        alt: `Dakar 2021 photo 24`,
+      },
+      {
+        id: 24,
+        src: dak25,
+        alt: `Dakar 2021 photo 25`,
+      },
+      {
+        id: 25,
+        src: dak26,
+        alt: `Dakar 2021 photo 26`,
+      },
+      {
+        id: 26,
+        src: dak27,
+        alt: `Dakar 2021 photo 27`,
+      },
+      {
+        id: 27,
+        src: dak28,
+        alt: `Dakar 2021 photo 28`,
+      },
+      {
+        id: 28,
+        src: dak29,
+        alt: `Dakar 2021 photo 29`,
+      },
+      {
+        id: 29,
+        src: dak30,
+        alt: `Dakar 2021 photo 30`,
+      },
+      {
+        id: 30,
+        src: dak31,
+        alt: `Dakar 2021 photo 31`,
+      },
+      {
+        id: 31,
+        src: dak32,
+        alt: `Dakar 2021 photo 32`,
+      },
+      {
+        id: 32,
+        src: dak33,
+        alt: `Dakar 2021 photo 33`,
+      },
+      {
+        id: 33,
+        src: dak34,
+        alt: `Dakar 2021 photo 34`,
+      },
+      {
+        id: 34,
+        src: dak35,
+        alt: `Dakar 2021 photo 35`,
+      },
+      {
+        id: 35,
+        src: dak36,
+        alt: `Dakar 2021 photo 36`,
+      },
+      {
+        id: 36,
+        src: dak37,
+        alt: `Dakar 2021 photo 37`,
+      },
+      {
+        id: 37,
+        src: dak38,
+        alt: `Dakar 2021 photo 38`,
+      },
+      {
+        id: 38,
+        src: dak39,
+        alt: `Dakar 2021 photo 39`,
+      },
+      {
+        id: 39,
+        src: dak40,
+        alt: `Dakar 2021 photo 40`,
+      },
+      {
+        id: 40,
+        src: dak41,
+        alt: `Dakar 2021 photo 41`,
+      },
+      {
+        id: 41,
+        src: dak42,
+        alt: `Dakar 2021 photo 42`,
+      },
+      {
+        id: 42,
+        src: dak43,
+        alt: `Dakar 2021 photo 43`,
+      },
+      {
+        id: 43,
+        src: dak44,
+        alt: `Dakar 2021 photo 44`,
+      },
+      {
+        id: 44,
+        src: dak45,
+        alt: `Dakar 2021 photo 45`,
+      },
+      {
+        id: 45,
+        src: dak46,
+        alt: `Dakar 2021 photo 46`,
+      },
+      {
+        id: 46,
+        src: dak47,
+        alt: `Dakar 2021 photo 47`,
+      },
+      {
+        id: 47,
+        src: dak48,
+        alt: `Dakar 2021 photo 48`,
+      },
+      {
+        id: 48,
+        src: dak49,
+        alt: `Dakar 2021 photo 49`,
+      },
+      {
+        id: 49,
+        src: dak50,
+        alt: `Dakar 2021 photo 50`,}
+    ]
   }
 ]
 
