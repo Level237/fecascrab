@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 
 import { Photo } from '../../types/gallery';
 import { ScrollRestoration } from 'react-router-dom';
@@ -12,7 +12,6 @@ interface PhotoGridProps {
 }
 
 export const PhotoGrid: React.FC<PhotoGridProps> = ({ photos, onPhotoClick }) => {
-  const [visiblePhotos, setVisiblePhotos] = useState<Photo[]>([]);
   const [loading, setLoading] = useState(false);
   const [visibleCount, setVisibleCount] = useState(8); 
 
@@ -23,24 +22,8 @@ export const PhotoGrid: React.FC<PhotoGridProps> = ({ photos, onPhotoClick }) =>
       setLoading(false);
     }, 500); // Simule un chargement
   };
-  useEffect(() => {
-    loadMorePhotos();
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
-  const loadMorePhotos = () => {
-    if (loading) return;
-    setLoading(true);
-    
-    setVisiblePhotos(photos);
-    setLoading(false);
-  };
 
-  const handleScroll = () => {
-    if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return;
-    loadMorePhotos();
-  };
 
   return (
 

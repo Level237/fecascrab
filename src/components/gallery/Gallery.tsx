@@ -8,7 +8,6 @@ import { PhotoGrid } from './photo-grid';
 import { PhotoCarousel } from './photo-carousel';
 import { albums } from "../../data/album";
 import { Album, Photo } from '../../types/gallery';
-import { ScrollRestoration } from 'react-router-dom';
 
 const container = {
   hidden: { opacity: 0 },

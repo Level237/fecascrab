@@ -26,7 +26,7 @@ export default function JoinTeam({source}:{source:string}) {
         console.log(email)
         try{
        
-            axios.post('http://localhost:5000/rejoindre/team',{
+            axios.post('https://api.fecascrab.com/rejoindre/team',{
               "email":email,
               "source":source,
               "phone":phone,
