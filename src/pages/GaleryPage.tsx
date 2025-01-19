@@ -17,6 +17,7 @@ import { useEffect, useState } from 'react'
 import Loader from '../components/ui/loader'
 import Footer from '../components/Footer'
 import { Gallery } from '../components/gallery/Gallery'
+import { ScrollRestoration } from 'react-router-dom'
 export default function GaleryPage() {
 
 
@@ -37,6 +38,7 @@ export default function GaleryPage() {
     <>
     {!loading &&  <section>
         <HeaderSection />
+        <ScrollRestoration/>
         <NavMobile/>
         <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
     className=' z-10 relative mt-12 max-sm:mt-7 h-96 mx-24 max-sm:mx-0   bg-[#02abee]'>

@@ -8,6 +8,7 @@ import { PhotoGrid } from './photo-grid';
 import { PhotoCarousel } from './photo-carousel';
 import { albums } from "../data/album";
 import { Album, Photo } from '../../types/gallery';
+import { ScrollRestoration } from 'react-router-dom';
 
 const container = {
   hidden: { opacity: 0 },
@@ -41,6 +42,7 @@ export function Gallery() {
 
   return (
     <div className="container mx-auto py-8">
+      
       {!selectedAlbum ? (
         <motion.div 
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -84,10 +86,10 @@ export function Gallery() {
       ) : (
         <div>
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold">{selectedAlbum.title} {selectedAlbum.year}</h2>
+            <h2 className="text-2xl font-bold">{selectedAlbum.title}</h2>
             <Button 
               onClick={() => setSelectedAlbum(null)}
-              variant="outline"
+              className='border border-red-600 text-red-600 rounded-full text-lg max-sm:text-sm max-sm:py-6 max-sm:px-8  py-6 px-12'
             >
               Retour aux albums
             </Button>

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { Photo } from '../../types/gallery';
+import { ScrollRestoration } from 'react-router-dom';
 
 interface PhotoGridProps {
   photos: Photo[];
@@ -34,6 +35,7 @@ export const PhotoGrid: React.FC<PhotoGridProps> = ({ photos, onPhotoClick }) =>
 
   return (
     <div className="grid grid-cols-2 max-sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <ScrollRestoration/>
       {visiblePhotos.map((photo) => (
         <div
           key={photo.id}
@@ -43,7 +45,7 @@ export const PhotoGrid: React.FC<PhotoGridProps> = ({ photos, onPhotoClick }) =>
           <img
             src={photo.src || "/placeholder.svg"}
             alt={photo.alt}
-            className="object-cover"
+            className="object-cover h-full w-full"
           />
         </div>
       ))}

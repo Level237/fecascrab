@@ -16,8 +16,8 @@ interface PhotoCarouselProps {
 export function PhotoCarousel({ photos, isOpen, onClose, initialIndex }: PhotoCarouselProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl p-0">
-        <Carousel className="w-full" >
+      <DialogContent  className="flex items-center p-0">
+        <Carousel className="w-full h-[100]" defaultValue={initialIndex} >
           <CarouselContent>
             {photos.map((photo) => (
               <CarouselItem key={photo.id}>
@@ -25,7 +25,7 @@ export function PhotoCarousel({ photos, isOpen, onClose, initialIndex }: PhotoCa
                   <img
                     src={photo.src || "/placeholder.svg"}
                     alt={photo.alt}
-                    className="object-cover h-72 rounded-lg"
+                    className="object-cover h-[100vh]  max-sm:h-72 rounded-lg"
                   />
                 </div>
               </CarouselItem>
