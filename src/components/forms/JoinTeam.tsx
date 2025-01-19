@@ -4,27 +4,70 @@ import { Select, SelectContent, SelectItem, SelectTrigger } from '../ui/select'
 import { SelectValue } from '@radix-ui/react-select'
 import { Textarea } from '../ui/textarea'
 import { Button } from '../ui/button'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 export default function JoinTeam() {
     const [loading, setLoading] = useState(false)
+    const [email, setEmail] = useState("")
+    const [town, setTown] = useState("")
+    const [phone, setPhone] = useState("")
+    const [objet, setObjet] = useState("")
+    const [message, setMessage] = useState("")
+    const navigate=useNavigate()
+    const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {setEmail(e.target.value)}
+    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => setPhone(e.target.value)
+    const handleObjetChange = (e: React.ChangeEvent<HTMLInputElement>) => setObjet(e.target.value)
+    const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        setLoading(true)
+        console.log(email)
+        try{
+       
+            axios.post('http://localhost:5000/rejoindre/team',{
+              "email":email,
+              "phone":phone,
+              "objet":objet,
+              "message":message,
+              "town":town
+            },{
+              headers: {
+                "Content-Type": "application/json",
+              }
+            }).then((res)=>{
+              
+              console.log(res)
+              setLoading(false)
+              navigate('/confirm')
+            }).catch((err)=>{
+              console.error(err)
+              setLoading(false)
+            })
+    }catch(err){
+        
+    }
+}
   return (
     <section className='flex flex-col gap-4'>
 
-        <form action="">
+        <form onSubmit={handleSubmit} action="POST">
 
         <div className='mb-3'>
             <Input
             required
-             name='email' 
+             name='email'
+             value={email}
             type='email'
             placeholder='E-mail'
-
+            onChange={handleEmailChange}
             className={`py-6 rounded-xl title-second  max-sm:placeholder:text-lg px-6 placeholder:text-xl text-xl  h-12`}/>
             
         </div>
         <div className='flex max-sm:flex-col mb-4 max-sm:items-start gap-4 items-center'>
             <div className='w-[100%]'>
-                <Select name='ville'  defaultValue="douala">
+                <Select onValueChange={(value: string) => setTown(value)} name='town'  defaultValue="douala">
                         
                         <SelectTrigger className="py-6 ">
                         <SelectValue placeholder="Sélectionner la ville" />
@@ -35,16 +78,18 @@ export default function JoinTeam() {
                         <SelectItem value="Yaoundé">Yaoundé</SelectItem>
                         <SelectItem value="bafoussam">Bafoussam</SelectItem>
                         <SelectItem value="bagangte">Bagangté</SelectItem>
+                        <SelectItem value="autres">Autres</SelectItem>
                     </SelectContent>
                 </Select>
             </div>
             <div className='w-[100%]'>
             <Input
             required
-             name='phone' 
+             name='phone'
+             value={phone}
             type='text'
             placeholder='Numéro de téléphone'
-
+            onChange={handlePhoneChange}
             className={`py-6 rounded-xl title-second  max-sm:placeholder:text-lg px-6 placeholder:text-xl text-xl  h-12`}/>
             </div>
         </div>
@@ -52,14 +97,18 @@ export default function JoinTeam() {
             <Input
             required
              name='objet' 
+             value={objet}
             type='text'
             placeholder='Objet'
-
+            onChange={handleObjetChange}
             className={`py-6 rounded-xl title-second  max-sm:placeholder:text-lg px-6 placeholder:text-xl text-xl  h-12`}/>
             
         </div>
         <div className='mb-3'>
         <Textarea
+        onChange={handleMessageChange}
+        required
+              value={message}
               placeholder="Votre message"
               className="min-h-[150px]"
               name='message'

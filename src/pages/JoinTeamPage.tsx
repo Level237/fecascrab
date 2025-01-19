@@ -2,13 +2,9 @@
 import HeaderSection from '../components/headerSection'
 import slide from "../assets/section2.jpg"
 import NavMobile from '../components/NavMobile'
-import slide12Origine from "../assets/slide12.jpg"
 import { useEffect, useState } from 'react'
 import Loader from '../components/ui/loader'
 import Footer from '../components/Footer'
-import { Separator } from '../components/ui/separator'
-import ClubForm from '../components/forms/ClubForm'
-import CtaInscription from '../components/Cta-inscription'
 import JoinTeam from '../components/forms/JoinTeam'
 export default function JoinTeamPage() {
 
