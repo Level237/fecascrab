@@ -70,7 +70,7 @@ export default function Header() {
                 </Link>
                 <Link
                   key={"Galerie"}
-                  to={"/"}
+                  to={"/gallerie"}
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
                 >
                   GALERIE

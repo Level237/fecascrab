@@ -66,7 +66,7 @@ export default function NavMobile() {
             <div className="mt-[12px] ml-10 text-white font-bold text-xl flex flex-col items-start">
             
                 <div className='mt-8 w-[65%] flex items-center justify-between' >
-                  <Link to='/' onClick={()=>closeHeader()} >
+                  <Link className='title-font text-3xl' to='/' onClick={()=>closeHeader()} >
                     La Féderation
                     </Link>
                     <div>
@@ -76,36 +76,35 @@ export default function NavMobile() {
                     </div>
                 </div>
                 {open && <div className="mt-5 mx-6 mb-6 flex flex-col gap-3 underline underline-offset-4 text-md">
-                <Link to='/origine' onClick={()=>closeHeader()} >
+                <Link className='title-font text-2xl' to='/origine' onClick={()=>closeHeader()} >
                     Origine
                     </Link>
-                    <Link to='/organisation' onClick={()=>closeHeader()} >
+                    <Link className='title-font text-2xl' to='/organisation' onClick={()=>closeHeader()} >
                     Organisation
                     </Link>
-                    <Link to='/clubs-afiliés' onClick={()=>closeHeader()} >
+                    <Link className='title-font text-2xl' to='/clubs-afiliés' onClick={()=>closeHeader()} >
                     Clubs Affiliés
                     </Link>
-                    <Link to='/' onClick={()=>closeHeader()} >
+                    <Link className='title-font text-2xl' to='/gallerie' onClick={()=>closeHeader()} >
                     Galerie
                     </Link>
                 </div>}
-                <div  className="mt-5">
-                <Link to='/palmares' onClick={()=>closeHeader()}>
+                <div  className="mt-4">
+                <Link className='title-font text-3xl' to='/palmares' onClick={()=>closeHeader()}>
                     Palmarès
                     </Link>
                 </div>
-                <div onClick={()=>closeHeader()} className="mt-5">
-                <Link to='/calendrier'
-                className=' text-white block'>Calendrier</Link>
-                </div>
-                <div onClick={()=>closeHeader()} className="mt-5">
-                  <Link to='/events'>
-                  Events
+              
+                <div onClick={()=>closeHeader()} className="mt-4">
+                  <Link className='title-font text-3xl' to='/events'>
+                  EVENT
                   </Link>
                 
                 </div>
-                <div onClick={()=>closeHeader()} className="mt-5">
-               Création Club
+                <div onClick={()=>closeHeader()} className="mt-4">
+                <Link className='title-font text-3xl' to='/creation-club'>
+                  CREATION CLUB
+                  </Link>
                 </div>
                
             </div>

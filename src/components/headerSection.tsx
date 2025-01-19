@@ -86,7 +86,7 @@ export default function HeaderSection() {
                 </Link>
                 <Link
                   key={"Galerie"}
-                  to={"/"}
+                  to={"/gallerie"}
                   className={`block px-4 py-2 text-sm ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
                 >
                   GALERIE
