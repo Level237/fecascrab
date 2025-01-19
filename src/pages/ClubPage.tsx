@@ -2,7 +2,6 @@
 import HeaderSection from '../components/headerSection'
 import slide from "../assets/club.jpeg"
 import NavMobile from '../components/NavMobile'
-import slide12Origine from "../assets/slide12.jpg"
 import { useEffect, useState } from 'react'
 import Loader from '../components/ui/loader'
 import logo from "../assets/logo-1.png"
@@ -293,9 +292,10 @@ activités de la Fédération.
             </div>
           
            
-           <CtaInscription/>
+          
            
     </section>
+    <CtaInscription/>
     <Footer/>
     </section>}
    

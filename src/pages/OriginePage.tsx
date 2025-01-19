@@ -12,10 +12,10 @@ import slide8Origine from "../assets/slide8Origine.jpg"
 import slide9Origine from "../assets/slide9Origine.jpg"
 import slide10Origine from "../assets/slide10.jpg"
 import slide11Origine from "../assets/slide11.jpg"
-import slide12Origine from "../assets/slide12.jpg"
 import { useEffect, useState } from 'react'
 import Loader from '../components/ui/loader'
 import Footer from '../components/Footer'
+import CtaInscription from '../components/Cta-inscription'
 export default function OriginePage() {
 
 
@@ -40,27 +40,27 @@ export default function OriginePage() {
         <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
     className=' z-10 relative mt-12 max-sm:mt-7 h-96 mx-24 max-sm:mx-0   bg-[#02abee]'>
         <div className='absolute bottom-[-30px] px-4 pt-24 pb-5 left-12 max-sm:left-12 bg-red-600'>
-            <h2 className='text-2xl text-white font-bold '>Les Origines</h2>
+            <h2 className='text-4xl max-sm:text-3xl title-font text-white font-bold  '>Les Origines</h2>
         </div>
     </div>
 
     <section className='mx-32 mt-24 max-sm:mx-4'>
-                <p className='text-xl max-sm:text-lg'>La Fédération camerounaise de Scrabble (FECASCRAB) est l'organe officiel qui
+                <p className='text-xl title-second max-sm:text-lg'>La Fédération camerounaise de Scrabble (FECASCRAB) est l'organe officiel qui
         régit la pratique du Scrabble au Cameroun. Créée en 1990, la FECASCRAB s’est
         donnée pour mission de promouvoir ce jeu intellectuel dans tout le pays, en offrant
         un cadre structuré pour les compétitions, les formations et les échanges entre
         passionnés.
 
         </p>
-        <h2 className='text-2xl mt-7 max-sm:text-2xl font-bold'>Date clés</h2>
+        <h2 className='text-2xl title-bold mt-7 max-sm:text-2xl font-bold'>Date clés</h2>
 
-        <div className='mx-4 max-sm:mx-6 mt-8'>
-        <li className="text-xl max-sm:text-lg mb-4 text-justify">
-                     <span className='font-bold'>Aout 1990 : </span>Déclaration de la FECASCRAB auprès de la Préfecture du
+        <div className='mx-4 title-second max-sm:mx-6 mt-8'>
+        <li className="text-xl max-sm:text-lg title-second mb-4 text-justify">
+                     <span className='font-bold title-bold'>Aout 1990 : </span>Déclaration de la FECASCRAB auprès de la Préfecture du
                      Département du Mfoundi (Région du Centre).
             </li>
             <li className="text-xl max-sm:text-lg mb-4 text-justify">
-                     <span className='font-bold'>1991 : </span>Affiliation de la FECASCRAB à la Fédération Internationale de Scrabble
+                     <span className='font-bold '>1991 : </span>Affiliation de la FECASCRAB à la Fédération Internationale de Scrabble
                      Francophone (FISF), positionnant le Cameroun sur la scène internationale.
             </li>
             <li className="text-xl max-sm:text-lg mb-4 text-justify">
@@ -87,13 +87,13 @@ famille du mouvement sportif camerounais.
             </div>
 
             <div>
-            <p className='text-xl max-sm:text-lg'>Au fil des ans, la FECASCRAB a su diversifier ses activités en introduisant des
+            <p className='text-xl title-second max-sm:text-lg'>Au fil des ans, la FECASCRAB a su diversifier ses activités en introduisant des
             formats variés comme le Scrabble Duplicate et Classique, tout en encourageant la
             participation des jeunes à travers les clubs scolaires.
         </p>
             </div>
 
-            <h2 className="text-2xl mt-7 max-sm:text-xl  font-bold text-red-600">LES GRANDS MOMENTS DE L’HISTOIRE DU SCRABBLE AU CAMEROUN</h2>
+            <h2 className="text-2xl title-bold mt-7 max-sm:text-xl  font-bold text-red-600">LES GRANDS MOMENTS DE L’HISTOIRE DU SCRABBLE AU CAMEROUN</h2>
 
             <div className='grid grid-cols-2  mt-12 mb-12 max-sm:grid-cols-1 gap-4'>
                     <div className='flex flex-col h-[100%] items-center gap-5'>
@@ -110,21 +110,21 @@ famille du mouvement sportif camerounais.
                     </div>
             </div>
             <div>
-            <p className='text-xl max-sm:text-lg'>Ces moments forts témoignent de l’évolution et de l’influence grandissante de la
+            <p className='text-xl title-second max-sm:text-lg'>Ces moments forts témoignent de l’évolution et de l’influence grandissante de la
             FECASCRAB sur le développement du Scrabble en Afrique et dans le monde.
 
 
         </p>
-        <h2 className="text-2xl mt-7 max-sm:text-xl  font-bold text-red-600">LES PERSONNALITES LES PLUS MARQUANTES DE LA FECASCRAB
+        <h2 className="text-2xl mt-7 title-bold max-sm:text-xl  font-bold text-red-600">LES PERSONNALITES LES PLUS MARQUANTES DE LA FECASCRAB
 
 </h2>
-<p className='text-xl max-sm:text-lg mt-8'>L’histoire de la FECASCRAB ne serait pas complète sans rendre hommage aux
+<p className='text-xl max-sm:text-lg title-second mt-8'>L’histoire de la FECASCRAB ne serait pas complète sans rendre hommage aux
 femmes et hommes qui ont marqué son parcours.
 
 
         </p>
 
-        <div className='mt-6 mx-6'>
+        <div className='mt-6 title-second mx-6'>
         <li className="text-xl max-sm:text-lg mb-4 text-justify">
                      <span className='font-bold'>Samuel Banyu: </span>Premier président de la FECASCRAB en 1991, visionnaire ayant
 œuvré pour la structuration de la Fédération et son affiliation internationale.
@@ -139,7 +139,7 @@ rayonnement du Scrabble africain.
             </li>
         </div>
             </div>
-            <div>
+            <div className='title-second'>
             <p className='text-xl max-sm:text-lg mt-8'>Ces figures, parmi tant d'autres, incarnent les valeurs et la passion qui animent la
 communauté scrabbleuse au Cameroun.
 <div className='mt-8'>
@@ -201,16 +201,10 @@ les camerounais Amédée Assomo et Eric Salvador TCHOUYO.Celle-ci  verra le sacr
 
             </li>
             </div>
-            <div className="relative mb-12 max-sm:hidden mt-12 h-[300px] flex-2">
-          <img
-            src={slide12Origine}
-            alt="Partie de Scrabble en cours"
-            className="rounded-lg object-cover  w-full h-full"
-          />
-        
-        </div>
+            
            
     </section>
+    <CtaInscription/>
     <Footer/>
     </section>}
 
