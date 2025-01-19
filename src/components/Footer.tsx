@@ -2,7 +2,7 @@ import logo from "../assets/logo.png"
 
 export default function Footer() {
   return (
-    <section className="flex flex-col mt-16 items-center justify-center    p-8 relative bg-[#107a5f]">
+    <section className="flex flex-col title-second mt-16 items-center justify-center    p-8 relative bg-[#107a5f]">
             <div className='w-full   flex justify-center '>
         <img className='w-28 absolute max-sm:w-28 top-[-36px] ' src={logo} alt="" />
       </div>

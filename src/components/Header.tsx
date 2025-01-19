@@ -107,7 +107,7 @@ export default function Header() {
           </div>
           <Link className='max-sm:hidden' to={"/inscription"}> <Button
             variant="outline" 
-            className="bg-red-500 border-none text-white  rounded-2xl py-6 font-bold "
+            className="bg-red-500 title-font text-xl border-none text-white  rounded-2xl py-6 px-6 font-bold "
           >
             Contactez-nous
           </Button></Link>
