@@ -43,7 +43,7 @@ export default function JoinTeamPage() {
        
            
             <div>
-        <p className='text-2xl max-sm:text-lg'>Pour tout intégration, collaboration ou partenariat avec l’équipe camerounaise officielle du
+        <p className='text-2xl title-second max-sm:text-lg'>Pour tout intégration, collaboration ou partenariat avec l’équipe camerounaise officielle du
 Scrabble, bien vouloir nous laisser un message en remplissant les champs ci-dessous. Nous
 vous repondrons le plus rapidement possible</p>
       </div>
