@@ -14,11 +14,11 @@ export default function Header() {
    openHeader()
   }
   return (
-    <header className="absolute  top-8 w-full z-50 bg-transparent">
+    <header className="absolute   top-8 w-full z-50 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <div className="flex flex-1 items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex  items-center">
               <img
                 src={logo}
                 alt="FCS Logo"
@@ -29,12 +29,12 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="hidden w-[50%] md:flex items-center space-x-8">
+          <nav className="hidden title-font text-2xl w-[50%] md:flex items-center space-x-8">
             <Link 
               to="/federation" 
               onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-              className="text-white relative flex items-center gap-3 hover:text-white/80 font-medium"
+              className="text-white   relative flex items-center gap-3 hover:text-white/80 font-medium"
             >
               LA FÉDÉRATION <ChevronDown className="h-4 w-4" />
               <AnimatePresence>
@@ -50,28 +50,28 @@ export default function Header() {
                 <Link
                   key={"origine"}
                   to={"/origine"}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                  className="block px-4 py-2 text-xl text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
                 >
                   ORIGINE
                 </Link>
                 <Link
                   key={"organisation"}
                   to={"/organisation"}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                  className="block px-4 py-2 text-xl text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
                 >
                   ORGANISATION
                 </Link>
                 <Link
                   key={"club"}
                   to={"/clubs-afiliés"}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                  className="block px-4 py-2 text-xl text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
                 >
                   CLUBS AFFILIÉS
                 </Link>
                 <Link
                   key={"Galerie"}
                   to={"/gallerie"}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                  className="block px-4 py-2 text-xl text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
                 >
                   GALERIE
                 </Link>
