@@ -355,7 +355,7 @@ export default function PalmaresPage() {
       <h1 className='text-[#00723e] text-center text-3xl md:text-4xl title-font font-bold mb-1 leading-tight'>Elite Classique</h1>
         <ChampionClassic/>
         <h1 className='text-[#00723e] text-center text-3xl md:text-4xl title-font font-bold mb-1 leading-tight'>Défi</h1>
-        <h1 className="text-red-600 text-center text-3xl mb-5 md:text-4xl title-font font-bold mb-1 leading-tight">
+        <h1 className="text-red-600 text-center text-3xl  md:text-4xl title-font font-bold mb-6 leading-tight">
         BALOG FRANCOIS ROLAND (2021)<br />
         TCHOUYO ERIC SALVADOR (2023)
       </h1>
