@@ -30,7 +30,7 @@ export default function MasterEvent() {
     {!loading &&  <section>
         <HeaderSection />
         <NavMobile/>
-        <div className='mt-12 flex flex-col items-center gap-4 justify-center max-sm:mx-4'>
+        <div className='mt-12 title-second flex flex-col items-center gap-4 justify-center max-sm:mx-4'>
                 <h2 className='font-bold title-font text-center text-6xl text-red-500 max-sm:text-3xl'>Super Masters 2025 <br />
 
 Une Expérience Unique au Cameroun</h2>
@@ -46,7 +46,7 @@ Une Expérience Unique au Cameroun</h2>
     </div>
 
     <section>
-    <div className='flex mx-24 mt-12 max-sm:-mt-[50px] flex-col items-start gap-4 justify-center max-sm:mx-2'>
+    <div className='flex mx-24 title-second mt-12 max-sm:-mt-[50px] flex-col items-start gap-4 justify-center max-sm:mx-2'>
                 <h2 className='font-bold title-font text-5xl text-red-500 max-sm:text-3xl'>Un cadre exceptionnel <br />
 
                 pour une compétition internationale</h2>
@@ -63,7 +63,7 @@ qui souligne l’importance de cet événement dans le paysage sportif internati
 
                 <Separator className='bg-[#00723e] mt-7'/>
             </div>
-            <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
+            <div className='flex mx-24 mt-12 title-second  flex-col items-start gap-4 justify-center max-sm:mx-2'>
                 <h2 className='font-bold title-font text-5xl text-red-500 max-sm:text-3xl'>Une gastronomie riche et variée</h2>
                 <div>
                     <p className='text-2xl max-sm:text-lg'>La cuisine sera à l’honneur avec des <span className='font-bold'> buffets généreux</span>  pour chaque repas :
@@ -86,7 +86,7 @@ journées en beauté.
                 <Separator className='bg-[#00723e] mt-7'/>
             </div>
 
-            <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
+            <div className='flex mx-24 mt-12  flex-col title-second items-start gap-4 justify-center max-sm:mx-2'>
                 <h2 className='font-bold title-font text-5xl text-red-500 max-sm:text-3xl'>Un événement de prestige</h2>
                 <div>
                     <p className='text-2xl max-sm:text-lg'>Les Super Masters 2025, c’est :

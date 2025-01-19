@@ -56,15 +56,15 @@ export default function EventPage() {
       
       </div>
       <div>
-        <h2 className='text-3xl  max-sm:text-2xl font-bold text-[#107a5f]'>SUPER MASTER 2025: UNE EXPERIENCE <br className='max-sm:hidden' />UNIQUE AU CAMEROUN</h2>
+        <h2 className='text-3xl title-bold  max-sm:text-2xl font-bold text-[#107a5f]'>SUPER MASTER 2025: UNE EXPERIENCE <br className='max-sm:hidden' />UNIQUE AU CAMEROUN</h2>
       </div>
 
       <div>
-        <p className='text-2xl max-sm:text-lg'>Rejoignez-nous pour vivre un moment d'exception, où compétition rime <br className='max-sm:hidden' />
+        <p className='text-2xl title-second max-sm:text-lg'>Rejoignez-nous pour vivre un moment d'exception, où compétition rime <br className='max-sm:hidden' />
         avec excellence et découverte !</p>
       </div>
       <div className='flex justify-center max-sm:justify-start'>
-        <Link to="/events/super-master-scrabble"><Button className='text-white px-7 rounded-2xl py-6 bg-red-600 text-xl'>En Savoir plus</Button></Link>
+        <Link to="/events/super-master-scrabble"><Button className='text-white title-font text-2xl px-7 rounded-2xl py-6 bg-red-600 '>En Savoir plus</Button></Link>
         
       </div>
         </section>
@@ -81,17 +81,17 @@ export default function EventPage() {
       </div>
   
       <div>
-        <h2 className='text-3xl  max-sm:text-2xl font-bold text-[#107a5f]'>Le Scrabble Scolaire : Une formation pour l'Avenir</h2>
+        <h2 className='text-3xl title-bold  max-sm:text-2xl font-bold text-[#107a5f]'>Le Scrabble Scolaire : Une formation pour l'Avenir</h2>
       </div>
 
       <div>
-        <p className='text-xl max-sm:text-lg'>Le Scrabble scolaire au Cameroun
+        <p className='text-xl title-second max-sm:text-lg'>Le Scrabble scolaire au Cameroun
 est bien plus qu’un simple jeu. Il
 est un puissant outil éducatif.
 </p>
       </div>
       <div className='flex'>
-        <Link to="/events/scrabble-scolaire"><Button className='text-white px-7 rounded-2xl py-6 bg-red-600 text-xl'>En Savoir plus</Button></Link>
+        <Link to="/events/scrabble-scolaire"><Button className='text-white title-font px-7 rounded-2xl py-6 bg-red-600 text-2xl'>En Savoir plus</Button></Link>
         
       </div>
         </section>
@@ -106,12 +106,12 @@ est un puissant outil éducatif.
       </div>
   
       <div>
-        <h2 className='text-3xl  max-sm:text-2xl font-bold text-[#107a5f]'>Selection Nationale de
+        <h2 className='text-3xl title-bold  max-sm:text-2xl font-bold text-[#107a5f]'>Selection Nationale de
         Scrabble du Cameroun</h2>
       </div>
 
       <div>
-        <p className='text-xl max-sm:text-lg'>Depuis 2016, le Cameroun a
+        <p className='text-xl title-second max-sm:text-lg'>Depuis 2016, le Cameroun a
 fièrement constitué une équipe
 nationale de Scrabble, symbole
 de discipline, d'excellence et de
@@ -119,7 +119,7 @@ passion.
 </p>
       </div>
       <div className='flex'>
-        <Link to="/events/national-team"><Button className='text-white px-7 rounded-2xl py-6 bg-red-600 text-xl'>En Savoir plus</Button></Link>
+        <Link to="/events/national-team"><Button className='text-white px-7 title-font rounded-2xl py-6 bg-red-600 text-2xl'>En Savoir plus</Button></Link>
         
       </div>
         </section>
