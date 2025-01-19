@@ -6,7 +6,7 @@ import { Card, CardContent } from '../../components/ui/card';
 import { Button } from '../../components/ui/button';
 import { PhotoGrid } from './photo-grid';
 import { PhotoCarousel } from './photo-carousel';
-import { albums } from "../data/album";
+import { albums } from "../../data/album";
 import { Album, Photo } from '../../types/gallery';
 import { ScrollRestoration } from 'react-router-dom';
 

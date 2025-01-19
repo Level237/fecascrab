@@ -18,11 +18,14 @@ import Loader from '../components/ui/loader'
 import Footer from '../components/Footer'
 import { Gallery } from '../components/gallery/Gallery'
 import { ScrollRestoration } from 'react-router-dom'
+
+
+
 export default function GaleryPage() {
 
 
   const [loading, setLoading] = useState(true);
-
+    
   useEffect(() => {
 
       const fetchData = async () => {

@@ -2,8 +2,6 @@ export interface Photo {
     id: number
     src: string
     alt: string
-    caption: string
-    date?: string
   }
   
   export interface Album {

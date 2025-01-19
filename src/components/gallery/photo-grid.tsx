@@ -23,8 +23,8 @@ export const PhotoGrid: React.FC<PhotoGridProps> = ({ photos, onPhotoClick }) =>
   const loadMorePhotos = () => {
     if (loading) return;
     setLoading(true);
-    const nextPhotos = photos.slice(visiblePhotos.length, visiblePhotos.length + 20);
-    setVisiblePhotos(prev => [...prev, ...nextPhotos]);
+    
+    setVisiblePhotos(photos);
     setLoading(false);
   };
 
