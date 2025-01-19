@@ -28,7 +28,7 @@ export default function HeaderSection() {
     }, [])
   return (
     <header className={`sticky top-0 max-sm:top-0 w-full z-50 transition-colors duration-300 ${
-        isScrolled ? 'bg-emerald-800  py-4' : 'bg-transparent mt-8'
+        isScrolled ? 'bg-emerald-800 z-[999999]  py-4' : 'bg-transparent mt-8'
       }`}>
         <div className="container mx-auto px-4">
           <div className="flex h-20 items-center justify-between">

@@ -4,6 +4,8 @@ import { Skeleton } from '../components/ui/skeleton'
 import { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import logoIcon from "../assets/logo.png"
+import NavMobile from '../components/NavMobile'
+import HeaderSection from '../components/headerSection'
 import '../components/forms/inscription.css'
 import Loader from '../components/ui/loader'
 import Footer from '../components/Footer'
@@ -42,8 +44,10 @@ export default function Inscription() {
 
     {!loading &&     <section>
       <ScrollRestoration/>
+      <HeaderSection />
+      <NavMobile/>
           <section className='flex flex-col gap-20 '>
-      <div className='bg-sky-400 w-full h-44 flex justify-center items-center relative'>
+      <div className='bg-sky-400 mt-12 w-full h-44 flex justify-center items-center relative'>
                 <div className='absolute bottom-[-80px] z-50'>
                  
                  
