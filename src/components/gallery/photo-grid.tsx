@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 import { Photo } from '../../types/gallery';
 import { ScrollRestoration } from 'react-router-dom';
+import { Button } from '../ui/button';
 
 interface PhotoGridProps {
   photos: Photo[];
@@ -13,7 +14,15 @@ interface PhotoGridProps {
 export const PhotoGrid: React.FC<PhotoGridProps> = ({ photos, onPhotoClick }) => {
   const [visiblePhotos, setVisiblePhotos] = useState<Photo[]>([]);
   const [loading, setLoading] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(8); 
 
+  const loadMoreImages = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setVisibleCount(prevCount => Math.min(prevCount + 8, photos.length)); // Charge 8 images supplémentaires
+      setLoading(false);
+    }, 500); // Simule un chargement
+  };
   useEffect(() => {
     loadMorePhotos();
     window.addEventListener('scroll', handleScroll);
@@ -34,9 +43,11 @@ export const PhotoGrid: React.FC<PhotoGridProps> = ({ photos, onPhotoClick }) =>
   };
 
   return (
-    <div className="grid grid-cols-2 max-sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+    <section>
+            <div className="grid grid-cols-2 max-sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
         <ScrollRestoration/>
-      {visiblePhotos.map((photo) => (
+        {photos.slice(0, visibleCount).map((photo) => (
         <div
           key={photo.id}
           className="relative aspect-square cursor-pointer overflow-hidden rounded-lg shadow-md transition-transform hover:scale-105"
@@ -49,7 +60,19 @@ export const PhotoGrid: React.FC<PhotoGridProps> = ({ photos, onPhotoClick }) =>
           />
         </div>
       ))}
+      
     </div>
+
+    {visibleCount < photos.length && (
+        <div className='flex items-center text-center w-full mt-8 justify-center'>
+ <Button className='bg-red-600 py-6 px-12 text-white' onClick={loadMoreImages} disabled={loading}>
+          {loading ? 'Chargement...' : 'Charger plus d\'images'}
+        </Button>
+        </div>
+       
+      )}
+    </section>
+    
   );
 };
 
