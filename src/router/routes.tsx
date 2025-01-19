@@ -13,6 +13,7 @@ import ScrabbleJunior from "../pages/events/ScrabbleJunior";
 import NationalTeam from "../pages/events/NationalTeam";
 import JoinTeamPage from "../pages/JoinTeamPage";
 import GaleryPage from "../pages/GaleryPage";
+import ContactPage from "../pages/ContactPage";
 
 export const routes=createBrowserRouter([{
     path:'/',
@@ -58,6 +59,9 @@ export const routes=createBrowserRouter([{
 },{
     path:"gallerie",
     element:<GaleryPage/>
+},{
+    path:"contact",
+    element:<ContactPage/>
 }
 
 ])
