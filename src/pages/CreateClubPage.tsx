@@ -35,7 +35,7 @@ export default function CreateClubPage() {
         
     </div>
 
-        <section className='flex mt-16 flex-col justify-center max-sm:mx-4 mx-24 gap-6'>
+        <section className='flex title-second mt-16 flex-col justify-center max-sm:mx-4 mx-24 gap-6'>
         <div>
                 <h2 className='font-bold title-font text-center text-6xl text-red-500 max-sm:text-3xl'>FORMULAIRE DE DEMANDE DE CREATION<br /> D'UN CLUB DE SCRABBLE SCOLAIRE</h2>
             </div>

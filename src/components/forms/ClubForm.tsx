@@ -96,7 +96,7 @@ export default function ClubForm() {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 ">
         <div className="space-y-6">
-          <h2 className="text-xl font-bold text-red-600">1. INFORMATIONS GÉNÉRALES SUR L'ÉTABLISSEMENT</h2>
+          <h2 className="text-4xl max-sm:text-3xl title-font  font-bold text-red-600">1. INFORMATIONS GÉNÉRALES SUR L'ÉTABLISSEMENT</h2>
           
           <FormField
             control={form.control}
@@ -221,7 +221,7 @@ export default function ClubForm() {
         </div>
         <Separator className='bg-[#00723e]'/>
         <div className="space-y-6">
-          <h2 className="text-xl font-bold text-red-600">2. PERSONNE DE CONTACT</h2>
+          <h2 className="text-4xl max-sm:text-3xl title-font font-bold text-red-600">2. PERSONNE DE CONTACT</h2>
           
           <FormField
             control={form.control}
@@ -293,7 +293,7 @@ export default function ClubForm() {
 
         <div className="space-y-6">
         <Separator className='bg-[#00723e]'/>
-          <h2 className="text-xl font-bold text-red-600">3. INTÉRÊT POUR LE SCRABBLE</h2>
+          <h2 className="text-4xl max-sm:text-3xl title-font font-bold text-red-600">3. INTÉRÊT POUR LE SCRABBLE</h2>
           
           <FormField
             control={form.control}
@@ -328,7 +328,7 @@ export default function ClubForm() {
         />
         </div>
         <div className="space-y-6">
-          <h2 className="text-xl font-bold text-red-600">4. DISPONIBILITÉS ET INFRASTRUCTURE</h2>
+          <h2 className="text-4xl max-sm:text-3xl title-font font-bold text-red-600">4. DISPONIBILITÉS ET INFRASTRUCTURE</h2>
 
           <div className="space-y-4">
             <FormField
@@ -437,7 +437,7 @@ export default function ClubForm() {
           </div>
         </div>
         <div className="space-y-6">
-          <h2 className="text-xl font-bold text-red-600">5. ENCADREMENT</h2>
+          <h2 className="text-4xl max-sm:text-3xl title-font font-bold text-red-600">5. ENCADREMENT</h2>
 
           <FormField
             control={form.control}
@@ -545,7 +545,7 @@ export default function ClubForm() {
           </div>
           <Separator className='bg-[#00723e]'/>
           <div className="space-y-6">
-    <h2 className="text-xl font-bold text-red-600">6. PARTICIPATION AUX COMPÉTITIONS</h2>
+    <h2 className="text-4xl max-sm:text-3xl title-font font-bold text-red-600">6. PARTICIPATION AUX COMPÉTITIONS</h2>
 
     <div className="space-y-4">
       <FormField
@@ -593,7 +593,7 @@ export default function ClubForm() {
   </div>
         <Separator className='bg-[#00723e]'/>
   <div className="space-y-6">
-    <h2 className="text-xl font-bold text-red-600">7. AUTRES INFORMATIONS OU DEMANDES</h2>
+    <h2 className="text-4xl max-sm:text-3xl title-font font-bold text-red-600">7. AUTRES INFORMATIONS OU DEMANDES</h2>
 
     <FormField
       control={form.control}
@@ -615,7 +615,7 @@ export default function ClubForm() {
   </div>
         </div>
         <div className="flex items-center justify-center">
-        <Button type="submit" className="py-8 px-8 text-lg bg-red-600 hover:bg-red-700 text-white">
+        <Button type="submit" className="py-8 px-8 text-2xl max-sm:text-xl title-font bg-red-600 hover:bg-red-700 text-white">
           Soumettre la demande
         </Button>
         </div>

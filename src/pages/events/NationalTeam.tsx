@@ -49,7 +49,7 @@ export default function NationalTeam() {
     </div>
 
     <section>
-    <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
+    <div className='flex title-second mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
     <h2 className='font-bold text-2xl italic text-red-500 max-sm:text-xl'>La Fierté du Scrabble Camerounais
     </h2>
                 <div>
@@ -64,7 +64,7 @@ Cameroun sur la scène internationale.
 
                 <Separator className='bg-[#00723e] mt-7'/>
             </div>
-            <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
+            <div className='flex title-second mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
                 <h2 className='font-bold title-font text-5xl text-red-500 max-sm:text-3xl'>Processus de Sélection</h2>
                 <div>
                     <p className='text-2xl max-sm:text-lg'>La constitution de l équipe nationale repose sur un processus rigoureux :
@@ -92,7 +92,7 @@ camerounais par le ministère des Sports et la FECASCRAB.
                 <Separator className='bg-[#00723e] mt-7'/>
             </div>
 
-            <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
+            <div className='flex title-second mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
                 <h2 className='font-bold title-font text-5xl text-red-500 max-sm:text-3xl'>Les Valeurs de l’Équipe Nationale</h2>
                 <div>
                     
@@ -111,7 +111,7 @@ camerounais par le ministère des Sports et la FECASCRAB.
 
                 <Separator className='bg-[#00723e] mt-7'/>
             </div>
-            <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
+            <div className='flex title-second mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
                 <h2 className='font-bold title-font text-5xl text-red-500 max-sm:text-3xl'>Vision et Objectifs</h2>
                 <p className='text-2xl max-sm:text-lg'>L équipe nationale vise
                 à :
@@ -126,7 +126,7 @@ camerounais par le ministère des Sports et la FECASCRAB.
                
                 <Separator className='bg-[#00723e] mt-7'/>
             </div>
-            <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
+            <div className='flex title-second mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
                 <h2 className='font-bold title-font text-5xl text-red-500 max-sm:text-3xl'>Le Programme du Championnat Scolaire</h2>
                 <p className='text-2xl max-sm:text-lg'>Le championnat scolaire se déroule en plusieurs étapes :
                 </p>

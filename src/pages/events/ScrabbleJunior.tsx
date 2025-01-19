@@ -44,7 +44,7 @@ export default function ScrabbleJunior() {
     </div>
 
     <section>
-    <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
+    <div className='flex mx-24 mt-12 title-second  flex-col items-start gap-4 justify-center max-sm:mx-2'>
                 
                 <div>
                     <p className='text-2xl max-sm:text-lg'>Le Scrabble scolaire au Cameroun est bien plus qu’un simple jeu. Il est un puissant outil
@@ -58,7 +58,7 @@ champions et de penseurs critiques.
 
                 <Separator className='bg-[#00723e] mt-7'/>
             </div>
-            <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
+            <div className='flex mx-24 title-second mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
                 <h2 className='font-bold title-font text-5xl text-red-500 max-sm:text-3xl'>L'importance du Scrabble Junior</h2>
                 <div>
                     <p className='text-2xl max-sm:text-lg'>Le Scrabble Junior :
@@ -82,7 +82,7 @@ participant à des tournois.
                 <Separator className='bg-[#00723e] mt-7'/>
             </div>
 
-            <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
+            <div className='flex mx-24 mt-12 title-second  flex-col items-start gap-4 justify-center max-sm:mx-2'>
                 <h2 className='font-bold title-font text-5xl text-red-500 max-sm:text-3xl'>Notre vision</h2>
                 <div>
                     <p className='text-2xl max-sm:text-lg'>La FECASCRAB souhaite :
@@ -102,7 +102,7 @@ participant à des tournois.
 
                 <Separator className='bg-[#00723e] mt-7'/>
             </div>
-            <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
+            <div className='flex mx-24 mt-12 title-second  flex-col items-start gap-4 justify-center max-sm:mx-2'>
                 <h2 className='font-bold title-font text-5xl text-red-500 max-sm:text-3xl'>Les établissements enregistrés</h2>
                 <p className='text-2xl max-sm:text-lg'>Nos établissements partenaires et leurs encadreurs dévoués :
                 </p>
@@ -164,7 +164,7 @@ participant à des tournois.
                 </div>
                 <Separator className='bg-[#00723e] mt-7'/>
             </div>
-            <div className='flex mx-24 mt-12  flex-col items-start gap-4 justify-center max-sm:mx-2'>
+            <div className='flex mx-24 mt-12 title-second  flex-col items-start gap-4 justify-center max-sm:mx-2'>
                 <h2 className='font-bold title-font text-5xl text-red-500 max-sm:text-3xl'>Le Programme du Championnat Scolaire</h2>
                 <p className='text-2xl max-sm:text-lg'>Le championnat scolaire se déroule en plusieurs étapes :
                 </p>

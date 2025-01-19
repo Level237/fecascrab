@@ -12,7 +12,7 @@ export default function CtaScolaire() {
         <div className="  flex flex-col gap-4 items-center">
             
                     <h2 className="text-white text-center text-6xl title-font max-sm:text-2xl font-bold">Participez à l'Aventure</h2>
-            <p className='text-2xl max-sm:text-lg text-white text-center'>La FECASCRAB invite toutes les écoles à rejoindre cette initiative ambitieuse.
+            <p className='text-2xl max-sm:text-lg title-second text-white text-center'>La FECASCRAB invite toutes les écoles à rejoindre cette initiative ambitieuse.
 
 Offrons aux jeunes camerounais une plateforme où apprendre,
 
@@ -27,7 +27,7 @@ s’exprimer et exceller à travers le Scrabble.</p>
         <div style={{ background:`url(${slider})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }}  
     className="relative px-24 hidden  max-sm:px-3 max-sm:flex max-sm:flex-col max-sm:items-center gap-5 max-sm:justify-center justify-center max-sm:mx-4  items-center    mx-24  mt-12 h-[100vh]">
           <h2 className="text-white text-center text-6xl title-font max-sm:text-4xl font-bold">Participez à l'Aventure</h2>
-          <p className='text-2xl max-sm:text-lg text-white text-center'>La FECASCRAB invite toutes les écoles à rejoindre cette initiative ambitieuse.
+          <p className='text-2xl max-sm:text-lg title-second text-white text-center'>La FECASCRAB invite toutes les écoles à rejoindre cette initiative ambitieuse.
 
 Offrons aux jeunes camerounais une plateforme où apprendre,
 
