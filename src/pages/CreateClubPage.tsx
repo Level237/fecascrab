@@ -2,7 +2,6 @@
 import HeaderSection from '../components/headerSection'
 import slide from "../assets/team_word_text_wrote_with_wooden_letters_isolated_wooden_office.jpg"
 import NavMobile from '../components/NavMobile'
-import slide12Origine from "../assets/slide12.jpg"
 import { useEffect, useState } from 'react'
 import Loader from '../components/ui/loader'
 import Footer from '../components/Footer'

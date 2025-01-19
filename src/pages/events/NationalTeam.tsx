@@ -11,7 +11,6 @@ import { useEffect, useState } from 'react'
 import Loader from '../../components/ui/loader'
 import Footer from '../../components/Footer'
 import { Separator } from '../../components/ui/separator'
-import CtaScolaire from '../../components/Cta-scolaire'
 import CtaTeam from '../../components/Cta-team'
 export default function NationalTeam() {
 

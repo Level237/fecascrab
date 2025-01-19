@@ -1,7 +1,6 @@
 
 import slider from "../assets/cta.jpg"
 import { Button } from "./ui/button"
-import sliderResponsive from "../assets/responsive_MasterScrabble.jpg"
 import { Link } from "react-router-dom"
 export default function CtaScolaire() {
   return (

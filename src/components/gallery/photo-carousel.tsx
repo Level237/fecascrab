@@ -1,6 +1,4 @@
-'use client'
 
-import React from 'react';
 
 import { Dialog, DialogContent } from '../../components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../../components/ui/carousel';
