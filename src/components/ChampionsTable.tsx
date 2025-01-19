@@ -71,7 +71,7 @@ import {
   
   export function ChampionshipTable() {
     return (
-      <div className="container mx-auto py-10">
+      <div className="container title-second mx-auto py-10">
         <Table className="border-2">
           <TableHeader>
             <TableRow className="bg-gray-100">

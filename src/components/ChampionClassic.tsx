@@ -60,7 +60,7 @@ import {
    */
   export function ChampionClassic() {
     return (
-      <div className="container mx-auto py-10">
+      <div className="container title-second mx-auto py-10">
        
         <Table className="border-2">
           <TableHeader>

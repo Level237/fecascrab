@@ -45,7 +45,7 @@ export const PhotoGrid: React.FC<PhotoGridProps> = ({ photos, onPhotoClick }) =>
   return (
 
     <section>
-            <div className="grid grid-cols-2 max-sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid  grid-cols-2 max-sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
         <ScrollRestoration/>
         {photos.slice(0, visibleCount).map((photo) => (
         <div
@@ -65,7 +65,7 @@ export const PhotoGrid: React.FC<PhotoGridProps> = ({ photos, onPhotoClick }) =>
 
     {visibleCount < photos.length && (
         <div className='flex items-center text-center w-full mt-8 justify-center'>
- <Button className='bg-red-600 py-6 px-12 text-white' onClick={loadMoreImages} disabled={loading}>
+ <Button className='bg-red-600 title-font text-2xl py-6 px-12 text-white' onClick={loadMoreImages} disabled={loading}>
           {loading ? 'Chargement...' : 'Charger plus d\'images'}
         </Button>
         </div>

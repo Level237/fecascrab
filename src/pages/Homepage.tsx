@@ -128,7 +128,7 @@ export default function Homepage() {
             <p className='text-2xl title-second max-sm:text-xl mt-5'>Rejoignez-nous pour vivre un moment d'exception, où compétition
             rime avec excellence et découverte !</p>
             <div className='mt-3 max-sm:mt-6 max-sm:justify-start flex items-center justify-center'>
-          <Link to={"/inscription"}><Button className='bg-red-600  text-white px-8 py-6 text-3xl max-sm:text-2xl title-font'>Découvrir</Button></Link>
+          <Link to={"/events/super-master-scrabble"}><Button className='bg-red-600  text-white px-8 py-6 text-3xl max-sm:text-2xl title-font'>Découvrir</Button></Link>
           
         </div>
           </div>

@@ -70,10 +70,10 @@ export function Gallery() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <h3 className="text-xl font-semibold text-white">
-                        {album.title} {album.year}
+                      <h3 className="text-xl title-bold font-semibold text-white">
+                        {album.title}
                       </h3>
-                      <p className="text-sm text-white/80">
+                      <p className="text-sm title-second text-white/80">
                         {album.photos.length} photos
                       </p>
                     </div>
@@ -89,7 +89,7 @@ export function Gallery() {
             <h2 className="text-2xl font-bold">{selectedAlbum.title}</h2>
             <Button 
               onClick={() => setSelectedAlbum(null)}
-              className='border border-red-600 text-red-600 rounded-full text-lg max-sm:text-sm max-sm:py-6 max-sm:px-8  py-6 px-12'
+              className='border title-bold border-red-600 text-red-600 rounded-full text-lg max-sm:text-sm max-sm:py-6 max-sm:px-8  py-6 px-12'
             >
               Retour aux albums
             </Button>

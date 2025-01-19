@@ -110,7 +110,7 @@ import {
   
   export function RankingsTable() {
     return (
-      <div className="container ">
+      <div className="container title-second ">
         <Table>
           <TableHeader className="bg-emerald-700 ">
             <TableRow>

@@ -37,7 +37,7 @@ export default function PalmaresPage() {
         <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
     className=' z-10  flex items-center justify-center relative mt-12 max-sm:mt-7 h-96 mx-24 max-sm:mx-0   bg-[#02abee]'>
       <div className=' z-[50]  '>
-        <h2 className='text-5xl max-sm:text-4xl text-white font-bold '>Palmarès</h2>
+        <h2 className='text-6xl title-font max-sm:text-6xl text-white font-bold '>Palmarès</h2>
       </div>
       <div className='absolute inset-0 bg-black opacity-30'>
 
@@ -45,15 +45,15 @@ export default function PalmaresPage() {
     </div>
 
     <div className="max-w-7xl mx-24 max-sm:mx-2 px-4 py-16">
-      <h1 className="text-red-600 text-3xl max-sm:text-2xl md:text-3xl font-bold mb-12 leading-tight">
+      <h1 className="text-red-600 title-font text-4xl max-sm:text-4xl md:text-5xl font-bold mb-12 leading-tight">
         PALMARES DU CAMEROUN AUX CHAMPIONNATS
-        <br />
+        
         DU MONDE DE SCRABBLE FRANCOPHONE (CDM)
       </h1>
 
       <div className="grid md:grid-cols-2 gap-12">
         {/* CDM 2021 */}
-        <div className="space-y-6">
+        <div className="space-y-6 title-second">
           <h2 className="text-red-600 text-2xl max-sm:text-xl font-bold">
             CDM 2021 (Aix-les-Bains en FRANCE)
           </h2>
@@ -92,7 +92,7 @@ export default function PalmaresPage() {
         </div>
 
         {/* CDM 2024 */}
-        <div className="space-y-6">
+        <div className="space-y-6 title-second">
           <h2 className="text-red-600 text-2xl max-sm:text-xl  font-bold">
             CDM 2024 (Montauban en FRANCE)
           </h2>
@@ -122,12 +122,13 @@ export default function PalmaresPage() {
       </div>
     </div>
     <div className="max-w-7xl mx-24 max-sm:mx-2 px-4 py-2">
-    <h1 className="text-red-600 text-3xl max-sm:text-2xl  md:text-3xl font-bold mb-12 leading-tight">
-        PALMARES DU CAMEROUN AUX CHAMPIONNATS
-        <br />
-        D’AFRIQUE DE SCRABBLE (CHAMPAS) DE 2016 A 2024
+    <h1 className="text-red-600 title-font text-4xl max-sm:text-4xl md:text-5xl font-bold mb-12 leading-tight">
+        PALMARES DU CAMEROUN AUX CHAMPIONNATS 
+
+
+             D’AFRIQUE DE SCRABBLE (CHAMPAS) DE 2016 A 2024
       </h1>
-      <div className="grid md:grid-cols-2 gap-12">
+      <div className="grid title-second md:grid-cols-2 gap-12">
         {/* CDM 2021 */}
         <div className="space-y-6">
           <h2 className="text-red-600 max-sm:text-xl  text-2xl font-bold">
@@ -338,23 +339,23 @@ export default function PalmaresPage() {
         </div>
 
         <div className=''>
-        <h1 className="text-red-600 max-sm:mx-8 text-3xl max-sm:text-2xl mt-5  md:text-3xl font-bold mb-12 max-sm:mb-6 leading-tight">
+        <h1 className="text-red-600 mx-4 title-font text-4xl max-sm:text-4xl md:text-5xl font-bold mb-12 leading-tight">
         Palmarès de TEAM Cameroun
       </h1>
       <RankingsTable/>
       
         </div>
         <div className='mt-12'>
-        <h1 className="text-red-600 text-center text-2xl md:text-3xl font-bold mb-12 leading-tight">
+        <h1 className="text-red-600 mx-4 title-font text-center text-4xl max-sm:text-4xl md:text-5xl font-bold mb-12 leading-tight">
         PALMARES DES MASTERS INTERNATIONAUX <br />
         DU CAMEROUN
       </h1>
-      <h1 className='text-[#00723e] text-center text-2xl md:text-3xl font-bold mb-1 leading-tight'>Elite Duplicate</h1>
+      <h1 className='text-[#00723e] text-center text-3xl md:text-4xl title-font font-bold mb-1 leading-tight'>Elite Duplicate</h1>
       <ChampionshipTable/>
-      <h1 className='text-[#00723e] text-center text-2xl md:text-3xl font-bold mb-1 leading-tight'>Elite Classique</h1>
+      <h1 className='text-[#00723e] text-center text-3xl md:text-4xl title-font font-bold mb-1 leading-tight'>Elite Classique</h1>
         <ChampionClassic/>
-        <h1 className='text-[#00723e] text-center text-2xl max-sm:text-xl md:text-3xl font-bold mb-1 leading-tight'>Défis</h1>
-        <h1 className="text-red-600 text-center max-sm:text-xl text-xl md:text-3xl font-bold mb-12 leading-tight">
+        <h1 className='text-[#00723e] text-center text-3xl md:text-4xl title-font font-bold mb-1 leading-tight'>Défi</h1>
+        <h1 className="text-red-600 text-center text-3xl mb-5 md:text-4xl title-font font-bold mb-1 leading-tight">
         BALOG FRANCOIS ROLAND (2021)<br />
         TCHOUYO ERIC SALVADOR (2023)
       </h1>

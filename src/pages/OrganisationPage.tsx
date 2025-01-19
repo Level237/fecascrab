@@ -2,10 +2,10 @@
 import HeaderSection from '../components/headerSection'
 import slide from "../assets/organisation.jpg"
 import NavMobile from '../components/NavMobile'
-import slide12Origine from "../assets/slide12.jpg"
 import { useEffect, useState } from 'react';
 import Loader from '../components/ui/loader';
 import Footer from '../components/Footer';
+import CtaInscription from '../components/Cta-inscription';
 export default function OrganisationPage() {
 
 
@@ -29,11 +29,11 @@ export default function OrganisationPage() {
         <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
     className=' z-10 relative mt-12 max-sm:mt-7 h-96 mx-24 max-sm:mx-0   bg-[#02abee]'>
         <div className='absolute bottom-[-30px] px-4 pt-24 pb-5 left-12 max-sm:left-12 bg-red-600'>
-            <h2 className='text-2xl text-white font-bold '>Organisation</h2>
+            <h2 className='text-4xl max-sm:text-3xl title-font text-white font-bold  '>Organisation</h2>
         </div>
     </div>
 
-    <section className='mx-32 mt-24 max-sm:mx-4'>
+    <section className='mx-32 title-second mt-24 max-sm:mx-4'>
                 <p className='text-xl max-sm:text-lg'>L'organisation de la Fédération camerounaise de Scrabble (FECASCRAB) repose
 sur une structure dynamique et bien définie, composée de membres dévoués à la
 promotion et au développement du Scrabble au Cameroun. Voici l’organigramme
@@ -93,16 +93,10 @@ activités de la Fédération.
             </div>
           
            
-            <div className="relative mb-12 max-sm:hidden mt-12 h-[300px] flex-2">
-          <img
-            src={slide12Origine}
-            alt="Partie de Scrabble en cours"
-            className="rounded-lg object-cover  w-full h-full"
-          />
-        
-        </div>
+            
            
     </section>
+    <CtaInscription/>
     <Footer/>
     </section>}
 
