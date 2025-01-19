@@ -23,7 +23,7 @@ export default function AnimatedCount({count,index,type}:{count:number,index:num
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, delay: index * 0.2 }}
-        className="text-center"
+        className="text-center title-bold"
       >
         <div className="text-5xl max-sm:text-4xl font-bold text-red-700">
           {displayCount.toString().padStart(2, '0')}

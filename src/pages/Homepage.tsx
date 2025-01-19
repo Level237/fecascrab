@@ -73,7 +73,7 @@ export default function Homepage() {
     {/* Welcome Section */}
     <div className="flex items-center max-sm:flex-col justify-between gap-8 mb-12">
       <div className="space-y-6 flex-1">
-        <h1 className="text-red-600 font-bold text-3xl max-sm:text-2xl md:text-3xl leading-tight">
+        <h1 className="text-red-600 title-font font-bold text-4xl max-sm:text-3xl md:text-5xl leading-tight">
           BIENVENUE SUR LE SITE OFFICIEL 
           
            DE LA FÉDÉRATION CAMEROUNAISE
@@ -87,7 +87,7 @@ export default function Homepage() {
         />
       
       </div>
-        <p className="text-gray-700 text-2xl max-sm:text-xl leading-relaxed">
+        <p className="text-gray-700 title-second text-2xl max-sm:text-xl leading-relaxed">
           Depuis 1990, nous avons pour mission d&apos;organiser et de promouvoir le Scrabble dans tout le pays. Si vous êtes passionné par les mots, nous offrons des clubs, des formations et les échanges entre passionnés.
         </p>
       </div>
@@ -103,7 +103,7 @@ export default function Homepage() {
 
     {/* News Section */}
     <div className="space-y-6">
-      <h2 className="text-3xl  font-bold max-sm:text-2xl text-red-600">À LA UNE</h2>
+      <h2 className="text-4xl title-font  font-bold max-sm:text-4xl text-red-600">À LA UNE</h2>
       
         
          
@@ -123,12 +123,12 @@ export default function Homepage() {
           </div>
 
           <div>
-            <h2 className='text-3xl text-[#00723e] max-sm:text-2xl font-bold'>SUPER MASTER 2025: UNE EXPERIENCE 
+            <h2 className='text-3xl title-bold text-[#00723e] max-sm:text-2xl font-bold'>SUPER MASTER 2025: UNE EXPERIENCE 
             UNIQUE AU CAMEROUN</h2>
-            <p className='text-2xl max-sm:text-xl mt-5'>Rejoignez-nous pour vivre un moment d'exception, où compétition
+            <p className='text-2xl title-second max-sm:text-xl mt-5'>Rejoignez-nous pour vivre un moment d'exception, où compétition
             rime avec excellence et découverte !</p>
             <div className='mt-3 max-sm:mt-6 max-sm:justify-start flex items-center justify-center'>
-          <Link to={"/inscription"}><Button className='bg-red-600 text-white px-8 py-6 text-lg title-bold'>Découvrir</Button></Link>
+          <Link to={"/inscription"}><Button className='bg-red-600  text-white px-8 py-6 text-3xl max-sm:text-2xl title-font'>Découvrir</Button></Link>
           
         </div>
           </div>
@@ -137,11 +137,11 @@ export default function Homepage() {
   </div>
   <section className='w-full bg-[#00723e59] px-6 py-14 flex flex-col items-center'>
         <div>
-            <h2 className='text-black text-3xl max-sm:text-2xl text-center font-bold'>La fédération Camerounaise de <br />
+            <h2 className='text-black title-medium text-3xl max-sm:text-2xl text-center font-bold'>La fédération Camerounaise de <br className='max-sm:hidden' />
             Scrabble c’est au total...</h2>
           </div>
           <Figures/>
-          <Link to={'/palmares'}><Button className='bg-red-600 mt-8 text-white px-8 py-6 text-lg title-bold'>Voir tout les palmares</Button></Link>
+          <Link to={'/palmares'}><Button className='bg-red-600 title-font mt-8 text-white px-8 py-6 text-2xl'>Voir tout les palmares</Button></Link>
           
         </section>
         
@@ -168,14 +168,14 @@ export default function Homepage() {
         </section>
         <div className=" flex flex-col items-center justify-center mt-[-7rem]  p-6">
           <div className=" bg-red-600 px-28 max-sm:px-6 py-9 z-50 ">
-           <h2 className='text-2xl mb-0 md:text-3xl font-bold text-white  inline-block'>Sélection Nationale de Scrabble du Cameroun</h2>
-           <p className='text-xl text-center'>Vous souhaitez en savoir plus sur comment intégrer l’équipe <br />
+           <h2 className='text-3xl text-center mb-0 md:text-4xl title-font font-bold text-white'>Sélection Nationale de Scrabble du Cameroun</h2>
+           <p className='text-xl max-sm:text-lg title-second text-center'>Vous souhaitez en savoir plus sur comment intégrer l’équipe <br />
 
             nationale ou soutenir nos joueurs ?</p>
             
           </div>
           <div className='mt-[-1.5rem] z-[60] '>
-            <Link to="/inscription"><Button className='bg-[#00723e]  text-white max-sm:py-8 px-8 py-6 text-lg'>Contactez Nous</Button></Link>
+            <Link to="/rejoindre-equipe-national"><Button className='bg-[#00723e] title-font   text-white max-sm:py-8 px-8 py-6 text-xl'>Contactez Nous</Button></Link>
             
             </div>
         </div>
