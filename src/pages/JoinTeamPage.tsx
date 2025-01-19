@@ -47,7 +47,7 @@ export default function JoinTeamPage() {
 Scrabble, bien vouloir nous laisser un message en remplissant les champs ci-dessous. Nous
 vous repondrons le plus rapidement possible</p>
       </div>
-        <JoinTeam/>
+        <JoinTeam source="Nouveau Membre voulant rejoindre l'Equipe national"/>
         </section>
        
        

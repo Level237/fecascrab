@@ -1,6 +1,6 @@
 
 import HeaderSection from '../components/headerSection'
-import slide from "../assets/section2.jpg"
+import slide from "../assets/contact.jpg"
 import NavMobile from '../components/NavMobile'
 import { useEffect, useState } from 'react'
 import Loader from '../components/ui/loader'
@@ -28,10 +28,7 @@ export default function ContactPage() {
         <HeaderSection />
         <NavMobile/>
         <div className='mt-12 flex flex-col items-center gap-4 justify-center max-sm:mx-4'>
-                <h2 className='font-bold title-font text-center text-6xl text-red-500 max-sm:text-3xl'>Sélection Nationale 
-                <br />
-
-                de Scrabble du Cameroun</h2>
+                <h2 className='font-bold title-font text-center text-6xl text-red-500 max-sm:text-3xl'>Contact</h2>
 
             </div>
         <div style={{ background:`url(${slide})`,backgroundPosition:"center",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
@@ -43,11 +40,9 @@ export default function ContactPage() {
        
            
             <div>
-        <p className='text-2xl max-sm:text-lg'>Pour tout intégration, collaboration ou partenariat avec l’équipe camerounaise officielle du
-Scrabble, bien vouloir nous laisser un message en remplissant les champs ci-dessous. Nous
-vous repondrons le plus rapidement possible</p>
+      
       </div>
-        <JoinTeam/>
+        <JoinTeam source='Contact'/>
         </section>
        
        

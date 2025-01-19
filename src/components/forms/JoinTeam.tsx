@@ -7,7 +7,7 @@ import { Button } from '../ui/button'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-export default function JoinTeam() {
+export default function JoinTeam({source}:{source:string}) {
     const [loading, setLoading] = useState(false)
     const [email, setEmail] = useState("")
     const [town, setTown] = useState("")
@@ -28,6 +28,7 @@ export default function JoinTeam() {
        
             axios.post('http://localhost:5000/rejoindre/team',{
               "email":email,
+              "source":source,
               "phone":phone,
               "objet":objet,
               "message":message,

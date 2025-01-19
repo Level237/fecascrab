@@ -122,7 +122,7 @@ export default function HeaderSection() {
                 clip-rule="evenodd"></path>
             </svg>
           </div>
-          <Link className='max-sm:hidden' to={"/inscription"}>
+          <Link className='max-sm:hidden' to={"/contact"}>
           <Button
                className="bg-red-500 title-font text-xl border-none text-white  rounded-2xl py-6 px-6 font-bold "
             >
