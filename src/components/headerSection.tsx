@@ -44,7 +44,7 @@ export default function HeaderSection() {
               </Link>
             </div>
   
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden text-2xl title-font md:flex items-center space-x-8">
 
             <Link 
               to="/federation" 
@@ -66,28 +66,28 @@ export default function HeaderSection() {
                 <Link
                   key={"origine"}
                   to={"/origine"}
-                  className={`block px-4 py-2 text-sm ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
+                  className={`block px-4 py-2 text-xl ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
                 >
                   ORIGINE
                 </Link>
                 <Link
                   key={"organisation"}
                   to={"/organisation"}
-                  className={`block px-4 py-2 text-sm ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
+                  className={`block px-4 py-2 text-xl ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
                 >
                   ORGANISATION
                 </Link>
                 <Link
                   key={"club"}
                   to={"/clubs-afiliés"}
-                  className={`block px-4 py-2 text-sm ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
+                  className={`block px-4 py-2 text-xl ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
                 >
                   CLUBS AFFILIÉS
                 </Link>
                 <Link
                   key={"Galerie"}
                   to={"/gallerie"}
-                  className={`block px-4 py-2 text-sm ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
+                  className={`block px-4 py-2 text-xl ${isScrolled ? 'text-[#00723e]' : 'text-white'} text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors`}
                 >
                   GALERIE
                 </Link>
@@ -124,7 +124,7 @@ export default function HeaderSection() {
           </div>
           <Link className='max-sm:hidden' to={"/inscription"}>
           <Button
-              className="bg-red-600  px-10 py-5 hover:bg-red-700 text-white border-none"
+               className="bg-red-500 title-font text-xl border-none text-white  rounded-2xl py-6 px-6 font-bold "
             >
               Contactez-nous
             </Button>
