@@ -47,7 +47,7 @@ export default function Inscription() {
       <HeaderSection />
       <NavMobile/>
           <section className='flex flex-col gap-20 '>
-      <div className='bg-sky-400 mt-12 w-full h-44 flex justify-center items-center relative'>
+      <div className='bg-red-600 mt-12 w-full h-44 flex justify-center items-center relative'>
                 <div className='absolute bottom-[-80px] z-50'>
                  
                  
