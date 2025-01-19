@@ -34,7 +34,7 @@ const slides: Slide[] = [
   },
   {
     id: 3,
-    title: <> <h1 className="text-white text-3xl md:text-5xl lg:text-5xl font-bold max-w-5xl leading-tight">Bienvenue sur le site Officiel <br className='max-sm:hidden' /> de la féderation camerounaise <br className='max-sm:hidden' /> de Scrabble
+    title: <> <h1 className="text-white title-bold text-3xl md:text-5xl lg:text-5xl font-bold max-w-5xl leading-tight">Bienvenue sur le site Officiel <br className='max-sm:hidden' /> de la féderation camerounaise <br className='max-sm:hidden' /> de Scrabble
     
     </h1></>,
     subtitle: "de la Fédération Internationale\nde Scrabble",
