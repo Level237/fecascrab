@@ -14,6 +14,7 @@ import NationalTeam from "../pages/events/NationalTeam";
 import JoinTeamPage from "../pages/JoinTeamPage";
 import GaleryPage from "../pages/GaleryPage";
 import ContactPage from "../pages/ContactPage";
+import ProgrammePage from "../pages/ProgrammePage";
 
 export const routes=createBrowserRouter([{
     path:'/',
@@ -62,6 +63,10 @@ export const routes=createBrowserRouter([{
 },{
     path:"contact",
     element:<ContactPage/>
+},
+{
+    path:"/programme-de-la-compétition",
+    element:<ProgrammePage/>
 }
 
 ])
