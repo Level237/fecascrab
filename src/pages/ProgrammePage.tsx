@@ -28,7 +28,7 @@ export default function ProgrammePage() {
         <div style={{ background: `url(${slide})`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
           className='z-10 relative mt-12 max-sm:mt-7 h-96 mx-24 max-sm:mx-0 bg-[#02abee]'>
          <div className='absolute bottom-[-30px] px-4 pt-24 pb-5 left-12 max-sm:left-12 bg-red-600'>
-            <h2 className='text-4xl max-sm:text-3xl title-font text-white font-bold  '>Programme</h2>
+            <h2 className='text-4xl max-sm:text-3xl title-font text-white font-bold'>Programme</h2>
         </div>
         </div>
 
