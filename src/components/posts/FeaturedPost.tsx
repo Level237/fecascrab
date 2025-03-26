@@ -1,10 +1,9 @@
-import superLeagueResponsive from "../../assets/SuperLeagueScrabble_VisuelOfficiel_AllSmart2024.jpg"
-import section2 from "../../assets/section2.jpg"
+
 import { Link } from "react-router-dom"
 import { Button } from "../ui/button"
 import { useEffect, useState } from "react"
 import ReactHtmlParser from "react-html-parser"
-import { Cpu } from "lucide-react"
+
 
 type Post = {
     title: {
