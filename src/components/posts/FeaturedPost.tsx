@@ -16,7 +16,7 @@ type Post = {
 }
 export default function FeaturedPost() {
     const [post,setPost] = useState<Post | null>(null)
-    const [featuredImage,setFeaturedImage] = useState<string | null>(null)
+    const [featuredImage,setFeaturedImage] = useState<number | null>(null)
     const [featuredImageUrl,setFeaturedImageUrl] = useState<string | null>(null)
 
     const getImageUrl = async (id: number) => {
