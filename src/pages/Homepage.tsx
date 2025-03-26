@@ -3,7 +3,6 @@ import { Button } from '../components/ui/button'
 import { useEffect, useState } from 'react'
 import "../components/forms/inscription.css"
 import section1 from "../assets/section1.jpg"
-import section2 from "../assets/event.jpg"
 import bgHome from "../assets/BG_Site.jpg"
 import logo from "../assets/logo-1.png"
 import logoIcon from "../assets/logo.png"
@@ -16,7 +15,8 @@ import Loader from '../components/ui/loader';
 import Footer from '../components/Footer';
 import { InstagramEmbed } from 'react-social-media-embed';
 import { HeroCarousel } from '../components/heroCarousel';
-import superLeagueResponsive from "../assets/SuperLeagueScrabble_VisuelOfficiel_AllSmart2024.jpg"
+import FeaturedPost from '../components/posts/FeaturedPost';
+
 export default function Homepage() {
 
 
@@ -101,38 +101,7 @@ export default function Homepage() {
       </div>
     </div>
 
-    {/* News Section */}
-    <div className="space-y-6">
-      <h2 className="text-4xl title-font  font-bold max-sm:text-4xl text-red-600">À LA UNE</h2>
-      
-        
-         
-          <div className="relative max-sm:hidden h-[200px] md:h-[300px]">
-            <img
-              src={section2}
-              alt="Super Master 2024"
-              className="rounded-2xl object-cover w-full h-full"
-            />
-          </div>
-          <div className="relative hidden max-sm:block h-[400px] md:h-[300px]">
-            <img
-              src={superLeagueResponsive}
-              alt="Super Master 2024"
-              className="rounded-xl object-cover w-full h-full"
-            />
-          </div>
-
-          <div>
-            <h2 className='text-3xl title-bold text-[#00723e] max-sm:text-2xl font-bold'>SUPER MASTER 2025: UNE EXPERIENCE 
-            UNIQUE AU CAMEROUN</h2>
-            <p className='text-2xl title-second max-sm:text-xl mt-5'>Rejoignez-nous pour vivre un moment d'exception, où compétition
-            rime avec excellence et découverte !</p>
-            <div className='mt-3 max-sm:mt-6 max-sm:justify-start flex items-center justify-center'>
-          <Link to={"/events/super-master-scrabble"}><Button className='bg-red-600  text-white px-8 py-6 text-3xl max-sm:text-2xl title-font'>Découvrir</Button></Link>
-          
-        </div>
-          </div>
-        </div>
+   <FeaturedPost/>
        
   </div>
   <section className='w-full bg-[#00723e59] px-6 py-14 flex flex-col items-center'>
