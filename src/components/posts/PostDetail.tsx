@@ -1,0 +1,109 @@
+import { useEffect, useState } from "react"
+import ReactHtmlParser from "react-html-parser"
+import { CalendarDays, Clock, User } from "lucide-react"
+import Loader from "../ui/loader"
+import { useParams } from "react-router-dom"
+type Post = {
+    title: {
+        rendered: string
+    }
+    content: {
+        rendered: string
+    }
+    date: string
+    author: number
+    featured_media: number
+}
+
+type Author = {
+    name: string
+    avatar_urls: {
+        [key: string]: string
+    }
+}
+
+export default function PostDetail() {
+    const { postUrl } = useParams()
+    const [post, setPost] = useState<Post | null>(null)
+    const [author, setAuthor] = useState<Author | null>(null)
+    const [featuredImageUrl, setFeaturedImageUrl] = useState<string | null>(null)
+    const [loading, setLoading] = useState(true)
+
+    const getImageUrl = async (id: number) => {
+        const response = await fetch(`https://blog.fecascrab.com/wp-json/wp/v2/media/${id}`)
+        const data = await response.json()
+        return data.link
+    }
+
+    const getAuthor = async (id: number) => {
+        const response = await fetch(`https://blog.fecascrab.com/wp-json/wp/v2/users/${id}`)
+        const data = await response.json()
+        return data
+    }
+
+    useEffect(() => {
+        const fetchPost = async () => {
+            try {
+                const response = await fetch(`https://blog.fecascrab.com/wp-json/wp/v2/posts?slug=${postUrl}`)
+                const data = await response.json()
+                setPost(data[0])
+                
+                const [imageUrl, authorData] = await Promise.all([
+                    getImageUrl(data[0].featured_media),
+                    getAuthor(data[0].author)
+                ])
+                console.log(imageUrl)
+                setFeaturedImageUrl(imageUrl)
+                setAuthor(authorData)
+                setLoading(false)
+            } catch (error) {
+                console.error("Error fetching post:", error)
+                setLoading(false)
+            }
+        }
+        fetchPost()
+    }, [postUrl])
+
+    if (loading) return <Loader />
+
+    return (
+        <article className="max-w-4xl mx-auto px-4 py-8">
+            {/* Hero Image */}
+            <div className="relative h-[400px] mb-8">
+                <img
+                    src={featuredImageUrl || ""}
+                    alt={post?.title.rendered || ""}
+                    className="rounded-2xl object-cover w-full h-full"
+                />
+            </div>
+
+            {/* Article Header */}
+            <div className="space-y-4 mb-8">
+                <h1 className="text-4xl font-bold text-[#00723e]">
+                    {post?.title.rendered && ReactHtmlParser(post.title.rendered)}
+                </h1>
+
+                {/* Meta Information */}
+                <div className="flex items-center gap-6 text-gray-600">
+                    <div className="flex items-center gap-2">
+                        <User size={20} />
+                        <span>{author?.name}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <CalendarDays size={20} />
+                        <span>{new Date(post?.date || "").toLocaleDateString()}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <Clock size={20} />
+                        <span>5 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none">
+                {post?.content.rendered && ReactHtmlParser(post.content.rendered)}
+            </div>
+        </article>
+    )
+} 

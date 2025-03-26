@@ -9,6 +9,7 @@ type Post = {
     title: {
         rendered: string
     }
+    slug: string
     excerpt: {
         rendered: string
     }
@@ -61,7 +62,7 @@ export default function FeaturedPost() {
                 <h2 className='text-3xl title-bold text-[#00723e] max-sm:text-2xl font-bold'>{post !== null && post.title.rendered}</h2>
                 <p className='text-2xl title-second max-sm:text-xl mt-5'>{post !== null && ReactHtmlParser(post.excerpt.rendered)}</p>
                 <div className='mt-3 max-sm:mt-6 max-sm:justify-start flex items-center justify-center'>
-              <Link to={"/events/super-master-scrabble"}><Button className='bg-red-600  text-white px-8 py-6 text-3xl max-sm:text-2xl title-font'>Découvrir</Button></Link>
+              <Link to={`/articles/${post?.slug}`}><Button className='bg-red-600  text-white px-8 py-6 text-3xl max-sm:text-2xl title-font'>Découvrir</Button></Link>
               
             </div>
               </div>
