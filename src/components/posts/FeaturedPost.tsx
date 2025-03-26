@@ -28,7 +28,6 @@ export default function FeaturedPost() {
         const fetchPost = async () => {
             const response = await fetch("https://blog.fecascrab.com/wp-json/wp/v2/posts?categories=3")
             const data = await response.json()
-            console.log(data[0])
             setPost(data[0])
             setFeaturedImage(data[0].featured_media)
             const imageUrl = await getImageUrl(data[0].featured_media)
