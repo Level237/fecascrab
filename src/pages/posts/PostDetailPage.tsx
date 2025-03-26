@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import ReactHtmlParser from "react-html-parser"
 import { CalendarDays, Clock, User } from "lucide-react"
-import Loader from "../ui/loader"
+import Loader from "../../components/ui/loader"
 import { useParams } from "react-router-dom"
 
-import NavMobile from "../NavMobile"
-import HeaderSection from "../headerSection"
+import NavMobile from "../../components/NavMobile"
+import HeaderSection from "../../components/headerSection"
     type Post = {
     title: {
         rendered: string

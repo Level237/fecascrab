@@ -15,7 +15,7 @@ import JoinTeamPage from "../pages/JoinTeamPage";
 import GaleryPage from "../pages/GaleryPage";
 import ContactPage from "../pages/ContactPage";
 import ProgrammePage from "../pages/ProgrammePage";
-import PostDetail from "../components/posts/PostDetail";
+import PostDetail from "../pages/posts/PostDetailPage";
 
 export const routes=createBrowserRouter([{
     path:'/',
