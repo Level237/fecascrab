@@ -3,7 +3,10 @@ import ReactHtmlParser from "react-html-parser"
 import { CalendarDays, Clock, User } from "lucide-react"
 import Loader from "../ui/loader"
 import { useParams } from "react-router-dom"
-type Post = {
+
+import NavMobile from "../NavMobile"
+import HeaderSection from "../headerSection"
+    type Post = {
     title: {
         rendered: string
     }
@@ -67,8 +70,11 @@ export default function PostDetail() {
     if (loading) return <Loader />
 
     return (
+        <section>
+              <HeaderSection />
+              <NavMobile/>
         <article className="max-w-4xl mx-auto px-4 py-8">
-            {/* Hero Image */}
+           
             <div className="relative h-[400px] mb-8">
                 <img
                     src={featuredImageUrl || ""}
@@ -105,5 +111,6 @@ export default function PostDetail() {
                 {post?.content.rendered && ReactHtmlParser(post.content.rendered)}
             </div>
         </article>
+        </section>
     )
 } 
