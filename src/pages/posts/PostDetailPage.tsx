@@ -107,8 +107,8 @@ export default function PostDetail() {
             </div>
 
             {/* Article Content */}
-            <div className="prose prose-lg max-w-none">
-                {post?.content.rendered && ReactHtmlParser(post.content.rendered)}
+            <div dangerouslySetInnerHTML={{ __html: post?.content.rendered || "" }} className=" max-w-none">
+                
             </div>
         </article>
         </section>
