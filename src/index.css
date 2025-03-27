@@ -3,13 +3,6 @@
 @tailwind utilities;
 
 
-#flex-section{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
 @layer base {
   :root {
     --background: 0 0% 100%;
