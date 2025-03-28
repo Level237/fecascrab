@@ -210,8 +210,9 @@ export default function PostDetail() {
                                 type="text"
                                 id="author_name"
                                 value={newComment.author_name}
+                                placeholder="Entrez votre nom"
                                 onChange={(e) => setNewComment({...newComment, author_name: e.target.value})}
-                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00723e] focus:ring-[#00723e]"
+                                className="mt-1 block w-full rounded-md border-gray-300 border-2 h-10 px-4 shadow-sm focus:border-[#00723e] focus:ring-[#00723e]"
                                 required
                             />
                         </div>
@@ -223,8 +224,9 @@ export default function PostDetail() {
                                 type="email"
                                 id="author_email"
                                 value={newComment.author_email}
+                                placeholder="Entrez votre email"
                                 onChange={(e) => setNewComment({...newComment, author_email: e.target.value})}
-                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00723e] focus:ring-[#00723e]"
+                                className="mt-1 block w-full h-10 px-4 rounded-md border-gray-300 border-2 shadow-sm focus:border-[#00723e] focus:ring-[#00723e]"
                                 required
                             />
                         </div>
@@ -239,7 +241,7 @@ export default function PostDetail() {
                             rows={4}
                             value={newComment.content}
                             onChange={(e) => setNewComment({...newComment, content: e.target.value})}
-                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00723e] focus:ring-[#00723e]"
+                            className="mt-1 block h-20 w-full rounded-md border-gray-300 border-2 shadow-sm focus:border-[#00723e] focus:ring-[#00723e]"
                             required
                         />
                     </div>
