@@ -8,6 +8,7 @@ import NavMobile from "../../components/NavMobile"
 import HeaderSection from "../../components/headerSection"
 
 type Post = {
+    id: number;
     title: {
         rendered: string
     }
