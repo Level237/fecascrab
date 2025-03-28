@@ -8,6 +8,7 @@ import NavMobile from "../../components/NavMobile"
 import HeaderSection from "../../components/headerSection"
 import {Helmet} from "react-helmet-async"
 import logoIcon from "../../assets/logo.png"
+import Footer from "../../components/Footer"
 type Post = {
     id: number;
     title: {
@@ -202,6 +203,7 @@ export default function PostDetail() {
           
         </article>
         </section>
+        <Footer/>
         </>
     )
 } 

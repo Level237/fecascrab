@@ -6,6 +6,7 @@ import Loader from "../../components/ui/loader";
 import HeaderSection from "../../components/headerSection";
 import NavMobile from "../../components/NavMobile";
 import slide from "../../assets/club.jpeg"
+import Footer from "../../components/Footer";
 type Post = {
     id: number;
     title: {
@@ -147,6 +148,7 @@ export default function ArticlesPage() {
                     ))}
                 </div>
             </div>
+            <Footer/>
         </section>
     );
 } 
