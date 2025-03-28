@@ -16,7 +16,7 @@ import GaleryPage from "../pages/GaleryPage";
 import ContactPage from "../pages/ContactPage";
 import ProgrammePage from "../pages/ProgrammePage";
 import PostDetail from "../pages/posts/PostDetailPage";
-
+import ArticlesPage from "../pages/posts/ArticlesPage";
 export const routes=createBrowserRouter([{
     path:'/',
     element:<Homepage/>
@@ -71,6 +71,9 @@ export const routes=createBrowserRouter([{
 },{
     path:"/articles/:postUrl",
     element:<PostDetail/>
+},{
+    path:"/articles",
+    element:<ArticlesPage/>
 }
 
 ])
