@@ -18,7 +18,7 @@ export default function FeaturedPost() {
     const [post,setPost] = useState<Post | null>(null)
     const [featuredImage,setFeaturedImage] = useState<number | null>(null)
     const [featuredImageUrl,setFeaturedImageUrl] = useState<string | null>(null)
-
+    console.log(featuredImage)
     const getImageUrl = async (id: number) => {
         const response = await fetch(`https://blog.fecascrab.com/wp-json/wp/v2/media/${id}`)
         const data = await response.json()
