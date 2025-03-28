@@ -5,7 +5,7 @@ import ReactHtmlParser from "react-html-parser";
 import Loader from "../../components/ui/loader";
 import HeaderSection from "../../components/headerSection";
 import NavMobile from "../../components/NavMobile";
-
+import slide from "../../assets/club.jpeg"
 type Post = {
     id: number;
     title: {
@@ -95,9 +95,14 @@ export default function ArticlesPage() {
         <section className="min-h-screen bg-gray-50">
             <HeaderSection />
             <NavMobile />
+            <div style={{ background:`url(${slide})`,backgroundPosition:"center",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
+    className='mb-12 z-10 relative mt-12 max-sm:mt-7 h-96 mx-24 max-sm:mx-0   bg-[#02abee]'>
+        <div className='absolute bottom-[-30px] px-4 pt-24 pb-5 left-12 max-sm:left-12 bg-red-600'>
+            <h2 className='text-4xl max-sm:text-3xl title-font text-white font-bold  '>Articles</h2>
+        </div>
+    </div>
+            <div className="max-w-7xl mx-24 px-4 py-12">
             
-            <div className="max-w-7xl mx-auto px-4 py-12">
-                <h1 className="text-4xl font-bold text-[#00723e] mb-8">Tous les Articles</h1>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {posts.map((post) => (
