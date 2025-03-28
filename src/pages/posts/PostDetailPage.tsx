@@ -100,33 +100,33 @@ export default function PostDetail() {
         }
     }, [postUrl, post?.id]);
 
-    const handleSubmitComment = async (e: React.FormEvent) => {
-        e.preventDefault();
-        try {
-            const response = await fetch('https://blog.fecascrab.com/wp-json/wp/v2/comments', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    post: post?.id,
-                    ...newComment
-                }),
-            });
+    //const handleSubmitComment = async (e: React.FormEvent) => {
+    //    e.preventDefault();
+    //    try {
+    //        const response = await fetch('https://blog.fecascrab.com/wp-json/wp/v2/comments', {
+    //            method: 'POST',
+    //            headers: {
+    //                'Content-Type': 'application/json',
+    //            },
+    //            body: JSON.stringify({
+    //                post: post?.id,
+    //                ...newComment
+    //            }),
+    //        });
 
-            if (response.ok) {
-                setNewComment({
-                    author_name: '',
-                    author_email: '',
-                    content: ''
-                });
-                const updatedComments = await response.json();
-                setComments([...comments, updatedComments]);
-            }
-        } catch (error) {
-            console.error("Error posting comment:", error);
-        }
-    };
+    //        if (response.ok) {
+    //            setNewComment({
+    //                author_name: '',
+    //                author_email: '',
+    //                content: ''
+    //            });
+    //            const updatedComments = await response.json();
+    //              setComments([...comments, updatedComments]);
+    //        }
+    //    } catch (error) {
+    //        console.error("Error posting comment:", error);
+    //    }
+    //};
 
     if (loading) return <Loader />
 
