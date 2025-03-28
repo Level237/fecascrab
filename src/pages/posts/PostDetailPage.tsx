@@ -6,7 +6,8 @@ import { useParams } from "react-router-dom"
 
 import NavMobile from "../../components/NavMobile"
 import HeaderSection from "../../components/headerSection"
-
+import {Helmet} from "react-helmet-async"
+import logoIcon from "../../assets/logo.png"
 type Post = {
     id: number;
     title: {
@@ -27,14 +28,14 @@ type Author = {
     }
 }
 
-type Comment = {
-    author_name: string;
-    content: {
-        rendered: string;
-    };
-    date: string;
-    id: number;
-}
+//type Comment = {
+//    author_name: string;
+//    content: {
+//        rendered: string;
+//    };
+//    date: string;
+//    id: number;
+//}
 
 export default function PostDetail() {
     const { postUrl } = useParams()
@@ -42,12 +43,12 @@ export default function PostDetail() {
     const [author, setAuthor] = useState<Author | null>(null)
     const [featuredImageUrl, setFeaturedImageUrl] = useState<string | null>(null)
     const [loading, setLoading] = useState(true)
-    const [comments, setComments] = useState<Comment[]>([])
-    const [newComment, setNewComment] = useState({
-        author_name: '',
-        author_email: '',
-        content: ''
-    })
+    //const [comments, setComments] = useState<Comment[]>([])
+    //const [newComment, setNewComment] = useState({
+    //    author_name: '',
+    //    author_email: '',
+    //    content: ''
+    //})
 
     const getImageUrl = async (id: number) => {
         const response = await fetch(`https://blog.fecascrab.com/wp-json/wp/v2/media/${id}`)
@@ -84,21 +85,21 @@ export default function PostDetail() {
         fetchPost()
     }, [postUrl])
 
-    useEffect(() => {
-        const fetchComments = async () => {
-            try {
-                const response = await fetch(`https://blog.fecascrab.com/wp-json/wp/v2/comments?post=${post?.id}`);
-                const data = await response.json();
-                setComments(data);
-            } catch (error) {
-                console.error("Error fetching comments:", error);
-            }
-        };
+    //useEffect(() => {
+    //    const fetchComments = async () => {
+    //        try {
+    //            const response = await fetch(`https://blog.fecascrab.com/wp-json/wp/v2/comments?post=${post?.id}`);
+    //            const data = await response.json();
+    //            setComments(data);
+    //            } catch (error) {
+    //                console.error("Error fetching comments:", error);
+    //        }
+    //    };
 
-        if (post?.id) {
-            fetchComments();
-        }
-    }, [postUrl, post?.id]);
+    //    if (post?.id) {
+    //        fetchComments();
+    //    }
+    //}, [postUrl, post?.id]);
 
     //const handleSubmitComment = async (e: React.FormEvent) => {
     //    e.preventDefault();
@@ -131,6 +132,32 @@ export default function PostDetail() {
     if (loading) return <Loader />
 
     return (
+        <>
+        <Helmet>
+      <title>FecaScrab - Féderation Camerounaise de Scrabble</title>
+      <link rel="icon" type="image/svg+xml" href={logoIcon} />
+      <meta name="robots" content="index, follow" />
+      <link rel='canonical' href={ window.location.href } />
+      <meta name='description' content='Féderation Camerounaise de Scrabble'/>
+      <meta name='keywords' content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
+      <meta property="og:url" content={window.location.href} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="FecaScrab - Féderation Camerounaise de Scrabble" />
+      <meta property="og:url" content="fecascrab.com" />
+      <meta property="og:image" content={featuredImageUrl || ""} />
+      <meta property="og:image:secure_url" content={featuredImageUrl || ""} />
+            <meta property="og:image:type" content="image/jpeg" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:image:alt" content={`Logo site`} />
+            <meta name="twitter:creator" content="fecascrab" />
+            <meta name="twitter:card" content="Féderation Camerounaise de Scrabble" />
+            <meta name="twitter:title" content="Féderation Camerounaise de Scrabble" />
+            <meta name="twitter:site" content="https://fecascrab.com" />
+            <meta name="twitter:image" content={featuredImageUrl || ""} />
+            <meta name="twitter:description" content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
+    </Helmet>
+        
         <section>
               <HeaderSection />
               <NavMobile/>
@@ -175,5 +202,6 @@ export default function PostDetail() {
           
         </article>
         </section>
+        </>
     )
 } 
