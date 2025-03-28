@@ -102,7 +102,7 @@ export default function ArticlesPage() {
             <h2 className='text-4xl max-sm:text-3xl title-font text-white font-bold  '>Articles</h2>
         </div>
     </div>
-            <div className="max-w-7xl mx-24 px-4 py-12">
+            <div className="max-w-7xl mx-24 max-sm:mx-0 px-4 py-12">
             
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
