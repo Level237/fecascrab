@@ -97,6 +97,13 @@ export default function Header() {
             >
               CRÉATION CLUB
             </Link>
+
+            <Link 
+              to="/articles" 
+              className="text-white hover:text-white/80 font-medium"
+            >
+              ARTICLES
+            </Link>
           </nav>
           <div className='lg:hidden'>
           <svg onClick={()=>openHeaderMobile()} className="w-7 h-7" fill="#fff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

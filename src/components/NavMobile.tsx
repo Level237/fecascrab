@@ -106,6 +106,12 @@ export default function NavMobile() {
                   CREATION CLUB
                   </Link>
                 </div>
+
+                <div onClick={()=>closeHeader()} className="mt-4">
+                <Link className='title-font text-3xl' to='/articles'>
+                 ARTICLES
+                  </Link>
+                </div>
                 <div onClick={()=>closeHeader()} className="mt-4">
                 <Link className='title-font text-3xl' to='/contact'>
                   Contact

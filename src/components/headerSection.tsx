@@ -114,6 +114,12 @@ export default function HeaderSection() {
               >
                 CRÉATION CLUB
               </Link>
+              <Link 
+                to="/articles" 
+                 className={`${isScrolled ? 'text-white hover:text-white' : 'text-[#00723e]'} hover:text-[#00723e]/80 font-medium`}
+              >
+                ARTICLES
+              </Link>
             </nav>
             <div  className='lg:hidden'>
           <svg onClick={()=>openHeaderMobile()} className="w-7 h-7" fill={isScrolled ? 'white' : '#00723e'} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
