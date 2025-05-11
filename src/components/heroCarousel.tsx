@@ -4,10 +4,6 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import hero from "../assets/hero.jpg"
-import slide1 from "../assets/Slide01.jpg"
-import slide2 from "../assets/Slide02.jpg"
-import slide1responsive from "../assets/responsive_MasterScrabble.jpg"
-import slide2responsive from "../assets/responsive_ScrabbleJunior.jpg"
 
 interface Slide {
   id: number
@@ -18,20 +14,8 @@ interface Slide {
 }
 
 const slides: Slide[] = [
-  {
-    id: 1,
-    title: <> </>,
-    subtitle: "de la Fédération Internationale\nde Scrabble",
-    imageMobile: slide1responsive,
-    image: slide1,
-  },
-  {
-    id: 2,
-    title: <> </>,
-    subtitle: "",
-    imageMobile: slide2responsive,
-    image: slide2
-  },
+ 
+
   {
     id: 3,
     title: <> <h1 className="text-white title-bold text-3xl md:text-5xl lg:text-5xl font-bold max-w-5xl leading-tight">Bienvenue sur le site Officiel <br className='max-sm:hidden' /> de la féderation camerounaise <br className='max-sm:hidden' /> de Scrabble
