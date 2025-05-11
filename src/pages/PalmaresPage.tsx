@@ -13,7 +13,6 @@ import { ChampionClassic } from '../components/ChampionClassic'
 import { useEffect, useState } from 'react'
 import Loader from '../components/ui/loader'
 import Footer from '../components/Footer'
-import CtaInscription from '../components/Cta-inscription'
 export default function PalmaresPage() {
 
   const [loading, setLoading] = useState(true);
@@ -115,6 +114,51 @@ export default function PalmaresPage() {
               <div>
                 <div className="font-medium">4è place à l&apos;Elite Duplicate</div>
                 <div className="text-lg font-bold">NKOUETE CHEWA King Josaphat</div>
+              </div>
+            </div>
+          </div>
+        </div>
+         {/* CDM 2024 */}
+         <div className="space-y-6 title-second">
+          <h2 className="text-red-600 text-2xl max-sm:text-xl  font-bold">
+            CHAMPAS 2025 - Pointe noire
+          </h2>
+          
+          <div className="space-y-4">
+            <div className="flex items-start gap-4">
+              <div className="mt-1">
+                    <img src={medalOr} className='w-10 h-10' alt="" />
+              </div>
+              <div>
+                <div className="font-medium">01 Médaille d&apos;Or en duplicate Blitz</div>
+                <div className="text-lg font-bold">Nkouete chewa King Josaphat</div>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="mt-1">
+                    <img src={medalAr} className='w-10 h-10' alt="" />
+              </div>
+              <div>
+                <div className="font-medium">01 Médaille d&apos;Argent en Elite Duplicate</div>
+                <div className="text-lg font-bold">Nkouete chewa King Josaphat</div>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="mt-1">
+                    <img src={medalBr} className='w-10 h-10' alt="" />
+              </div>
+              <div>
+                <div className="font-medium">01 Médaille de Bronze en Elite Duplicate</div>
+                <div className="text-lg font-bold">TCHOUYO Eric Salvador</div>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="mt-1">
+                    <img src={medalBr} className='w-10 h-10' alt="" />
+              </div>
+              <div>
+                <div className="font-medium">01 Médaille de Bronze Défi Africain</div>
+                <div className="text-lg font-bold">Ivan Seundjeu</div>
               </div>
             </div>
           </div>
@@ -369,8 +413,7 @@ export default function PalmaresPage() {
         </div>
         </div>
         
-    </div>
-    <CtaInscription/>
+    </div> 
     <Footer/>
     </section>}
 
