@@ -22,6 +22,10 @@ import {
       number: 1,
       name: "NKOUETE CHEWA King Josaphat",
       achievements: [
+        { title: "1ère place au Grand Prix Paul Vieilly - Festival d'Aix-les-Bains 2025" },
+        {title:"5ème place de la Coupe de la Savoie- Festival d'Aix-les-Bains 2025"},
+        {title:"3ème place au Championnat de France de Blitz - Festival d'Aix-les-Bains 2025"},
+        {title:"3ème place à la Coupe d’Aix-les-Bains 2025"},
         { title: "Champion du Cameroun Elite Duplicate 2025" },
         { title: "Champion du Cameroun Elite Duplicate 2024" },
         { title: "Vainqueur des Masters Internationaux du Cameroun 2023" },

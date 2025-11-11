@@ -119,7 +119,132 @@ export default function PalmaresPage() {
           </div>
         </div>
          {/* CDM 2024 */}
+       
+        <div className="space-y-6 title-second">
+          <h2 className="text-red-600 text-2xl max-sm:text-xl  font-bold">
+           CDM 2025 - Grand Open de Laviolette
+          </h2>
+          
+          <div className="space-y-4">
+            <div className="flex items-start gap-4">
+              <div className="mt-1">
+                    <img src={medalOr} className='w-10 h-10' alt="" />
+              </div>
+              <div>
+                <div className="font-medium">1 ère place</div>
+                <div className="text-lg font-bold">TCHOUYO Eric Salvador</div>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="mt-1">
+                    <img src={medalAr} className='w-10 h-10' alt="" />
+              </div>
+              <div>
+                <div className="font-medium">2 ème place</div>
+                <div className="text-lg font-bold">Jean Louis Bassomo</div>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="mt-1">
+                    <img src={medalOr} className='w-10 h-10' alt="" />
+              </div>
+              <div>
+                <div className="font-medium">5 ème place</div>
+                <div className="text-lg font-bold">Wilfried Tsuata Lando</div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+
+        <div className="space-y-6 title-second">
+          <h2 className="text-red-600 text-2xl max-sm:text-xl  font-bold">
+           CDM 2025 - Open des Forges
+          </h2>
+          
+          <div className="space-y-4">
+            <div className="flex items-start gap-4">
+              <div className="mt-1">
+                    <img src={medalBr} className='w-10 h-10' alt="" />
+              </div>
+              <div>
+                <div className="font-medium">3 ème place en Open Classique</div>
+                <div className="text-lg font-bold">Wilfried Tsuata Lando</div>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="mt-1">
+                    <img src={medalAr} className='w-10 h-10' alt="" />
+              </div>
+              <div>
+                <div className="font-medium">2 ème place</div>
+                <div className="text-lg font-bold">Antoine Romain Tsoungui</div>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="mt-1">
+                    <img src={medalBr} className='w-10 h-10' alt="" />
+              </div>
+              <div>
+                <div className="font-medium">3 ème place</div>
+                <div className="text-lg font-bold">Paco Bahanag</div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+       
+        <div className="space-y-6 title-second">
+          <h2 className="text-red-600 text-2xl max-sm:text-xl  font-bold">
+           CDM 2025 - Grand Open de Saint Laurent
+          </h2>
+          
+          <div className="space-y-4">
+            <div className="flex items-start gap-4">
+              <div className="mt-1">
+                    <img src={medalOr} className='w-10 h-10' alt="" />
+              </div>
+              <div>
+                <div className="font-medium">1 ère place ex aequo</div>
+                <div className="text-lg font-bold">Wilfried Tsuata Lando,ex aequo avec Mowa Youssoupha</div>
+              </div>
+            </div>
+         
+           
+          </div>
+        </div>
+
          <div className="space-y-6 title-second">
+          <h2 className="text-red-600 text-2xl max-sm:text-xl  font-bold">
+           CDM 2025 - Open de Saint Maurice
+          </h2>
+          
+          <div className="space-y-4">
+            <div className="flex items-start gap-4">
+              <div className="mt-1">
+                    <img src={medalAr} className='w-10 h-10' alt="" />
+              </div>
+              <div>
+                <div className="font-medium">2 ème place</div>
+                <div className="text-lg font-bold">TCHOUYO Eric Salvador</div>
+              </div>
+            </div>
+         
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="max-w-7xl mx-24 max-sm:mx-2 px-4 py-2">
+    <h1 className="text-red-600 title-font text-4xl max-sm:text-4xl md:text-5xl font-bold mb-12 leading-tight">
+        PALMARES DU CAMEROUN AUX CHAMPIONNATS 
+
+
+             D’AFRIQUE DE SCRABBLE (CHAMPAS) DE 2016 A 2024
+      </h1>
+      <div className="grid title-second md:grid-cols-2 gap-12">
+        {/* CDM 2021 */}
+          <div className="space-y-6 title-second">
           <h2 className="text-red-600 text-2xl max-sm:text-xl  font-bold">
             CHAMPAS 2025 - Pointe noire
           </h2>
@@ -163,128 +288,6 @@ export default function PalmaresPage() {
             </div>
           </div>
         </div>
-        <div className="space-y-6 title-second">
-          <h2 className="text-red-600 text-2xl max-sm:text-xl  font-bold">
-           CDM 2025 - Grand Open de Laviolette
-          </h2>
-          
-          <div className="space-y-4">
-            <div className="flex items-start gap-4">
-              <div className="mt-1">
-                    <img src={medalOr} className='w-10 h-10' alt="" />
-              </div>
-              <div>
-                <div className="font-medium">1 ère place</div>
-                <div className="text-lg font-bold">TCHOUYO Eric Salvador</div>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="mt-1">
-                    <img src={medalAr} className='w-10 h-10' alt="" />
-              </div>
-              <div>
-                <div className="font-medium">2 ème place</div>
-                <div className="text-lg font-bold">Jean Louis Bassomo</div>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="mt-1">
-                    <img src={medalOr} className='w-10 h-10' alt="" />
-              </div>
-              <div>
-                <div className="font-medium">5 ème place</div>
-                <div className="text-lg font-bold">Wilfried Tsuata Lando</div>
-              </div>
-            </div>
-           
-          </div>
-        </div>
-        <div className="space-y-6 title-second">
-          <h2 className="text-red-600 text-2xl max-sm:text-xl  font-bold">
-           CDM 2025 - Open de Saint Maurice
-          </h2>
-          
-          <div className="space-y-4">
-            <div className="flex items-start gap-4">
-              <div className="mt-1">
-                    <img src={medalAr} className='w-10 h-10' alt="" />
-              </div>
-              <div>
-                <div className="font-medium">2 ème place</div>
-                <div className="text-lg font-bold">TCHOUYO Eric Salvador</div>
-              </div>
-            </div>
-         
-           
-          </div>
-        </div>
-        <div className="space-y-6 title-second">
-          <h2 className="text-red-600 text-2xl max-sm:text-xl  font-bold">
-           CDM 2025 - Grand Open de Saint Laurent
-          </h2>
-          
-          <div className="space-y-4">
-            <div className="flex items-start gap-4">
-              <div className="mt-1">
-                    <img src={medalOr} className='w-10 h-10' alt="" />
-              </div>
-              <div>
-                <div className="font-medium">1 ère place ex aequo</div>
-                <div className="text-lg font-bold">Wilfried Tsuata Lando,ex aequo avec Mowa Youssoupha</div>
-              </div>
-            </div>
-         
-           
-          </div>
-        </div>
-
-        <div className="space-y-6 title-second">
-          <h2 className="text-red-600 text-2xl max-sm:text-xl  font-bold">
-           CDM 2025 - Open des Forges
-          </h2>
-          
-          <div className="space-y-4">
-            <div className="flex items-start gap-4">
-              <div className="mt-1">
-                    <img src={medalBr} className='w-10 h-10' alt="" />
-              </div>
-              <div>
-                <div className="font-medium">3 ème place en Open Classique</div>
-                <div className="text-lg font-bold">Wilfried Tsuata Lando</div>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="mt-1">
-                    <img src={medalAr} className='w-10 h-10' alt="" />
-              </div>
-              <div>
-                <div className="font-medium">2 ème place</div>
-                <div className="text-lg font-bold">Antoine Romain Tsoungui</div>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="mt-1">
-                    <img src={medalBr} className='w-10 h-10' alt="" />
-              </div>
-              <div>
-                <div className="font-medium">3 ème place</div>
-                <div className="text-lg font-bold">Paco Bahanag</div>
-              </div>
-            </div>
-           
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="max-w-7xl mx-24 max-sm:mx-2 px-4 py-2">
-    <h1 className="text-red-600 title-font text-4xl max-sm:text-4xl md:text-5xl font-bold mb-12 leading-tight">
-        PALMARES DU CAMEROUN AUX CHAMPIONNATS 
-
-
-             D’AFRIQUE DE SCRABBLE (CHAMPAS) DE 2016 A 2024
-      </h1>
-      <div className="grid title-second md:grid-cols-2 gap-12">
-        {/* CDM 2021 */}
         <div className="space-y-6">
           <h2 className="text-red-600 max-sm:text-xl  text-2xl font-bold">
             CHAMPAS 2016 (Lomé au TOGO)
@@ -380,7 +383,9 @@ export default function PalmaresPage() {
               </div>
             </div>
           </div>
-          <div className="space-y-6">
+         
+        </div>
+         <div className="space-y-6">
           <h2 className="text-red-600 max-sm:text-xl  text-2xl font-bold">
           CHAMPAS 2018 (Bamako au Mali)
           </h2>
@@ -409,7 +414,6 @@ export default function PalmaresPage() {
             </div>
            
           </div>
-        </div>
         </div>
         <div className="space-y-6">
           <h2 className="text-red-600 max-sm:text-xl  text-2xl font-bold">
