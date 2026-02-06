@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
-import ReactHtmlParser from "react-html-parser"
+import parse from "html-react-parser"
 import { CalendarDays, Clock, User } from "lucide-react"
 import Loader from "../../components/ui/loader"
 import { useParams } from "react-router-dom"
 
 import NavMobile from "../../components/NavMobile"
 import HeaderSection from "../../components/headerSection"
-import {Helmet} from "react-helmet-async"
+import { Helmet } from "react-helmet-async"
 import logoIcon from "../../assets/logo.png"
 import Footer from "../../components/Footer"
 type Post = {
@@ -69,7 +69,7 @@ export default function PostDetail() {
                 const response = await fetch(`https://blog.fecascrab.com/wp-json/wp/v2/posts?slug=${postUrl}`)
                 const data = await response.json()
                 setPost(data[0])
-                
+
                 const [imageUrl, authorData] = await Promise.all([
                     getImageUrl(data[0].featured_media),
                     getAuthor(data[0].author)
@@ -134,76 +134,76 @@ export default function PostDetail() {
 
     return (
         <>
-        <Helmet>
-      <title>FecaScrab - Féderation Camerounaise de Scrabble</title>
-      <link rel="icon" type="image/svg+xml" href={logoIcon} />
-      <meta name="robots" content="index, follow" />
-      <link rel='canonical' href={ window.location.href } />
-      <meta name='description' content='Féderation Camerounaise de Scrabble'/>
-      <meta name='keywords' content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
-      <meta property="og:url" content={window.location.href} />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="FecaScrab - Féderation Camerounaise de Scrabble" />
-      <meta property="og:url" content="fecascrab.com" />
-      <meta property="og:image" content={featuredImageUrl || ""} />
-      <meta property="og:image:secure_url" content={featuredImageUrl || ""} />
-            <meta property="og:image:type" content="image/jpeg" />
-            <meta property="og:image:width" content="1200" />
-            <meta property="og:image:height" content="630" />
-            <meta property="og:image:alt" content={`Logo site`} />
-            <meta name="twitter:creator" content="fecascrab" />
-            <meta name="twitter:card" content="Féderation Camerounaise de Scrabble" />
-            <meta name="twitter:title" content="Féderation Camerounaise de Scrabble" />
-            <meta name="twitter:site" content="https://fecascrab.com" />
-            <meta name="twitter:image" content={featuredImageUrl || ""} />
-            <meta name="twitter:description" content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
-    </Helmet>
-        
-        <section>
-              <HeaderSection />
-              <NavMobile/>
-        <article className="max-w-4xl mx-auto px-4 py-8">
-           
-            <div className="relative h-[400px] mb-8">
-                <img
-                    src={featuredImageUrl || ""}
-                    alt={post?.title.rendered || ""}
-                    className="rounded-2xl object-cover w-full h-full"
-                />
-            </div>
+            <Helmet>
+                <title>FecaScrab - Féderation Camerounaise de Scrabble</title>
+                <link rel="icon" type="image/svg+xml" href={logoIcon} />
+                <meta name="robots" content="index, follow" />
+                <link rel='canonical' href={window.location.href} />
+                <meta name='description' content='Féderation Camerounaise de Scrabble' />
+                <meta name='keywords' content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
+                <meta property="og:url" content={window.location.href} />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="FecaScrab - Féderation Camerounaise de Scrabble" />
+                <meta property="og:url" content="fecascrab.com" />
+                <meta property="og:image" content={featuredImageUrl || ""} />
+                <meta property="og:image:secure_url" content={featuredImageUrl || ""} />
+                <meta property="og:image:type" content="image/jpeg" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta property="og:image:alt" content={`Logo site`} />
+                <meta name="twitter:creator" content="fecascrab" />
+                <meta name="twitter:card" content="Féderation Camerounaise de Scrabble" />
+                <meta name="twitter:title" content="Féderation Camerounaise de Scrabble" />
+                <meta name="twitter:site" content="https://fecascrab.com" />
+                <meta name="twitter:image" content={featuredImageUrl || ""} />
+                <meta name="twitter:description" content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
+            </Helmet>
 
-            {/* Article Header */}
-            <div className="space-y-4 mb-8">
-                <h1 className="text-4xl font-bold text-[#00723e]">
-                    {post?.title.rendered && ReactHtmlParser(post.title.rendered)}
-                </h1>
+            <section>
+                <HeaderSection />
+                <NavMobile />
+                <article className="max-w-4xl mx-auto px-4 py-8">
 
-                {/* Meta Information */}
-                <div className="flex items-center gap-6 text-gray-600">
-                    <div className="flex items-center gap-2">
-                        <User size={20} />
-                        <span>{author?.name}</span>
+                    <div className="relative h-[400px] mb-8">
+                        <img
+                            src={featuredImageUrl || ""}
+                            alt={post?.title.rendered || ""}
+                            className="rounded-2xl object-cover w-full h-full"
+                        />
                     </div>
-                    <div className="flex items-center gap-2">
-                        <CalendarDays size={20} />
-                        <span>{new Date(post?.date || "").toLocaleDateString()}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <Clock size={20} />
-                        <span>5 min read</span>
-                    </div>
-                </div>
-            </div>
 
-            {/* Article Content */}
-            <div dangerouslySetInnerHTML={{ __html: post?.content.rendered || "" }} className=" max-w-none">
-                
-            </div>
+                    {/* Article Header */}
+                    <div className="space-y-4 mb-8">
+                        <h1 className="text-4xl font-bold text-[#00723e]">
+                            {post?.title.rendered && parse(post.title.rendered)}
+                        </h1>
 
-          
-        </article>
-        </section>
-        <Footer/>
+                        {/* Meta Information */}
+                        <div className="flex items-center gap-6 text-gray-600">
+                            <div className="flex items-center gap-2">
+                                <User size={20} />
+                                <span>{author?.name}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <CalendarDays size={20} />
+                                <span>{new Date(post?.date || "").toLocaleDateString()}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Clock size={20} />
+                                <span>5 min read</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Article Content */}
+                    <div dangerouslySetInnerHTML={{ __html: post?.content.rendered || "" }} className=" max-w-none">
+
+                    </div>
+
+
+                </article>
+            </section>
+            <Footer />
         </>
     )
 } 

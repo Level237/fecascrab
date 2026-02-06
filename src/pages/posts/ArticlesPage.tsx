@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CalendarDays, Clock, User } from "lucide-react";
-import ReactHtmlParser from "react-html-parser";
+import parse from "html-react-parser";
 import Loader from "../../components/ui/loader";
 import HeaderSection from "../../components/headerSection";
 import NavMobile from "../../components/NavMobile";
@@ -96,39 +96,39 @@ export default function ArticlesPage() {
         <section className="min-h-screen bg-gray-50">
             <HeaderSection />
             <NavMobile />
-            <div style={{ background:`url(${slide})`,backgroundPosition:"center",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
-    className='mb-12 z-10 relative mt-12 max-sm:mt-7 h-96 mx-24 max-sm:mx-0   bg-[#02abee]'>
-        <div className='absolute bottom-[-30px] px-4 pt-24 pb-5 left-12 max-sm:left-12 bg-red-600'>
-            <h2 className='text-4xl max-sm:text-3xl title-font text-white font-bold  '>Articles</h2>
-        </div>
-    </div>
+            <div style={{ background: `url(${slide})`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
+                className='mb-12 z-10 relative mt-12 max-sm:mt-7 h-96 mx-24 max-sm:mx-0   bg-[#02abee]'>
+                <div className='absolute bottom-[-30px] px-4 pt-24 pb-5 left-12 max-sm:left-12 bg-red-600'>
+                    <h2 className='text-4xl max-sm:text-3xl title-font text-white font-bold  '>Articles</h2>
+                </div>
+            </div>
             <div className="max-w-7xl mx-24 max-sm:mx-0 px-4 py-12">
-            
-                
+
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {posts.map((post) => (
-                        <Link 
-                            to={`/articles/${post.slug}`} 
+                        <Link
+                            to={`/articles/${post.slug}`}
                             key={post.id}
                             className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden"
                         >
                             <div className="aspect-video relative overflow-hidden">
                                 <img
                                     src={featuredImages[post.id] || ""}
-                                    alt={ReactHtmlParser(post.title.rendered)}
+                                    alt={parse(post.title.rendered) as string}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
-                            
+
                             <div className="p-6 space-y-4">
                                 <h2 className="text-xl font-semibold text-[#00723e] line-clamp-2 group-hover:text-[#005e33]">
-                                    {ReactHtmlParser(post.title.rendered)}
+                                    {parse(post.title.rendered)}
                                 </h2>
-                                
+
                                 <div className="text-gray-600 line-clamp-3">
-                                    {ReactHtmlParser(post.excerpt.rendered)}
+                                    {parse(post.excerpt.rendered)}
                                 </div>
-                                
+
                                 <div className="flex items-center gap-4 text-sm text-gray-500">
                                     <div className="flex items-center gap-1">
                                         <User size={16} />
@@ -148,7 +148,7 @@ export default function ArticlesPage() {
                     ))}
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </section>
     );
 } 
