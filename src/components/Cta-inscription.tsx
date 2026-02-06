@@ -15,7 +15,7 @@ export default function CtaInscription() {
 
           <h2 className="text-white hidden text-center text-5xl max-sm:text-2xl title-font font-bold">INSCRIVEZ VOUS <br />DES MAINTENANT</h2>
           <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-            <Link to="/inscription"><Button className="bg-red-600  max-sm:text-2xl title-font rounded-full text-white text-2xl  py-6 px-12">S'INSCRIRE</Button></Link>
+            <Link to="/inscription-scrabble-2026"><Button className="bg-red-600  max-sm:text-2xl title-font rounded-full text-white text-2xl  py-6 px-12">S'INSCRIRE</Button></Link>
 
           </div>
         </div>
@@ -23,7 +23,7 @@ export default function CtaInscription() {
       <div style={{ background: `url(${sliderResponsive})`, backgroundPosition: "top", backgroundSize: "contain", backgroundRepeat: "no-repeat" }}
         className="relative px-24 hidden   max-sm:px-0 max-sm:flex max-sm:items-end max-sm:justify-center max-sm:mx-4  items-center    mx-24  mt-12 h-[60vh] flex">
 
-        <Link to="/inscription"><Button className="bg-red-600 text-2xl max-sm:text-2xl title-font mb-[2rem]  rounded-full text-white    py-7 px-12">S'INSCRIRE</Button></Link>
+        <Link to="/inscription-scrabble-2026"><Button className="bg-red-600 text-2xl max-sm:text-2xl title-font mb-[2rem]  rounded-full text-white    py-7 px-12">S'INSCRIRE</Button></Link>
 
 
 

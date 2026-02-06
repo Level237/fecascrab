@@ -1,6 +1,5 @@
 import InscriptionForm from '../components/forms/InscriptionForm'
-import logoOff from "../assets/logo-officiel.png"
-import { Skeleton } from '../components/ui/skeleton'
+import logoOff from "../assets/responsive_MasterScrabble.jpg"
 import { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import logoIcon from "../assets/logo.png"
@@ -13,12 +12,9 @@ import Footer from '../components/Footer'
 import { ScrollRestoration } from 'react-router-dom'
 export default function Inscription() {
 
-  const [imageLoad, setImageLoad] = useState(false)
 
-  const handleImageLoaded = () => {
-    setImageLoad(true)
-    console.log('true')
-  }
+
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -53,9 +49,7 @@ export default function Inscription() {
 
             </div>
 
-            <div className='absolute bottom-[-80px] z-50'>
-              {!imageLoad && <Skeleton className='w-48 h-48 bg-slate-50' />}
-            </div>
+
           </div>
 
           <section className='flex flex-col items-center justify-center'>

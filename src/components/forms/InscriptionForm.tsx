@@ -23,10 +23,8 @@ export default function InscriptionForm() {
   const [value, setValue] = useState("")
   const [widthShirt, setWidthShirt] = useState("")
   const [picture, setPicture] = useState<File | null>(null);
-  const [pictureBase64, setPictureBase64] = useState("");
 
   const [pictureVaccination, setPictureVaccination] = useState<File | null>(null);
-  const [pictureBase64Vaccination, setPictureBase64Vaccination] = useState("");
   const countriesSort = countries.sort((a: any, b: any) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
   const [category, setCategory] = useState("")
   const [checkedItems, setCheckedItems] = useState([]);
@@ -42,26 +40,16 @@ export default function InscriptionForm() {
 
 
 
-  const handleChange = async (e: any) => {
-    setPicture(e.target.files[0]);
-    if (e.target.files[0]) {
-      const base64 = await convertToBase64(e.target.files[0]);
-
-      setPictureBase64(base64)
-      console.log(base64)
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setPicture(e.target.files[0]);
     }
-
   }
 
-  const handleChangeVaccination = async (e: any) => {
-    setPictureVaccination(e.target.files[0]);
-    if (e.target.files[0]) {
-      const base64 = await convertToBase64(e.target.files[0]);
-
-      setPictureBase64Vaccination(base64)
-      console.log(base64)
+  const handleChangeVaccination = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setPictureVaccination(e.target.files[0]);
     }
-
   }
   const {
     value: enterName,
@@ -75,7 +63,6 @@ export default function InscriptionForm() {
         return prev.filter((item: any) => item !== label); // Décocher
       } else {
         return [...prev, label]; // Cocher
-        console.log(category, value, confirm)
       }
     });
   };
@@ -97,55 +84,8 @@ export default function InscriptionForm() {
     console.log(value)
   }
 
-  console.log(widthShirt)
-  const convertToBase64 = (file: File): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(file);
-      fileReader.onload = () => {
-        resolve(fileReader.result as string);
-      };
-      fileReader.onerror = (error) => {
-        reject(error);
-      };
-    });
-  };
-  const submitFormHandler = (e: any) => {
+  const submitFormHandler = async (e: React.FormEvent) => {
     e.preventDefault()
-    setLoading(true)
-    try {
-
-
-      axios.post('https://api.fecascrab.com/test/email', {
-        "name": enterName,
-        "email": enterEmail,
-        "birth": enterBirth,
-        "phone": phone,
-        "category": category,
-        "checkedItems": checkedItems,
-        "passport": picture,
-        "vaccination": pictureVaccination,
-        "from": enterEmail,
-        "nationality": value,
-        "widthShirt": widthShirt
-      }, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-          "Accept": "application/json"
-        }
-      }).then((res) => {
-
-        console.log(res)
-        setLoading(false)
-        navigate('/confirm')
-      }).catch((err) => {
-        console.error(err)
-        setLoading(false)
-      })
-    }
-    catch (error) {
-      console.error("Error sending email:", error);
-    }
 
     if (phone.length <= 4) {
       alert("Veuillez entrer un numéro de téléphone valide")
@@ -160,34 +100,71 @@ export default function InscriptionForm() {
       return;
     }
 
+    setLoading(true)
 
+    try {
+      const formData = new FormData();
+      formData.append("name", enterName);
+      formData.append("email", enterEmail);
+      formData.append("birth", enterBirth);
+      formData.append("phone", phone);
+      formData.append("category", category);
+      formData.append("checkedItems", checkedItems.join(", "));
+      formData.append("from", enterEmail);
+      formData.append("nationality", value);
+      formData.append("widthShirt", widthShirt);
 
+      if (picture) {
+        formData.append("passport", picture);
+      }
+      if (pictureVaccination) {
+        formData.append("vaccination", pictureVaccination);
+      }
 
+      const res = await axios.post('https://api.fecascrab.com/test/email', formData, {
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      console.log(res)
+      setLoading(false)
+      navigate('/confirm')
+    } catch (error) {
+      console.error("Error sending email:", error)
+      setLoading(false)
+      alert("Une erreur s'est produite lors de l'envoi du formulaire. Veuillez réessayer.");
+    }
   }
 
   const validClassName = NameError ? "border border-red-400" : ""
   const validClassEmail = emailError ? "border border-red-400" : ""
 
+  const inputBaseStyles = "w-full bg-white border border-gray-200 text-gray-900 text-lg rounded-xl focus:ring-2 focus:ring-[#02abee]/20 focus:border-[#02abee] block p-4 placeholder:text-gray-400 transition-all duration-200 shadow-sm hover:border-gray-300";
+
   return (
-    <section className='mb-20'>
-      <div className='mb-5'>
-        <h2 className='font-bold title-font text-4xl max-sm:text-2xl'>INFORMATIONS PERSONNELLES <span className='text-[#f00] title-font'>[*]</span></h2>
+    <section className='mb-20 max-w-4xl mx-auto'>
+      <div className='mb-8 text-center'>
+        <h2 className='font-bold title-font text-4xl max-sm:text-3xl text-[#00723e]'>INFORMATIONS PERSONNELLES <span className='text-[#f00] title-font'>[*]</span></h2>
+        <p className="mt-2 text-gray-600">Veuillez remplir vos informations avec précision</p>
       </div>
 
-      <form encType="multipart/form-data" onSubmit={submitFormHandler} action="POST">
+      <form encType="multipart/form-data" onSubmit={submitFormHandler} action="POST" className="space-y-6">
 
-        <div className='mb-6'>
-          <Input placeholder='Nom et Prénom'
+        <div className='group'>
+          <label className="block mb-2 text-sm font-medium text-gray-700">Nom complet</label>
+          <Input placeholder='Ex: John Doe'
             required
             name='name'
             value={enterName}
             onChange={enteredNameHandler}
             onBlur={blurNameHandler}
-            className={`py-8 rounded-xl title-second px-6 placeholder:text-xl  placeholder:title-second max-sm:placeholder:text-md text-xl bg-gray-100 h-12 ${validClassName}`} />
+            className={`${inputBaseStyles} h-14 ${validClassName}`} />
 
         </div>
         {NameError && <p className="text-xs title-second mt-[-10px] text-red-600">Ne peut pas etre vide</p>}
-        <div className='mb-5 mt-3'>
+        <div className='group'>
+          <label className="block mb-2 text-sm font-medium text-gray-700">Date de naissance</label>
           <Input
             required
             name='birth'
@@ -197,17 +174,25 @@ export default function InscriptionForm() {
             value={enterBirth}
             onChange={enteredBirthHandler}
             onBlur={blurBirthHandler}
-            placeholder='Date de naissance' className='py-8 title-second rounded-xl px-6 placeholder:text-xl text-xl bg-gray-100 h-12' />
+            className={`${inputBaseStyles} h-14`} />
         </div>
-        <div className='mb-3'>
-          <div className="flex">
-            <label className="sr-only title-second">Nationalité</label>
-            <select name='nationality' onChange={(e) => setValue(e.target.value)} id="states" className="bg-gray-100 h-12 py-2 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option className='title-second ' selected>Nationalité</option>
+
+        <div className='group'>
+          <label className="block mb-2 text-sm font-medium text-gray-700">Nationalité</label>
+          <div className="relative">
+            <select
+              name='nationality'
+              onChange={(e) => setValue(e.target.value)}
+              className={`${inputBaseStyles} h-14 appearance-none cursor-pointer`}
+            >
+              <option className='text-gray-500' value="" selected>Sélectionnez votre nationalité</option>
               {countriesSort.map((country: any) => (
-                <option className='title-second max:sm:text-2xl' value={country.name}>{country.name} {country.emoji}</option>
+                <option key={country.name} value={country.name}>{country.name} {country.emoji}</option>
               ))}
             </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+            </div>
           </div>
         </div>
         <div className='mb-3'>
@@ -232,37 +217,43 @@ export default function InscriptionForm() {
             }}
           />
         </div>
-        <div className='mb-3'>
+
+        <div className='group'>
+          <label className="block mb-2 text-sm font-medium text-gray-700">Adresse Email</label>
           <Input
             required
             name='email'
             type='email'
-            placeholder='E-mail'
+            placeholder='exemple@email.com'
             value={enterEmail}
             onChange={enteredEmailHandler}
             onBlur={blurEmailHandler}
-            className={`py-8 rounded-xl title-second ${validClassEmail} max-sm:placeholder:text-lg px-6 placeholder:text-xl text-xl bg-gray-100 h-12`} />
-
+            className={`${inputBaseStyles} h-14 ${validClassEmail}`} />
         </div>
-        {emailError && <p className="text-xs title-second mt-[10px] text-red-600">Ne peut pas etre vide</p>}
+        {emailError && <p className="text-xs mt-1 text-red-600">L'email est requis</p>}
 
-        <div className='mb-3'>
-          <select
-            required
-            name='width_shirt'
-            value={widthShirt}
-            onChange={(e) => setWidthShirt(e.target.value)}
-            className={`w-full rounded-xl title-second px-6 text-xl bg-gray-100 h-16 focus:outline-none`}
-          >
-            <option value="" disabled>Taille de votre T-shirt</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-            <option value="XXL">XXL</option>
-            <option value="XXXL">XXXL</option>
-          </select>
-
+        <div className='group'>
+          <label className="block mb-2 text-sm font-medium text-gray-700">Taille de T-shirt</label>
+          <div className="relative">
+            <select
+              required
+              name='width_shirt'
+              value={widthShirt}
+              onChange={(e) => setWidthShirt(e.target.value)}
+              className={`${inputBaseStyles} h-14 appearance-none cursor-pointer`}
+            >
+              <option value="" disabled>Sélectionnez votre taille</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+              <option value="XXXL">XXXL</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+            </div>
+          </div>
         </div>
 
         <Card className="p-4 bg-white shadow-lg hover:shadow-xl transition-shadow duration-200">
@@ -339,16 +330,22 @@ export default function InscriptionForm() {
             <h2 className='mx-5  max-sm:mt-6 text-xl max-sm:text-md italic title-italic'>Catégorie d'inscription(cochez une option):</h2>
           </div>
           <div>
-            <RadioGroup name='category' onValueChange={enteredCategoryHandler} defaultValue="comfortable" className='w-full mx-12 max-sm:mx-2 max-sm:mt-6 mt-4'>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem className='' value="Joueur étranger" id="r1" />
-                <Label htmlFor="r1"><h2 className='text-xl title-bold max-sm:text-lg font-bold '>Joueur étranger <span className='font-light title-medium'>-150€ (Repas et hébergement inclus)</span> </h2></Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem className='' value="Joueur local" id="r2" />
-                <Label htmlFor="r2"><h2 className='text-xl title-bold max-sm:text-lg font-bold'>Joueur local (Cameroun) <span className='font-light title-medium'>-75€(Repas et hébergement inclus)</span> </h2></Label>
+            <RadioGroup name='category' onValueChange={enteredCategoryHandler} defaultValue="comfortable" className='w-full grid md:grid-cols-2 gap-4 mt-4'>
+              <div className={`relative flex items-center space-x-2 border rounded-xl p-4 transition-all cursor-pointer ${category === 'Joueur étranger' ? 'border-[#02abee] bg-blue-50 ring-1 ring-[#02abee]' : 'border-gray-200 hover:border-gray-300'}`}>
+                <RadioGroupItem value="Joueur étranger" id="r1" className="text-[#02abee]" />
+                <Label htmlFor="r1" className="flex-1 cursor-pointer">
+                  <div className='text-lg font-bold text-gray-900'>Joueur étranger</div>
+                  <div className='text-sm text-gray-500'>150€ (Repas et hébergement inclus)</div>
+                </Label>
               </div>
 
+              <div className={`relative flex items-center space-x-2 border rounded-xl p-4 transition-all cursor-pointer ${category === 'Joueur local' ? 'border-[#02abee] bg-blue-50 ring-1 ring-[#02abee]' : 'border-gray-200 hover:border-gray-300'}`}>
+                <RadioGroupItem value="Joueur local" id="r2" className="text-[#02abee]" />
+                <Label htmlFor="r2" className="flex-1 cursor-pointer">
+                  <div className='text-lg font-bold text-gray-900'>Joueur local (Cameroun)</div>
+                  <div className='text-sm text-gray-500'>75€ (Repas et hébergement inclus)</div>
+                </Label>
+              </div>
             </RadioGroup>
           </div>
           <div className='mt-5'>
@@ -363,41 +360,25 @@ export default function InscriptionForm() {
           <div>
             <h2 className='mx-5 title-italic max-sm:text-md max-sm:w-full text-xl italic'>Type de compétition choisie(cochez une ou plusieurs option):</h2>
           </div>
-          <div className='w-full mx-12 max-sm:mx-2 max-sm:mt-8 mt-4'>
-            <div className="flex items-center">
-              <div className="flex flex-col gap-4 justify-center">
-                {options.map(option => (
-
-                  <div className='flex flex-col'>
-                    <div className='flex flex-row items-center gap-3'>
-
-                      <Checkbox
-                        name="checkedItems"
-                        value={option.label}
-                        key={option.id}
-
-                        onCheckedChange={() => handleCheckboxChange(option.label)}
-                        className="text-xl max-sm:text-lg font-bold leading-none peer-disabled:opacity-70"
-                      />
-
-
-
-                      <label className="text-xl title-bold max-sm:text-lg font-bold leading-none peer-disabled:opacity-70" htmlFor={option.label}>{option.label}</label>
-                    </div>
-
-
-                  </div>
-
-
-                ))}
-
+          <div className='w-full mt-6 space-y-4'>
+            {options.map(option => (
+              <div key={option.id} className="space-y-3">
+                <div className="flex items-center space-x-3 bg-gray-50 p-3 rounded-lg border border-gray-100">
+                  <Checkbox
+                    name="checkedItems"
+                    value={option.label}
+                    id={option.label}
+                    onCheckedChange={() => handleCheckboxChange(option.label)}
+                    className="h-5 w-5 data-[state=checked]:bg-red-600 border-gray-400"
+                  />
+                  <label className="text-xl font-bold text-gray-900 cursor-pointer" htmlFor={option.label}>{option.label}</label>
+                </div>
               </div>
-            </div>
-
+            ))}
           </div>
 
         </section>
-        <input type="hidden" name="passportFull" value={pictureBase64} />
+
         <Separator className='text-black w-full bg-black mt-12' />
         <section className='flex flex-col pt-8'>
           <h2 className='font-bold title-font max-sm:text-2xl text-4xl mb-6'>Conditions de participation <span className='text-[#f00]'>[*]</span></h2>

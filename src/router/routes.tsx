@@ -17,63 +17,63 @@ import ContactPage from "../pages/ContactPage";
 import ProgrammePage from "../pages/ProgrammePage";
 import PostDetail from "../pages/posts/PostDetailPage";
 import ArticlesPage from "../pages/posts/ArticlesPage";
-export const routes=createBrowserRouter([{
-    path:'/',
-    element:<Homepage/>
-},{
-    path:'/inscription',
-    element:<Inscription/>
-},{
-    path:'/confirm',
-    element:<ConfirmPage/>
+export const routes = createBrowserRouter([{
+    path: '/',
+    element: <Homepage />
+}, {
+    path: '/inscription-scrabble-2026',
+    element: <Inscription />
+}, {
+    path: '/confirm',
+    element: <ConfirmPage />
 },
 {
-    path:'/origine',
-    element:<OriginePage/>
+    path: '/origine',
+    element: <OriginePage />
 },
 {
-    path:"/organisation",
-    element:<OrganisationPage/>
-},{
-    path:"/clubs-afiliés",
-    element:<ClubPage/>
-},{
-    path:"/palmares",
-    element:<PalmaresPage/>
-},{
-    path:"events",
-    element:<EventPage/>
-},{
-    path:"creation-club",
-    element:<CreateClubPage/>
-},{
-    path:"events/super-master-scrabble",
-    element:<MasterEvent/>
-},{
-    path:"events/scrabble-scolaire",
-    element:<ScrabbleJunior/>
-},{
-    path:"events/national-team",
-    element:<NationalTeam/>
-},{
-    path:"rejoindre-equipe-national",
-    element:<JoinTeamPage/>
-},{
-    path:"gallerie",
-    element:<GaleryPage/>
-},{
-    path:"contact",
-    element:<ContactPage/>
+    path: "/organisation",
+    element: <OrganisationPage />
+}, {
+    path: "/clubs-afiliés",
+    element: <ClubPage />
+}, {
+    path: "/palmares",
+    element: <PalmaresPage />
+}, {
+    path: "events",
+    element: <EventPage />
+}, {
+    path: "creation-club",
+    element: <CreateClubPage />
+}, {
+    path: "events/super-master-scrabble",
+    element: <MasterEvent />
+}, {
+    path: "events/scrabble-scolaire",
+    element: <ScrabbleJunior />
+}, {
+    path: "events/national-team",
+    element: <NationalTeam />
+}, {
+    path: "rejoindre-equipe-national",
+    element: <JoinTeamPage />
+}, {
+    path: "gallerie",
+    element: <GaleryPage />
+}, {
+    path: "contact",
+    element: <ContactPage />
 },
 {
-    path:"/programme-de-la-compétition",
-    element:<ProgrammePage/>
-},{
-    path:"/articles/:postUrl",
-    element:<PostDetail/>
-},{
-    path:"/articles",
-    element:<ArticlesPage/>
+    path: "/programme-de-la-compétition",
+    element: <ProgrammePage />
+}, {
+    path: "/articles/:postUrl",
+    element: <PostDetail />
+}, {
+    path: "/articles",
+    element: <ArticlesPage />
 }
 
 ])
