@@ -6,7 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
+src/assets/galeries
+src/assets/events/masterscrabble
+events
 node_modules
 dist
 dist-ssr
