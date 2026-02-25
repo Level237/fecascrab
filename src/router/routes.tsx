@@ -17,12 +17,16 @@ import ContactPage from "../pages/ContactPage";
 import ProgrammePage from "../pages/ProgrammePage";
 import PostDetail from "../pages/posts/PostDetailPage";
 import ArticlesPage from "../pages/posts/ArticlesPage";
+import InscriptionFeminine from "../pages/Inscription-Scrabble-Feminine";
 export const routes = createBrowserRouter([{
     path: '/',
     element: <Homepage />
 }, {
     path: '/inscription-scrabble-2026',
     element: <Inscription />
+}, {
+    path: '/inscription-tournoi-feminin-2026',
+    element: <InscriptionFeminine />
 }, {
     path: '/confirm',
     element: <ConfirmPage />

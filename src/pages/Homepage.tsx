@@ -18,6 +18,8 @@ import { HeroCarousel } from '../components/heroCarousel';
 import FeaturedPost from '../components/posts/FeaturedPost';
 import CtaInscription from '../components/Cta-inscription';
 
+import EventModal from '../components/EventModal';
+
 export default function Homepage() {
 
 
@@ -41,6 +43,7 @@ export default function Homepage() {
 
   return (
     <>
+      <EventModal />
       <Helmet>
         <title>FecaScrab - Féderation Camerounaise de Scrabble</title>
         <link rel="icon" type="image/svg+xml" href={logoIcon} />

@@ -4,6 +4,11 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import hero from "../assets/hero.jpg"
+import slide1 from "../assets/SliderWeb.jpeg"
+import sliderResponsive from "../assets/responsive_MasterScrabble.jpg"
+
+import sliderWomen from "../assets/sliderWomen.jpg"
+import sliderWomenMobile from "../assets/sliderwomenMobile.jpg"
 
 interface Slide {
   id: number
@@ -14,18 +19,30 @@ interface Slide {
 }
 
 const slides: Slide[] = [
- 
-
   {
-    id: 3,
+    id: 1,
     title: <> <h1 className="text-white title-bold text-3xl md:text-5xl lg:text-5xl font-bold max-w-5xl leading-tight">Bienvenue sur le site Officiel <br className='max-sm:hidden' /> de la féderation camerounaise <br className='max-sm:hidden' /> de Scrabble
-    
+
     </h1></>,
     subtitle: "de la Fédération Internationale\nde Scrabble",
     imageMobile: hero,
     image: hero,
   },
-  
+  {
+    id: 2,
+    title: <> </>,
+    subtitle: "",
+    imageMobile: sliderResponsive,
+    image: slide1
+  },
+  {
+    id: 3,
+    title: <> </>,
+    subtitle: "",
+    imageMobile: sliderWomenMobile,
+    image: sliderWomen
+  },
+
 ]
 
 export function HeroCarousel() {
@@ -68,7 +85,7 @@ export function HeroCarousel() {
           className="absolute inset-0"
         >
           {/* Background Image with Overlay */}
-          <div 
+          <div
             className="absolute max-sm:hidden inset-0 bg-[#00000063]"
             style={{
               backgroundImage: `url(${slides[currentSlide].image})`,
@@ -78,7 +95,7 @@ export function HeroCarousel() {
           >
             <div className="absolute inset-0 bg-[#00000015]" />
           </div>
-          <div 
+          <div
             className="absolute hidden max-sm:block inset-0 bg-transparent"
             style={{
               backgroundImage: `url(${slides[currentSlide].imageMobile})`,
@@ -97,11 +114,11 @@ export function HeroCarousel() {
               transition={{ delay: 0.6 }}
               className="text-center"
             >
-              
-                {slides[currentSlide].title}
-                
-               
-              
+
+              {slides[currentSlide].title}
+
+
+
             </motion.div>
           </div>
         </motion.div>
@@ -109,12 +126,12 @@ export function HeroCarousel() {
 
       {/* Navigation Arrows */}
       <button
-      
+
         onClick={() => handleArrowClick('prev')}
         className="absolute max-sm:hidden left-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors"
         aria-label="Previous slide"
       >
-        <ChevronLeft   className="w-8 h-8" />
+        <ChevronLeft className="w-8 h-8" />
       </button>
       <button
         onClick={() => handleArrowClick('next')}
@@ -146,4 +163,3 @@ export function HeroCarousel() {
     </div>
   )
 }
-
